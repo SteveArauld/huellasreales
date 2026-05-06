@@ -119,7 +119,7 @@ public function processOrder(OrderRequest $request, $lang, $slug)
         Mail::to($orderData['email'])
             ->send(new OrderConfirmationMail($orderData, $cat));
 
-        $adminEmail = env('ADMIN_EMAIL', 'contacto@dulcemascota.eu');
+        $adminEmail = env('ADMIN_EMAIL', 'contacto@huellasreales.es');
         Mail::to($adminEmail)
             ->send(new OrderConfirmationMail($orderData, $cat, true));
 

@@ -11,6 +11,8 @@ use App\Http\Requests\OrderRequest;
 use App\Mail\OrderConfirmationMail;
 use App\Models\Cat;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
+
 
 class CachorroController extends Controller
 {
@@ -125,7 +127,7 @@ class CachorroController extends Controller
             Mail::to($orderData['email'])
                 ->send(new OrderConfirmationMail($orderData, $cachorro));
 
-            $adminEmail = env('ADMIN_EMAIL', 'contacto@dulcemascota.eu');
+            $adminEmail = env('ADMIN_EMAIL', 'contacto@huellasreales.es');
             Mail::to($adminEmail)
                 ->send(new OrderConfirmationMail($orderData, $cachorro, true));
 
@@ -133,6 +135,10 @@ class CachorroController extends Controller
                 ->with('success', __('controller.order.success'));
 
         } catch (\Exception $e) {
+            Log::error('Error al procesar el pedido: ' . $e->getMessage(), [
+                'order_data' => $request->all(),
+                'cachorro_slug' => $slug
+            ]);
             return redirect()->back()
                 ->withInput()
                 ->withErrors(['error' => __('controller.order.error')]);

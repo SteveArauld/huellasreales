@@ -553,13 +553,13 @@
                     <div class="navbar-column">
                         <div class="navbar-action-wrapper">
                             <a class="navbar-btn navbar-btn-email"
-                               href="mailto:contacto@huellasreales.eu"
+                               href="mailto:contacto@huellasreales.es"
                                target="_self"
                                rel="noopener">
                                 <svg class="navbar-icon" viewBox="0 0 24 24" width="20" height="20">
                                     <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                                 </svg>
-                                <span class="navbar-text">contacto@huellasreales.eu</span>
+                                <span class="navbar-text">contacto@huellasreales.es</span>
                             </a>
                         </div>
                     </div>
