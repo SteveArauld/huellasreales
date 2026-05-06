@@ -1,0 +1,101 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-Ccq2rzOL.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/css/cachorrosraza.css": {
+    "file": "assets/cachorrosraza-d5f03BSU.css",
+    "src": "resources/css/cachorrosraza.css",
+    "isEntry": true,
+    "name": "cachorrosraza",
+    "names": [
+      "cachorrosraza.css"
+    ]
+  },
+  "resources/css/contacto.css": {
+    "file": "assets/contacto-BUy0SFy_.css",
+    "src": "resources/css/contacto.css",
+    "isEntry": true,
+    "name": "contacto",
+    "names": [
+      "contacto.css"
+    ]
+  },
+  "resources/css/devoluciones.css": {
+    "file": "assets/devoluciones-Cr7rQbLD.css",
+    "src": "resources/css/devoluciones.css",
+    "isEntry": true,
+    "name": "devoluciones",
+    "names": [
+      "devoluciones.css"
+    ]
+  },
+  "resources/css/envio.css": {
+    "file": "assets/envio-DCNPmsPZ.css",
+    "src": "resources/css/envio.css",
+    "isEntry": true,
+    "name": "envio",
+    "names": [
+      "envio.css"
+    ]
+  },
+  "resources/css/garantia.css": {
+    "file": "assets/garantia-CFe-1Ldk.css",
+    "src": "resources/css/garantia.css",
+    "isEntry": true,
+    "name": "garantia",
+    "names": [
+      "garantia.css"
+    ]
+  },
+  "resources/css/privaciadad.css": {
+    "file": "assets/privaciadad-B5Iw0Ln5.css",
+    "src": "resources/css/privaciadad.css",
+    "isEntry": true,
+    "name": "privaciadad",
+    "names": [
+      "privaciadad.css"
+    ]
+  },
+  "resources/css/quienes.css": {
+    "file": "assets/quienes-BH_M0wBE.css",
+    "src": "resources/css/quienes.css",
+    "isEntry": true,
+    "name": "quienes",
+    "names": [
+      "quienes.css"
+    ]
+  },
+  "resources/css/referencias.css": {
+    "file": "assets/referencias-CbEDhA-u.css",
+    "src": "resources/css/referencias.css",
+    "isEntry": true,
+    "name": "referencias",
+    "names": [
+      "referencias.css"
+    ]
+  },
+  "resources/css/show.css": {
+    "file": "assets/show-uyE6LCj6.css",
+    "src": "resources/css/show.css",
+    "isEntry": true,
+    "name": "show",
+    "names": [
+      "show.css"
+    ]
+  },
+  "resources/css/venta.css": {
+    "file": "assets/venta-CXV5Lf-i.css",
+    "src": "resources/css/venta.css",
+    "isEntry": true,
+    "name": "venta",
+    "names": [
+      "venta.css"
+    ]
+  }
+}
