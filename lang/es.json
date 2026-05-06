@@ -1118,5 +1118,6 @@
     "search_no_cats_for_breed": "Ningún gato disponible para esta raza",
     "search_details_error": "Error al cargar los detalles",
     "common_search": "Buscar",
-    "common_view_all": "Ver todo"
+    "common_view_all": "Ver todo",
+    "order.cat_name": "nombre"
 }
