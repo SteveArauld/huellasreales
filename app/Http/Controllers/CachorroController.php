@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests\OrderRequest;
 use App\Mail\OrderConfirmationMail;
-
+use App\Models\Cat;
 use Illuminate\Support\Facades\Mail;
 
 class CachorroController extends Controller
@@ -20,8 +20,17 @@ class CachorroController extends Controller
         
         $cachorrosp = $races->take(6);
         $cachorrosf = $races->skip(6)->take(6);
+        
+        $catsCollection = Cat::all();
 
-        return view('home', compact('cachorrosp', 'cachorrosf'));
+        $racesUniques = $catsCollection
+            ->pluck('race')
+            ->unique()
+            ->values()
+            ->toArray();
+
+        
+        return view('home', compact('cachorrosp', 'cachorrosf', 'racesUniques','catsCollection'));
     }
     
     public function show($lang, $slug)
@@ -130,104 +139,204 @@ class CachorroController extends Controller
         }
     }
 
-    public function search(Request $request)
-    {
-        $query = $request->input('q', '');
+public function search(Request $request)
+{
+    $query = $request->input('q', '');
 
-        if (empty($query)) {
-            return redirect()->route('cachorros.index');
-        }
-
-        $resultados = Chio::search($query)->get();
-
-        $resultadosPorRaza = [];
-        foreach ($resultados as $cachorro) {
-            $raza = $cachorro->raza;
-            if (!isset($resultadosPorRaza[$raza])) {
-                $resultadosPorRaza[$raza] = [];
-            }
-            $resultadosPorRaza[$raza][] = $cachorro->toArray();
-        }
-
-        return view('pages.search-results', [
-            'query' => $query,
-            'resultados' => $resultados->toArray(),
-            'resultadosPorRaza' => $resultadosPorRaza,
-            'total' => $resultados->count()
-        ]);
+    if (empty($query)) {
+        return redirect()->route('cats.venta');
     }
 
-    public function autocomplete(Request $request)
-    {
-        $query = $request->input('query', '');
+    // Recherche sur les chiots
+    $cachorros = Chio::search($query)->get();
 
-        if (strlen($query) < 2) {
-            return response()->json([]);
+    // Recherche sur les chats
+    $cats = Cat::where('nom', 'like', "%{$query}%")
+        ->orWhere('race', 'like', "%{$query}%")
+        ->get();
+
+    // Fusionner les résultats pour l'affichage par race
+    $resultadosPorRaza = [];
+
+    foreach ($cachorros as $cachorro) {
+        $raza = $cachorro->raza;
+        if (!isset($resultadosPorRaza[$raza])) {
+            $resultadosPorRaza[$raza] = [];
         }
-
-        $cachorros = Chio::all();
-
-        $razasUnicas = [];
-        $suggestions = [];
-
-        foreach ($cachorros as $cachorro) {
-            $raza = $cachorro->raza;
-
-            if (stripos($raza, $query) !== false && !in_array($raza, $razasUnicas)) {
-                $razasUnicas[] = $raza;
-
-                $count = Chio::byRaza($raza)->count();
-
-                $suggestions[] = [
-                    'type' => 'race',
-                    'text' => $raza,
-                    'count' => $count,
-                    'url' => $this->generateRaceUrl($raza)
-                ];
-            }
-
-            if (stripos($cachorro->nombre, $query) !== false) {
-                $suggestions[] = [
-                    'type' => 'cachorro',
-                    'text' => $cachorro->nombre,
-                    'raza' => $cachorro->raza,
-                    'imagen' => $cachorro->imagenes[0] ?? '',
-                    'url' => $cachorro->enlace ?? '#'
-                ];
-            }
-        }
-
-        $suggestions = array_slice($suggestions, 0, 10);
-
-        return response()->json($suggestions);
+        $resultadosPorRaza[$raza][] = array_merge($cachorro->toArray(), ['type' => 'dog']);
     }
 
-    private function generateRaceUrl($raza)
-    {
-        $slug = strtolower(str_replace(' ', '-', $raza));
-        return route('cachorrosraza', ['lang' => app()->getLocale(), 'slug' => $slug]);
+    foreach ($cats as $cat) {
+        $raza = $cat->race;
+        if (!isset($resultadosPorRaza[$raza])) {
+            $resultadosPorRaza[$raza] = [];
+        }
+        $resultadosPorRaza[$raza][] = array_merge($cat->toArray(), ['type' => 'cat']);
     }
 
-    public function raceDetails(Request $request)
-    {
-        $race = $request->input('race', '');
+    return view('pages.search-results', [
+        'query' => $query,
+        'cachorros' => $cachorros->toArray(),
+        'cats' => $cats->toArray(),
+        'resultadosPorRaza' => $resultadosPorRaza,
+        'total_cachorros' => $cachorros->count(),
+        'total_cats' => $cats->count(),
+        'total' => $cachorros->count() + $cats->count()
+    ]);
+}
 
-        $cachorrosDeRaza = Chio::byRaza($race)->get();
+public function autocomplete(Request $request)
+{
+    $query = $request->input('query', '');
 
-        $formattedResults = [];
-        foreach ($cachorrosDeRaza as $cachorro) {
-            $formattedResults[] = [
-                'nombre' => $cachorro->nombre ?? 'Sin nombre',
-                'imagenes' => $cachorro->imagenes ?? [],
-                'enlace' => $cachorro->enlace ?? '#',
-                'descripcion' => $cachorro->descripcion ?? ''
+    if (strlen($query) < 2) {
+        return response()->json([]);
+    }
+
+    $suggestions = [];
+    $razasUniquesChiots = [];
+    $razasUniquesCats = [];
+
+    // Récupérer tous les chiots
+    $cachorros = Chio::all();
+
+    foreach ($cachorros as $cachorro) {
+        $raza = $cachorro->raza;
+
+        // Suggestions par race de chiot
+        if (stripos($raza, $query) !== false && !in_array($raza, $razasUniquesChiots)) {
+            $razasUniquesChiots[] = $raza;
+            $count = Chio::byRaza($raza)->count();
+
+            $suggestions[] = [
+                'type' => 'race_dog',
+                'text' => $raza,
+                'count' => $count,
+                'url' => $this->generateRaceUrlDog($raza),
+                'animal' => 'dog'
             ];
         }
 
-        return response()->json([
-            'race' => $race,
-            'cachorros' => $formattedResults,
-            'count' => $cachorrosDeRaza->count()
-        ]);
+        // Suggestions par nom de chiot
+        if (stripos($cachorro->nombre, $query) !== false) {
+            $suggestions[] = [
+                'type' => 'cachorro',
+                'text' => $cachorro->nombre,
+                'raza' => $cachorro->raza,
+                'imagen' => $cachorro->imagenes[0] ?? '',
+                'url' => $cachorro->enlace ?? '#',
+                'animal' => 'dog'
+            ];
+        }
     }
+
+    // Récupérer tous les chats
+    $cats = Cat::all();
+
+    foreach ($cats as $cat) {
+        $raza = $cat->race;
+
+        // Suggestions par race de chat
+        if (stripos($raza, $query) !== false && !in_array($raza, $razasUniquesCats)) {
+            $razasUniquesCats[] = $raza;
+            
+            // Compter les chats de cette race
+            $count = Cat::where('race', $raza)->count();
+            
+            // Décoder les images
+            $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+            $imagenEjemplo = !empty($images) ? $images[0] : '';
+
+            $suggestions[] = [
+                'type' => 'race_cat',
+                'text' => $raza,
+                'count' => $count,
+                'url' => $this->generateRaceUrlCat($raza),
+                'imagen' => $imagenEjemplo,
+                'animal' => 'cat'
+            ];
+        }
+
+        // Suggestions par nom de chat
+        if (stripos($cat->nom, $query) !== false) {
+            $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+            
+            $suggestions[] = [
+                'type' => 'cat',
+                'text' => $cat->nom,
+                'raza' => $cat->race,
+                'imagen' => !empty($images) ? $images[0] : '',
+                'url' => route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]),
+                'animal' => 'cat'
+            ];
+        }
+    }
+
+    // Trier les suggestions : d'abord les races, puis les noms
+    usort($suggestions, function($a, $b) {
+        $order = ['race_dog', 'race_cat', 'cachorro', 'cat'];
+        $orderA = array_search($a['type'], $order);
+        $orderB = array_search($b['type'], $order);
+        return $orderA - $orderB;
+    });
+
+    $suggestions = array_slice($suggestions, 0, 12);
+
+    return response()->json($suggestions);
+}
+
+public function raceDetails(Request $request)
+{
+    $race = $request->input('race', '');
+    
+    if (empty($race)) {
+        return response()->json(['error' => 'Race non spécifiée'], 400);
+    }
+
+    $cachorros = Chio::byRaza($race)->get();
+    $cats = Cat::where('race', $race)->get();
+
+    $resultats = [];
+
+    foreach ($cachorros as $cachorro) {
+        $resultats[] = [
+            'nombre' => $cachorro->nombre,
+            'imagenes' => $cachorro->imagenes ?? [],
+            'descripcion' => $cachorro->descripcion ?? '',
+            'enlace' => $cachorro->enlace ?? '#',
+            'type' => 'dog'
+        ];
+    }
+
+    foreach ($cats as $cat) {
+        $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+        $resultats[] = [
+            'nombre' => $cat->nom,
+            'imagenes' => $images ?? [],
+            'descripcion' => $cat->description ?? '',
+            'enlace' => route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]),
+            'type' => 'cat'
+        ];
+    }
+
+    return response()->json([
+        'race' => $race,
+        'count' => count($resultats),
+        'animals' => $resultats
+    ]);
+}
+
+private function generateRaceUrlDog($raza)
+{
+    $slug = strtolower(str_replace(' ', '-', $raza));
+    return route('cachorrosraza', ['lang' => app()->getLocale(), 'slug' => $slug]);
+}
+
+private function generateRaceUrlCat($raza)
+{
+    $slug = strtolower(str_replace(' ', '-', $raza));
+    return route('cats.race', ['lang' => app()->getLocale(), 'slug' => $slug]);
+}
+
+  
 }

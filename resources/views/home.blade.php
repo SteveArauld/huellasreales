@@ -245,16 +245,16 @@
                                                             <div data-brz-translate-text="1">
                                                                 <p class="brz-ls-lg-m_1_5 brz-fs-lg-30 brz-fsft-lg-0 brz-fwdth-lg-100 brz-vfw-lg-400 brz-lh-lg-1_4 brz-fw-lg-700 brz-fss-lg-px brz-ft-google brz-ff-comfortaa brz-tp-lg-empty brz-mb-sm-20 brz-text-sm-center brz-mb-lg-20 brz-text-lg-center brz-tp-xs-empty brz-fs-xs-21 brz-fss-xs-px brz-fw-xs-800 brz-ls-xs-0_2 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-css-n6q_n"
                                                                    data-uniq-id="mNydb" data-generated-css="brz-css-p6gmi">
-                                                                    <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppies_sale.by_breed_title') }}</span>
+                                                                    <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('cat_available_by_race') }}</span>
                                                                 </p>
                                                                 <p class="brz-mb-sm-20 brz-text-sm-center brz-mb-lg-20 brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-21 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_4 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_1_5 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-tp-xs-empty brz-fs-xs-29 brz-css-eJi2V"
                                                                    data-uniq-id="dDAPS" data-generated-css="brz-css-qyLjr">
-                                                                    <span class="brz-cp-color1" style="color: rgba(var(--brz-global-color1),1);">{{ __('puppies_sale.small_breeds_title') }}</span>
+                                                                    <span class="brz-cp-color1" style="color: rgba(var(--brz-global-color1),1);">{{ __('cat_available_by_race') }}</span>
                                                                 </p>
                                                                 <p class="brz-mb-sm-20 brz-text-sm-center brz-mb-lg-20 brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-23 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_4 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-tp-xs-empty brz-fs-xs-15 brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_1_5 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-css-wwUsd"
                                                                    data-uniq-id="l93TQ" data-generated-css="brz-css-pE_e9">
                                                                     <strong class="brz-cp-color8 brz-bold-true brz-italic-true" style="color: rgb(255, 255, 255);">
-                                                                        <em>{{ __('puppies_sale.click_image_instruction') }}</em>
+                                                                        <em>{{ __('cat_visit_category') }}</em>
                                                                     </strong>
                                                                 </p>
                                                             </div>
@@ -446,14 +446,14 @@
                                                             <div data-brz-translate-text="1">
                                                                 <p class="brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-23 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_4 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_1_5 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-tp-xs-empty brz-fs-xs-29 brz-css-zpvHh"
                                                                    data-generated-css="brz-css-cruhx" data-uniq-id="gyP_2">
-            <span class="brz-cp-color1" style="color: rgba(var(--brz-global-color1),1); background-color: rgba(255, 255, 255, 0);">
-                {{ __('puppies_sale.medium_large_breeds_title') }}
-            </span>
+                                                        <span class="brz-cp-color1" style="color: rgba(var(--brz-global-color1),1); background-color: rgba(255, 255, 255, 0);">
+                                                            {{ __('puppies_sale.medium_large_breeds_title') }}
+                                                        </span>
                                                                 </p>
                                                                 <p class="brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-23 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_4 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-tp-xs-empty brz-fs-xs-15 brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_1_5 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-css-mL5WD"
                                                                    data-generated-css="brz-css-cNAA0" data-uniq-id="tva7Q">
                                                                     <strong class="brz-bold-true brz-italic-true brz-cp-color8" style="color: rgb(255, 255, 255); background-color: rgba(255, 255, 255, 0);">
-                                                                        <em>{{ __('puppies_sale.click_image_instruction') }}</em>
+                                                                        <em>{{ __('cat_visit_category') }}</em>
                                                                     </strong>
                                                                     <strong class="brz-cp-color1" style="color: rgba(var(--brz-global-color1),1); background-color: rgba(255, 255, 255, 0);"> </strong>
                                                                 </p>
@@ -639,6 +639,248 @@
                                                 </div>
                                             </div>
                                         </section>
+
+
+                                      <section id="tuud1Wd07z5e_tuud1Wd07z5e" class="brz-section brz-css-1b3z3in brz-css-124gpei">
+                <div class="brz-section__content brz-section--fullWidth brz-css-850zcw brz-css-ebnzov"
+                    data-brz-custom-id="yg1ufdDfebwh">
+                    <div class="brz-bg">
+                        <div class="brz-bg-color"></div>
+                        <div class="brz-bg-shape brz-bg-shape__top"></div>
+                        <div class="brz-bg-shape brz-bg-shape__bottom"></div>
+                    </div>
+                    <div class="brz-container brz-css-mlside brz-css-c2jm35">
+                      <div id="" class="brz-css-1r5wefz brz-css-1y4nor9 brz-wrapper">
+                                                        <div
+                                                            class="brz-rich-text brz-rich-text__custom brz-css-pjtswy brz-css-12nfm4"
+                                                            data-brz-custom-id="sejbabqxkxjjzcwwojtzdbtmrufdvkpbrlzh">
+                                                            <div data-brz-translate-text="1">
+                                                                <p class="brz-ls-lg-m_1_5 brz-fs-lg-30 brz-fsft-lg-0 brz-fwdth-lg-100 brz-vfw-lg-400 brz-lh-lg-1_4 brz-fw-lg-700 brz-fss-lg-px brz-ft-google brz-ff-comfortaa brz-tp-lg-empty brz-mb-sm-20 brz-text-sm-center brz-mb-lg-20 brz-text-lg-center brz-tp-xs-empty brz-fs-xs-21 brz-fss-xs-px brz-fw-xs-800 brz-ls-xs-0_2 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-css-n6q_n"
+                                                                   data-uniq-id="mNydb" data-generated-css="brz-css-p6gmi">
+                                                                    <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('cat_available_by_race') }}</span>
+                                                                </p>
+                                                                <p class="brz-mb-sm-20 brz-text-sm-center brz-mb-lg-20 brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-21 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_4 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_1_5 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-tp-xs-empty brz-fs-xs-29 brz-css-eJi2V"
+                                                                   data-uniq-id="dDAPS" data-generated-css="brz-css-qyLjr">
+                                                                    <span class="brz-cp-color1" style="color: rgba(var(--brz-global-color1),1);">{{ __('cat_available_by_race') }}</span>
+                                                                </p>
+                                                                <p class="brz-mb-sm-20 brz-text-sm-center brz-mb-lg-20 brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-23 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_4 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-tp-xs-empty brz-fs-xs-15 brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_1_5 brz-lh-xs-1_4 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-css-wwUsd"
+                                                                   data-uniq-id="l93TQ" data-generated-css="brz-css-pE_e9">
+                                                                    <strong class="brz-cp-color8 brz-bold-true brz-italic-true" style="color: rgb(255, 255, 255);">
+                                                                        <em>{{ __('cat_visit_category') }}</em>
+                                                                    </strong>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+            
+
+                    <div class="breeds-showcase-wrapper" data-brz-custom-id="avGJNi3_4Zpn">
+                        <div class="breeds-showcase">
+                            <div class="breeds-container">
+                                <div class="breeds-grid">
+                                    @foreach($racesUniques as $race)
+                                        @php
+                                            $count = 0;
+                                            $imagenEjemplo = '';
+                                            foreach ($catsCollection as $c) {
+                                                if ($c->race === $race) {
+                                                    $count++;
+                                                    if (empty($imagenEjemplo) && !empty($c->images)) {
+                                                        $images = is_string($c->images) ? json_decode($c->images, true) : $c->images;
+                                                        if (!empty($images[0])) {
+                                                            $imagenEjemplo = $images[0];
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            $slug = strtolower(str_replace(' ', '-', $race));
+                                        @endphp
+
+                                        <div class="breed-card">
+                                            <a href="{{ route('cats.race', ['lang' => app()->getLocale(), 'slug' => $slug]) }}"
+                                               class="breed-link"
+                                               aria-label="{{ __("cat_visit_category") }} {{ $race }}">
+
+                                                <div class="breed-image-wrapper">
+                                                    @if($imagenEjemplo)
+                                                        <img src="{{ asset($imagenEjemplo) }}"
+                                                             alt="{{ $race }}"
+                                                             width="300"
+                                                             height="300"
+                                                             class="breed-image"
+                                                             loading="lazy">
+                                                    @else
+                                                        <div class="breed-image-placeholder">
+                                                            <span>{{ substr($race, 0, 2) }}</span>
+                                                        </div>
+                                                    @endif
+                                                </div>
+
+                                                <h3 class="breed-title">
+                                                    {{ $race }}
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <style>
+                        .breeds-showcase-wrapper {
+                            width: 100%;
+                        }
+
+                        .breeds-showcase {
+                            width: 100%;
+                            padding: 1rem;
+                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+                        }
+
+                        .breeds-container {
+                            max-width: 1400px;
+                            margin: 0 auto;
+                        }
+
+                        .breeds-grid {
+                            display: grid;
+                            gap: 1rem;
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+
+                        .breed-card {
+                            background: white;
+                            border-radius: 12px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                            transition: all 0.3s ease;
+                            height: 100%;
+                            border: 1px solid #f0f0f0;
+                        }
+
+                        .breed-card:hover {
+                            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                        }
+
+                        .breed-link {
+                            text-decoration: none;
+                            color: inherit;
+                            display: block;
+                            height: 100%;
+                        }
+
+                        .breed-image-wrapper {
+                            position: relative;
+                            padding-top: 100%;
+                            overflow: hidden;
+                            background: #f8f8f8;
+                        }
+
+                        .breed-image {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .breed-card:hover .breed-image {
+                            transform: scale(1.05);
+                        }
+
+                        .breed-image-placeholder {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                            color: white;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            text-align: center;
+                            padding: 1rem;
+                        }
+
+                        .breed-title {
+                            margin: 0;
+                            padding: 0.75rem;
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            color: #333;
+                            text-align: center;
+                            background: white;
+                            line-height: 1.4;
+                        }
+
+                        .breed-count {
+                            font-size: 0.8rem;
+                            color: #666;
+                            font-weight: normal;
+                            margin-left: 0.25rem;
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            .breeds-grid {
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 1.5rem;
+                            }
+                            .breeds-showcase {
+                                padding: 2rem;
+                            }
+                            .breed-title {
+                                font-size: 1rem;
+                                padding: 1rem;
+                            }
+                        }
+
+                        @media screen and (min-width: 1024px) {
+                            .breeds-grid {
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 2rem;
+                            }
+                            .breed-title {
+                                font-size: 1.1rem;
+                                padding: 1.25rem;
+                            }
+                        }
+
+                        @media screen and (min-width: 1280px) {
+                            .breeds-grid {
+                                gap: 2.5rem;
+                            }
+                            .breed-title {
+                                font-size: 1.2rem;
+                                padding: 1.5rem;
+                            }
+                        }
+
+                        .breed-link:focus {
+                            outline: 2px solid #0066cc;
+                            outline-offset: 2px;
+                        }
+
+                        @media print {
+                            .breeds-showcase {
+                                padding: 1rem;
+                            }
+                            .breed-card {
+                                box-shadow: none;
+                                border: 1px solid #ddd;
+                                break-inside: avoid;
+                            }
+                        }
+                    </style>
+                </div>
+            </div>
+        </section>
+
 
                                         <section id="vp_h0NAVh_ch_vp_h0NAVh_ch" class="brz-section brz-css-10a0f94 brz-css-q2ez2d">
                                             <div class="brz-section__content brz-section--boxed brz-css-1pdk69m brz-css-1sdthb8"

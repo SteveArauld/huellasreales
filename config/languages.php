@@ -2,9 +2,9 @@
 
 
 return [
-     'en' => 'English',
+    // 'en' => 'English',
      'fr' => 'Français',
      'es' => 'Español',
-     'it' => 'Italiano',
-     'pt' => 'Português',
+    // 'it' => 'Italiano',
+    // 'pt' => 'Português',
 ];

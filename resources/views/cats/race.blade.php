@@ -1,17 +1,14 @@
 @extends('layouts.app')
 
-@section('title', __('Avisos legais'))
+@section('title', __('cat.title'))
 
 @push('styles')
-
-    <title>Cachorro Beagle - Huellas Reales En Venta</title>
+    <title>Chats disponibles à l'adoption</title>
     @include('pages.style')
     @vite(['resources/css/cachorrosraza.css'])
-
 @endpush
 
 @section('content')
-
     <div class="brz brz-root__container brz-reset-all brz-root__container-page">
         @include('layouts.partials.navbar.public')
 
@@ -28,67 +25,77 @@
                     <div id="" class="brz-css-1ulcrds brz-css-3xs40p brz-wrapper">
                         <div class="brz-rich-text brz-rich-text__custom brz-css-vqm1om brz-css-okdzvu"
                              data-brz-custom-id="kDeePsojQlbq">
-                            <div data-brz-translate-text="1"><p data-generated-css="brz-css-jDOhI" data-uniq-id="spodJ"
-                                                                class="brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-46 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_3 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-eWxyk">
-                                    <span style="color: rgba(var(--brz-global-color8),1);" class="brz-cp-color8">Cachorros Disponibles</span>
-                                </p></div>
+                            <div data-brz-translate-text="1">
+                                <p data-generated-css="brz-css-jDOhI" data-uniq-id="spodJ"
+                                   class="brz-text-lg-center brz-tp-lg-empty brz-ff-comfortaa brz-ft-google brz-fs-lg-46 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-m_1_5 brz-lh-lg-1_3 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-eWxyk">
+                                    <span style="color: rgba(var(--brz-global-color8),1);" class="brz-cp-color8">{{ __('cats_available') }}</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
+
                     <div class="dogs-grid-wrapper">
                         <div class="dogs-grid-container">
                             <div class="dogs-grid">
-                                @foreach($cachorros as $cachorro)
+                                @foreach($cats as $cat)
                                     <div class="dog-card">
-                                        <!-- Image du chien -->
                                         <div class="dog-image-wrapper">
-                                            <a href="{{ route('cachorros.show', ['lang' => app()->getLocale(), 'slug' => $cachorro['slug'] ?? '']) }}"
+                                            <a href="{{ route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]) }}"
                                                class="dog-image-link">
-                                                @if(!empty($cachorro['imagenes'][0]))
+                                                @php
+                                                    $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+                                                @endphp
+                                                @if(!empty($images) && count($images) > 0)
                                                     <picture>
-                                                        <source srcset="{{ asset($cachorro['imagenes'][1] ?? $cachorro['imagenes'][0]) }} 1x"
+                                                        <source srcset="{{ asset($images[1] ?? $images[0]) }} 1x"
                                                                 media="(min-width: 992px)">
-                                                        <source srcset="{{ asset($cachorro['imagenes'][2] ?? $cachorro['imagenes'][0]) }} 1x"
+                                                        <source srcset="{{ asset($images[2] ?? $images[0]) }} 1x"
                                                                 media="(min-width: 768px)">
                                                         <img decoding="async"
                                                              class="dog-image"
-                                                             src="{{ asset($cachorro['imagenes'][0]) }}"
+                                                             src="{{ asset($images[0]) }}"
                                                              loading="lazy"
-                                                             alt="{{ $cachorro['nombre'] ?? '' }}"
-                                                             title="{{ $cachorro['nombre'] ?? '' }}">
+                                                             alt="{{ $cat->nom }}"
+                                                             title="{{ $cat->nom }}">
                                                     </picture>
                                                 @else
                                                     <div class="dog-image-placeholder">
-                                                        <span>{{ $cachorro['nombre'][0] ?? '🐕' }}</span>
+                                                        <span>{{ substr($cat->nom, 0, 1) ?? '🐱' }}</span>
                                                     </div>
                                                 @endif
                                             </a>
                                         </div>
 
-                                        <!-- Informations du chien -->
                                         <div class="dog-info">
                                             <h3 class="dog-name">
-                                                <a href="{{ route('cachorros.show', ['lang' => app()->getLocale(), 'slug' => $cachorro['slug'] ?? '']) }}">
-                                                    {{ $cachorro['nombre'] ?? '' }}
+                                                <a href="{{ route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]) }}">
+                                                    {{ $cat->nom }}
                                                 </a>
                                             </h3>
 
                                             <div class="dog-breed">
-                                                <span class="breed-badge">{{ $cachorro['raza'] ?? '' }}</span>
+                                                <span class="breed-badge">{{ $cat->race }}</span>
                                             </div>
 
                                             <div class="dog-features">
+                                                @if($cat->age_mois)
+                                                    <p class="dog-feature-text">
+                                                        <strong>{{ __('age_months') }}:</strong> {{ $cat->age_mois }} mois
+                                                    </p>
+                                                @endif
+                                                @if($cat->sexe)
+                                                    <p class="dog-feature-text">
+                                                        <strong>{{ __('sex') }}:</strong> {{ $cat->sexe == 'male' ? 'Mâle' : 'Femelle' }}
+                                                    </p>
+                                                @endif
                                                 <p class="dog-feature-text">
-                                                    <a href="{{ route('cachorros.show', ['lang' => app()->getLocale(), 'slug' => $cachorro['slug'] ?? '']) }}">
-                                                        <strong>{{ __('puppy.vaccinated_chipped_dewormed') }}</strong>
-                                                    </a>
+                                                    <strong>{{ __('health_status') }}</strong>
                                                 </p>
                                             </div>
 
-                                            <!-- Bouton d'action -->
                                             <a class="dog-details-btn"
-                                               href="{{ route('cachorros.show', ['lang' => app()->getLocale(), 'slug' => $cachorro['slug'] ?? '']) }}">
-
-                                                <span>{{ __('puppy.buy_reserve_now') }}</span>
+                                               href="{{ route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]) }}">
+                                                <span>{{ __('adopt_reserve_now') }}</span>
                                                 <svg class="brz-icon-svg align-[initial] brz-css-s9vtaz brz-css-1d8crnm">
                                                     <use href="/wp-content/plugins/brizy/public/editor-build/prod/editor/icons/glyph/paw.svg#nc_icon"></use>
                                                 </svg>
@@ -98,17 +105,16 @@
                                 @endforeach
                             </div>
 
-                            <!-- Pagination - Vérification pour un tableau -->
-                            @if(is_object($cachorros) && method_exists($cachorros, 'links'))
+                            @if(is_object($cats) && method_exists($cats, 'links'))
                                 <div class="pagination-wrapper">
-                                    {{ $cachorros->links('vendor.pagination.custom') }}
+                                    {{ $cats->links('vendor.pagination.custom') }}
                                 </div>
                             @endif
                         </div>
                     </div>
 
                     <style>
-                        /* Styles de base */
+                        /* Vos styles restent identiques */
                         .dogs-grid-wrapper {
                             width: 100%;
                             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
@@ -120,14 +126,12 @@
                             padding: 1rem;
                         }
 
-                        /* Grille responsive - 2 colonnes sur mobile par défaut */
                         .dogs-grid {
                             display: grid;
                             gap: 1rem;
                             grid-template-columns: repeat(2, 1fr);
                         }
 
-                        /* Cartes */
                         .dog-card {
                             background: white;
                             border-radius: 16px;
@@ -145,10 +149,9 @@
                             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
                         }
 
-                        /* Image */
                         .dog-image-wrapper {
                             position: relative;
-                            padding-top: 100%; /* Ratio carré 1:1 pour uniformité */
+                            padding-top: 100%;
                             overflow: hidden;
                             background: #f8f8f8;
                         }
@@ -173,7 +176,6 @@
                             transform: scale(1.1);
                         }
 
-                        /* Placeholder */
                         .dog-image-placeholder {
                             width: 100%;
                             height: 100%;
@@ -186,7 +188,6 @@
                             font-weight: 600;
                         }
 
-                        /* Informations */
                         .dog-info {
                             padding: 1rem;
                             flex: 1;
@@ -268,58 +269,27 @@
                             min-width: 0;
                         }
 
-                        /* Option avec un dégradé orange si vous préférez */
-                        .dog-details-btn.orange-gradient {
-                            background: linear-gradient(135deg, rgb(251, 139, 67) 0%, rgb(231, 119, 47) 100%);
-                        }
-
-                        /* Option avec une seule couleur */
-                        .dog-details-btn.orange-solid {
-                            background: rgb(251, 139, 67);
-                        }
-
-                        /* Ombre adaptée à la couleur orange */
                         .dog-details-btn:hover {
                             transform: translateY(-2px);
                             box-shadow: 0 6px 16px rgba(251, 139, 67, 0.4);
                         }
 
-                        /* Icône qui ne rétrécit pas */
-                        .btn-icon {
-                            flex-shrink: 0;
-                            width: 18px;
-                            height: 18px;
-                        }
-
-                        /* Mobile */
                         @media screen and (max-width: 640px) {
                             .dog-details-btn {
                                 font-size: 0.7rem;
                                 padding: 0.5rem 0.75rem;
                                 gap: 0.4rem;
                             }
-
-                            .btn-icon {
-                                width: 16px;
-                                height: 16px;
-                            }
                         }
 
-                        /* Très petits mobiles */
                         @media screen and (max-width: 380px) {
                             .dog-details-btn {
                                 font-size: 0.6rem;
                                 padding: 0.4rem 0.6rem;
                                 gap: 0.25rem;
                             }
-
-                            .btn-icon {
-                                width: 14px;
-                                height: 14px;
-                            }
                         }
 
-                        /* Option alternative: passer en colonne sur très petit */
                         @media screen and (max-width: 340px) {
                             .dog-details-btn {
                                 flex-direction: column;
@@ -334,21 +304,11 @@
                             }
                         }
 
-                        .btn-icon {
-                            transition: transform 0.3s ease;
-                        }
-
-                        .dog-details-btn:hover .btn-icon {
-                            transform: translateX(3px);
-                        }
-
-                        /* Pagination */
                         .pagination-wrapper {
                             margin-top: 2.5rem;
                             text-align: center;
                         }
 
-                        /* Tablettes (≥ 768px) */
                         @media screen and (min-width: 768px) {
                             .dogs-grid-container {
                                 padding: 2rem;
@@ -381,7 +341,6 @@
                             }
                         }
 
-                        /* Desktop (≥ 1024px) */
                         @media screen and (min-width: 1024px) {
                             .dogs-grid {
                                 grid-template-columns: repeat(3, 1fr);
@@ -389,7 +348,6 @@
                             }
                         }
 
-                        /* Grands écrans (≥ 1280px) */
                         @media screen and (min-width: 1280px) {
                             .dogs-grid {
                                 grid-template-columns: repeat(4, 1fr);
@@ -401,7 +359,6 @@
                             }
                         }
 
-                        /* Très petits écrans (≤ 360px) */
                         @media screen and (max-width: 360px) {
                             .dogs-grid {
                                 gap: 0.75rem;
@@ -421,7 +378,6 @@
                             }
                         }
 
-                        /* Animations */
                         @keyframes fadeInUp {
                             from {
                                 opacity: 0;
@@ -447,19 +403,16 @@
                         .dog-card:nth-child(7) { animation-delay: 0.7s; }
                         .dog-card:nth-child(8) { animation-delay: 0.8s; }
 
-                        /* Accessibilité */
                         .dog-details-btn:focus,
                         .dog-name a:focus {
                             outline: 2px solid #667eea;
                             outline-offset: 2px;
                         }
 
-                        /* Support pour réduire les animations */
                         @media (prefers-reduced-motion: reduce) {
                             .dog-card,
                             .dog-image,
-                            .dog-details-btn,
-                            .btn-icon {
+                            .dog-details-btn {
                                 animation: none;
                                 transition: none;
                             }
@@ -473,7 +426,6 @@
                             }
                         }
 
-                        /* Impression */
                         @media print {
                             .dogs-grid-container {
                                 padding: 1rem;
@@ -504,8 +456,5 @@
         </section>
 
         @include('layouts.partials.footer.public')
-
     </div>
-
 @endsection
-

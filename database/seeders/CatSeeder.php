@@ -24,6 +24,7 @@ class CatSeeder extends Seeder
         $races = File::directories($this->basePath);
         $cats = [];
         $catId = 1;
+        $existingSlugs = [];
 
         foreach ($races as $racePath) {
             $raceName = $this->formatRaceName(basename($racePath));
@@ -33,18 +34,16 @@ class CatSeeder extends Seeder
             foreach ($catFolders as $catFolder) {
                 $folderName = basename($catFolder);
 
-                if (in_array(strtolower($folderName), ['madres', 'minks', 'adoptados'])) {
-                    continue;
-                }
-
-                $catData = $this->extractCatData($folderName, $raceName, $catId);
-                $images = $this->processImages($catFolder, $catData['slug'], $raceName);
+                // On passe $existingSlugs à extractCatData
+                $catData = $this->extractCatData($folderName, $raceName, $catId, $existingSlugs);
+                $images = $this->processImages($catFolder, $catData['nom'], $raceName);
 
                 if (!empty($images)) {
                     $catData['images'] = json_encode($images);
                     $catData['created_at'] = now();
                     $catData['updated_at'] = now();
                     $cats[] = $catData;
+                    $existingSlugs[] = $catData['slug'];
                     $catId++;
                 }
             }
@@ -62,8 +61,7 @@ class CatSeeder extends Seeder
     private function formatRaceName($folderName)
     {
         $raceMap = [
-            'gatitos azules ruzos' => 'Bleu Russe',
-            'gatitos azules rusos' => 'Bleu Russe',
+            'gatitos azules ruzos' => 'azules ruzos',
             'main coon' => 'Maine Coon',
             'ragdoll' => 'Ragdoll',
             'gatitos british pelo corto' => 'British Shorthair',
@@ -73,7 +71,7 @@ class CatSeeder extends Seeder
         return $raceMap[$key] ?? ucwords($folderName);
     }
 
-    private function extractCatData($folderName, $race, $id)
+    private function extractCatData($folderName, $race, $id, $existingSlugs = [])
     {
         $parts = explode(' ', $folderName);
         $nom = $parts[0];
@@ -85,6 +83,9 @@ class CatSeeder extends Seeder
 
         $sexe = $this->determineSexe($nom);
         $slug = Str::slug($nom . '-' . $id);
+        
+        // S'assurer que le slug est unique
+        $slug = $this->makeUniqueSlug($slug, $existingSlugs);
 
         return [
             'id' => $id,
@@ -148,29 +149,62 @@ class CatSeeder extends Seeder
         );
     }
 
-    private function processImages($catFolder, $slug, $race)
+    private function makeUniqueSlug($slug, $existingSlugs)
+    {
+        $originalSlug = $slug;
+        $counter = 1;
+        
+        while (in_array($slug, $existingSlugs)) {
+            $slug = $originalSlug . '-' . $counter;
+            $counter++;
+        }
+        
+        return $slug;
+    }
+
+    private function processImages($catFolder, $nom, $race)
     {
         $images = [];
         $files = File::files($catFolder);
-
-        $raceSlug = Str::slug($race);
-        $index = 1;
-
+        
+        // Filtrer seulement les images
+        $imageFiles = [];
         foreach ($files as $file) {
             $extension = strtolower($file->getExtension());
-
             if (in_array($extension, ['jpg', 'jpeg', 'png', 'webp', 'heic'])) {
-                $newFileName = "{$slug}-{$index}.{$extension}";
-                $newPath = dirname($file->getPathname()) . '/' . $newFileName;
-
-                if (!File::exists($newPath) || $file->getFilename() !== $newFileName) {
-                    File::move($file->getPathname(), $newPath);
-                }
-
-                $relativePath = $this->webPath . Str::slug($race) . '/' . basename(dirname($file->getPathname())) . '/' . $newFileName;
-                $images[] = $relativePath;
-                $index++;
+                $imageFiles[] = $file;
             }
+        }
+        
+        if (empty($imageFiles)) {
+            return $images;
+        }
+
+        $raceFolder = basename(dirname($catFolder));
+        $catFolderName = basename($catFolder);
+        $nomClean = Str::slug($nom);
+        
+        $index = 1;
+        foreach ($imageFiles as $file) {
+            $extension = strtolower($file->getExtension());
+            
+            // Renommer avec un nom simple: {nom}-{numero}.{extension}
+            $newFileName = "{$nomClean}-{$index}.{$extension}";
+            $newPath = $catFolder . '/' . $newFileName;
+            
+            // Toujours renommer, même si le fichier existe déjà avec un bon nom
+            if (File::exists($newPath) && $newPath !== $file->getPathname()) {
+                File::delete($newPath);
+            }
+            
+            if ($file->getFilename() !== $newFileName) {
+                File::move($file->getPathname(), $newPath);
+            }
+            
+            // Chemin web pour la BD
+            $relativePath = $this->webPath . $raceFolder . '/' . $catFolderName . '/' . $newFileName;
+            $images[] = $relativePath;
+            $index++;
         }
 
         return $images;

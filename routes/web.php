@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CachorroController;
+use App\Http\Controllers\CatController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,9 +27,15 @@ Route::group([ 'prefix' => '{lang}','middleware' => 'setLocale','where' => ['lan
 
         Route::post('/order/{slug}', [CachorroController::class, 'processOrder'])->name('order.process');
 
+
+        Route::post('/orderchat/{slug}', [CatController::class, 'processOrder'])->name('order.processcats');
+
         Route::get('/cachorros-en-venta', [CachorroController::class, 'venta'])->name('venta');
 
-
+     Route::get('/gatos-en-venta', [CatController::class, 'venta'])->name('cats.venta');
+    Route::get('/gatos-disponibles/{slug}', [CatController::class, 'show'])->name('cats.show');
+    Route::get('/gatos-por-raza/{slug}', [CatController::class, 'catsRace'])->name('cats.race');
+    Route::get('/buscar-gatos', [CatController::class, 'search'])->name('cats.search');
 
         Route::get('/quienes-somos', function () {
             return view('pages.quienes');

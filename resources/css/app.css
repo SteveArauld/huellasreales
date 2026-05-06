@@ -8158,22 +8158,16 @@ body.single-product .product_meta .tagged_as {
 }
 
 .brz .brz-css-10jmis2 > .brz-bg > .brz-bg-image {
-    background-size: cover;
-    background-repeat: no-repeat;
-    -webkit-mask-image: none;
-    mask-image: none;
+        background-image: url(/wp-content/uploads/2025/12/whatsapp-image-2025-12-14-at-2-43-35-am-1.webp);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        -webkit-mask-image: none;
+        mask-image: none;
 }
 
-.brz .brz-css-10jmis2 > .brz-bg > .brz-bg-image {
-    background-image: none;
-    filter: none;
-    display: block;
-}
 
-.brz .brz-css-10jmis2 > .brz-bg > .brz-bg-image:after {
-    content: "";
-    background-image: none;
-}
 
 .brz .brz-css-10jmis2 > .brz-bg > .brz-bg-color {
     -webkit-mask-image: none;
@@ -16199,10 +16193,7 @@ body.single-product .product_meta .tagged_as {
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);;
 }
 
-.brz .brz-css-12mcu1p > .brz-bg > .brz-bg-image {
-    background-image: url("/wp-content/uploads/2025/12/whatsapp-image-2025-12-14-at-2-43-35-am-1.webp");
-    background-position: 47% 55%;
-}
+
 
 .brz .brz-css-12mcu1p > .brz-bg > .brz-bg-image:after {
     content: "";
@@ -16233,12 +16224,16 @@ body.single-product .product_meta .tagged_as {
     }
 
     .brz .brz-css-12mcu1p > .brz-bg > .brz-bg-image {
+        background-image: url(/wp-content/uploads/2025/12/whatsapp-image-2025-12-14-at-2-43-35-am-1.webp);
         background-size: cover;
+        background-position: center center;
         background-repeat: no-repeat;
+
         -webkit-mask-image: none;
         mask-image: none;
     }
 
+  
     .brz .brz-css-12mcu1p:hover > .brz-bg > .brz-bg-image {
         background-image: url("/wp-content/uploads/2025/12/whatsapp-image-2025-12-14-at-2-43-35-am-1.webp");
         filter: none;

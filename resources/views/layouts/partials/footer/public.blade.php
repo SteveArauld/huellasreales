@@ -14,7 +14,7 @@
                      width="100">
 
                 <div class="footer-info">
-                    <p><strong>Dulce Mascota SL</strong><br>
+                    <p><strong>Huellas Reales SL</strong><br>
                         NIF : B74839261<br>
                         Registro Núcleo Zoológico : ES320540000287</p>
                 </div>
