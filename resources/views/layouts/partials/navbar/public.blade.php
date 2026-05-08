@@ -499,7 +499,7 @@
                 <a href="{{ route('envio', ['lang' => app()->getLocale()]) }}" class="rmp-menu-item-link menu-link"
                    role="menuitem">{{ __('menu.shipping_link') }}</a>
             </li>
-            <!-- <li id="rmp-menu-item-2613"
+            <li id="rmp-menu-item-2613"
                 class="menu-item menu-item-type-post_type menu-item-object-page rmp-menu-item rmp-menu-top-level-item
 
 {{ request()->routeIs('garantia') ? 'rmp-menu-current-item' : '' }}"
@@ -522,7 +522,7 @@
                 role="none">
                 <a href="{{ route('contacto', ['lang' => app()->getLocale()]) }}" class="rmp-menu-item-link menu-link"
                    role="menuitem">{{ __('menu.contact_link') }}</a>
-            </li> -->
+            </li>
         </ul>
     </div>
 </div>
@@ -619,7 +619,7 @@
                                         {{ __('menu.cats_sale_link') }}
                                     </a>
                                 </li>
-                                <!-- <li class="navbar-menu-item">
+                                <li class="navbar-menu-item">
                                     <a class="navbar-menu-link {{ request()->routeIs('envio') ? 'active' : '' }}"
                                        href="{{ route('envio', ['lang' => app()->getLocale()]) }}">
                                         {{ __('menu.shipping_link') }}
@@ -642,7 +642,7 @@
                                        href="{{ route('contacto', ['lang' => app()->getLocale()]) }}">
                                         {{ __('menu.contact_link') }}
                                     </a>
-                                </li> -->
+                                </li>
                             </ul>
                         </nav>
                     </div>
