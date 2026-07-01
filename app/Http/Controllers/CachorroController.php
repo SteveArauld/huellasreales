@@ -244,47 +244,47 @@ public function autocomplete(Request $request)
         }
     }
 
-    // Récupérer tous les chats
-    $cats = Cat::all();
+    // // Récupérer tous les chats
+    // $cats = Cat::all();
 
-    foreach ($cats as $cat) {
-        $raza = $cat->race;
+    // foreach ($cats as $cat) {
+    //     $raza = $cat->race;
 
-        // Suggestions par race de chat
-        if (stripos($raza, $query) !== false && !in_array($raza, $razasUniquesCats)) {
-            $razasUniquesCats[] = $raza;
+    //     // Suggestions par race de chat
+    //     if (stripos($raza, $query) !== false && !in_array($raza, $razasUniquesCats)) {
+    //         $razasUniquesCats[] = $raza;
             
-            // Compter les chats de cette race
-            $count = Cat::where('race', $raza)->count();
+    //         // Compter les chats de cette race
+    //         $count = Cat::where('race', $raza)->count();
             
-            // Décoder les images
-            $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
-            $imagenEjemplo = !empty($images) ? $images[0] : '';
+    //         // Décoder les images
+    //         $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+    //         $imagenEjemplo = !empty($images) ? $images[0] : '';
 
-            $suggestions[] = [
-                'type' => 'race_cat',
-                'text' => $raza,
-                'count' => $count,
-                'url' => $this->generateRaceUrlCat($raza),
-                'imagen' => $imagenEjemplo,
-                'animal' => 'cat'
-            ];
-        }
+    //         $suggestions[] = [
+    //             'type' => 'race_cat',
+    //             'text' => $raza,
+    //             'count' => $count,
+    //             'url' => $this->generateRaceUrlCat($raza),
+    //             'imagen' => $imagenEjemplo,
+    //             'animal' => 'cat'
+    //         ];
+    //     }
 
-        // Suggestions par nom de chat
-        if (stripos($cat->nom, $query) !== false) {
-            $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+    //     // Suggestions par nom de chat
+    //     if (stripos($cat->nom, $query) !== false) {
+    //         $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
             
-            $suggestions[] = [
-                'type' => 'cat',
-                'text' => $cat->nom,
-                'raza' => $cat->race,
-                'imagen' => !empty($images) ? $images[0] : '',
-                'url' => route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]),
-                'animal' => 'cat'
-            ];
-        }
-    }
+    //         $suggestions[] = [
+    //             'type' => 'cat',
+    //             'text' => $cat->nom,
+    //             'raza' => $cat->race,
+    //             'imagen' => !empty($images) ? $images[0] : '',
+    //             'url' => route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]),
+    //             'animal' => 'cat'
+    //         ];
+    //     }
+    // }
 
     // Trier les suggestions : d'abord les races, puis les noms
     usort($suggestions, function($a, $b) {
@@ -308,7 +308,7 @@ public function raceDetails(Request $request)
     }
 
     $cachorros = Chio::byRaza($race)->get();
-    $cats = Cat::where('race', $race)->get();
+    // $cats = Cat::where('race', $race)->get();
 
     $resultats = [];
 
@@ -322,16 +322,16 @@ public function raceDetails(Request $request)
         ];
     }
 
-    foreach ($cats as $cat) {
-        $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
-        $resultats[] = [
-            'nombre' => $cat->nom,
-            'imagenes' => $images ?? [],
-            'descripcion' => $cat->description ?? '',
-            'enlace' => route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]),
-            'type' => 'cat'
-        ];
-    }
+    // foreach ($cats as $cat) {
+    //     $images = is_string($cat->images) ? json_decode($cat->images, true) : $cat->images;
+    //     $resultats[] = [
+    //         'nombre' => $cat->nom,
+    //         'imagenes' => $images ?? [],
+    //         'descripcion' => $cat->description ?? '',
+    //         'enlace' => route('cats.show', ['lang' => app()->getLocale(), 'slug' => $cat->slug]),
+    //         'type' => 'cat'
+    //     ];
+    // }
 
     return response()->json([
         'race' => $race,
