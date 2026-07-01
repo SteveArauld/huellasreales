@@ -483,14 +483,14 @@
                 <a href="{{ route('venta', ['lang' => app()->getLocale()]) }}" class="rmp-menu-item-link menu-link"
                    role="menuitem">{{ __('menu.puppies_sale_link') }}</a>
             </li>
-            <li id="rmp-menu-item-564-cats"
+            <!-- <li id="rmp-menu-item-564-cats"
                 class="menu-item menu-item-type-post_type menu-item-object-page rmp-menu-item rmp-menu-top-level-item
 
 {{ request()->routeIs('cats.venta') ? 'rmp-menu-current-item' : '' }}"
                 role="none">
                 <a href="{{ route('cats.venta', ['lang' => app()->getLocale()]) }}" class="rmp-menu-item-link menu-link"
                    role="menuitem">{{ __('menu.cats_sale_link') }}</a>
-            </li>
+            </li> -->
             <li id="rmp-menu-item-2614"
                 class="menu-item menu-item-type-post_type menu-item-object-page rmp-menu-item rmp-menu-top-level-item
 
@@ -613,12 +613,12 @@
                                         {{ __('menu.puppies_sale_link') }}
                                     </a>
                                 </li>
-                                <li class="navbar-menu-item">
+                                <!-- <li class="navbar-menu-item">
                                     <a class="navbar-menu-link {{ request()->routeIs('cats.venta') ? 'active' : '' }}"
                                        href="{{ route('cats.venta', ['lang' => app()->getLocale()]) }}">
                                         {{ __('menu.cats_sale_link') }}
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="navbar-menu-item">
                                     <a class="navbar-menu-link {{ request()->routeIs('envio') ? 'active' : '' }}"
                                        href="{{ route('envio', ['lang' => app()->getLocale()]) }}">
@@ -678,12 +678,12 @@
                     {{ __('menu.puppies_sale_link') }}
                 </a>
             </li>
-            <li class="navbar-mobile-menu-item">
+            <!-- <li class="navbar-mobile-menu-item">
                 <a class="navbar-mobile-menu-link {{ request()->routeIs('cats.venta') ? 'active' : '' }}"
                    href="{{ route('cats.venta', ['lang' => app()->getLocale()]) }}">
                     {{ __('menu.cats_sale_link') }}
                 </a>
-            </li>
+            </li> -->
             <li class="navbar-mobile-menu-item">
                 <a class="navbar-mobile-menu-link {{ request()->routeIs('envio') ? 'active' : '' }}"
                    href="{{ route('envio', ['lang' => app()->getLocale()]) }}">

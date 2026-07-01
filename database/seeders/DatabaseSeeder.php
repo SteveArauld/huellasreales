@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RaceSeeder::class,
             ChiosSeeder::class,
-            CatSeeder::class,
+            // CatSeeder::class,
         ]);
     }
 }

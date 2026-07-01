@@ -22,6 +22,8 @@ class CachorroController extends Controller
         
         $cachorrosp = $races->take(6);
         $cachorrosf = $races->skip(6)->take(6);
+
+       // dd($cachorrosp, $cachorrosf);
         
         $catsCollection = Cat::all();
 
@@ -92,24 +94,30 @@ class CachorroController extends Controller
         ]);
     }
     
-    public function venta()
-    {
-        $cachorrosCollection = Chio::all();
+ public function venta()
+{
+    $cachorrosCollection = Chio::all();
 
-        $razasUnicas = $cachorrosCollection
-            ->pluck('raza')
-            ->unique()
-            ->values()
-            ->toArray();
+    // Récupérer les races uniques depuis la table 'races' (le seeder)
+    $razasUnicas = DB::table('races')
+        ->select('slug', 'description', 'imagen')
+        ->get()
+        ->map(function ($raza) {
+            return [
+                'slug' => $raza->slug,
+                'description' => $raza->description,
+                'imagen' => json_decode($raza->imagen, true)
+            ];
+        });
 
-        $cachorrosPaginated = Chio::paginate(36);
+    $cachorrosPaginated = Chio::paginate(36);
 
-        return view('pages.venta', [
-            'cachorros' => $cachorrosPaginated,
-            'razasUnicas' => $razasUnicas,
-            'cachorrosCollection' => $cachorrosCollection
-        ]);
-    }
+    return view('pages.venta', [
+        'cachorros' => $cachorrosPaginated,
+        'razasUnicas' => $razasUnicas,
+        'cachorrosCollection' => $cachorrosCollection
+    ]);
+}
 
     public function processOrder(OrderRequest $request, $lang, $slug)
     {

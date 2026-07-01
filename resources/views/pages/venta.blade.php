@@ -161,48 +161,52 @@
                         <div class="breeds-showcase">
                             <div class="breeds-container">
                                 <div class="breeds-grid">
-                                    @foreach($razasUnicas as $raza)
-                                        @php
-                                            $count = 0;
-                                            $imagenEjemplo = '';
-                                            foreach ($cachorrosCollection as $c) {
-                                                if ($c['raza'] === $raza) {
-                                                    $count++;
-                                                    if (empty($imagenEjemplo) && isset($c['imagenes'][0])) {
-                                                        $imagenEjemplo = $c['imagenes'][0];
-                                                    }
-                                                }
-                                            }
-                                            $slug = strtolower(str_replace(' ', '-', $raza));
-                                        @endphp
+                                 @foreach($razasUnicas as $raza)
+    @php
+        // $raza est maintenant un tableau avec 'slug', 'description', 'imagen'
+        $nombreRaza = $raza['description'];
+        $slug = $raza['slug'];
+        
+        // Compter les chiots de cette race
+        $count = 0;
+        foreach ($cachorrosCollection as $c) {
+            if ($c['raza'] === $nombreRaza) {
+                $count++;
+            }
+        }
+        
+        // Sélectionner une image aléatoire parmi les images Pexels
+        $imagenes = $raza['imagen'];
+        $imagenAleatoria = !empty($imagenes) ? $imagenes[array_rand($imagenes)] : '';
+    @endphp
 
-                                        <div class="breed-card">
-                                            <a href="{{ route('cachorrosraza', ['lang' => app()->getLocale(),'slug' => $slug]) }}"
-                                               class="breed-link"
-                                               aria-label="{{ __("puppies.visit_category") }} {{ $raza }}">
+    <div class="breed-card">
+        <a href="{{ route('cachorrosraza', ['lang' => app()->getLocale(), 'slug' => $slug]) }}"
+           class="breed-link"
+           aria-label="{{ __("puppies.visit_category") }} {{ $nombreRaza }}">
 
-                                                <div class="breed-image-wrapper">
-                                                    @if($imagenEjemplo)
-                                                        <img src="{{ asset($imagenEjemplo) }}"
-                                                             alt="{{ $raza }}"
-                                                             width="300"
-                                                             height="300"
-                                                             class="breed-image"
-                                                             loading="lazy">
-                                                    @else
-                                                        <div class="breed-image-placeholder">
-                                                            <span>{{ $raza }}</span>
-                                                        </div>
-                                                    @endif
-                                                </div>
+            <div class="breed-image-wrapper">
+                @if($imagenAleatoria)
+                    <img src="{{ asset($imagenAleatoria) }}"
+                         alt="{{ $nombreRaza }}"
+                         width="300"
+                         height="300"
+                         class="breed-image"
+                         loading="lazy">
+                @else
+                    <div class="breed-image-placeholder">
+                        <span>{{ $nombreRaza }}</span>
+                    </div>
+                @endif
+            </div>
 
-                                                <h3 class="breed-title">
-                                                    {{ $raza }}
-                                                    <span class="breed-count">({{ $count }})</span>
-                                                </h3>
-                                            </a>
-                                        </div>
-                                    @endforeach
+            <h3 class="breed-title">
+                {{ $nombreRaza }}
+                <span class="breed-count">({{ $count }})</span>
+            </h3>
+        </a>
+    </div>
+@endforeach
                                 </div>
                             </div>
                         </div>
@@ -395,13 +399,13 @@
             </div>
         </section>
 
-        <section id="eXnpICmUHla5_eXnpICmUHla5" class="dogs-showcase-section">
-            <div class="dogs-showcase-container">
-                <!-- En-tête de la section -->
-                <div class="section-header">
-                    <h1 class="section-title">{{ $raza }}</h1>
-                    <p class="section-subtitle">{{ __("puppies.find_perfect_companion") }}</p>
-                </div>
+       <section id="eXnpICmUHla5_eXnpICmUHla5" class="dogs-showcase-section">
+    <div class="dogs-showcase-container">
+        <!-- En-tête de la section -->
+        <div class="section-header">
+            <h1 class="section-title">{{ __("puppies.available_puppies") }}</h1>
+            <p class="section-subtitle">{{ __("puppies.find_perfect_companion") }}</p>
+        </div>
 
                 <!-- Grille des chiens -->
                 <div class="dogs-grid">

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class RaceSeeder extends Seeder
 {
@@ -14,7 +15,10 @@ class RaceSeeder extends Seeder
                 'id' => 1,
                 'slug' => 'cachorro-beagle',
                 'description' => 'Cachorro Beagle',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/beagle-welpen-zu-verkauf-alle-welpen-300x300.jpg']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Beagle/Cachorro_Beagle_01.jpg',
+                    'images_chiens/Cachorro_Beagle/Cachorro_Beagle_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -22,7 +26,10 @@ class RaceSeeder extends Seeder
                 'id' => 2,
                 'slug' => 'cachorro-bichon-frise',
                 'description' => 'Cachorro Bichon Frise',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/bichon-frise-puppies-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Bichon_Frise/Cachorro_Bichon_Frise_01.jpg',
+                    'images_chiens/Cachorro_Bichon_Frise/Cachorro_Bichon_Frise_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -30,7 +37,10 @@ class RaceSeeder extends Seeder
                 'id' => 3,
                 'slug' => 'cachorro-border-collie',
                 'description' => 'Cachorro Border Collie',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/oio.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Border_Collie/Cachorro_Border_Collie_01.jpg',
+                    'images_chiens/Cachorro_Border_Collie/Cachorro_Border_Collie_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -38,7 +48,10 @@ class RaceSeeder extends Seeder
                 'id' => 4,
                 'slug' => 'cachorro-boston-terrier',
                 'description' => 'Cachorro Boston Terrier',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/boster-t-1-bansky-1-296x296x7x0x282x296x1751319054.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Boston_Terrier/Cachorro_Boston_Terrier_01.jpg',
+                    'images_chiens/Cachorro_Boston_Terrier/Cachorro_Boston_Terrier_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -46,7 +59,10 @@ class RaceSeeder extends Seeder
                 'id' => 5,
                 'slug' => 'boxer-cachorro',
                 'description' => 'Cachorro Boxer',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/beast-1-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Boxer/Cachorro_Boxer_01.jpg',
+                    'images_chiens/Cachorro_Boxer/Cachorro_Boxer_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -54,7 +70,10 @@ class RaceSeeder extends Seeder
                 'id' => 6,
                 'slug' => 'cachorro-boyero-de-berna',
                 'description' => 'Cachorro Boyero de Berna',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/koda-1-282x303x0x3x282x296x1717856185.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Boyero_de_Berna/Cachorro_Boyero_de_Berna_01.jpg',
+                    // 'images_chiens/Cachorro_Boyero_de_Berna/Cachorro_Boyero_de_Berna_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -62,7 +81,10 @@ class RaceSeeder extends Seeder
                 'id' => 7,
                 'slug' => 'cachorro-bulldog-frances',
                 'description' => 'Cachorro Bulldog francés',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/fn-new-9-282x351x0x27x282x296x1751253513.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Bulldog_francés/Cachorro_Bulldog_francés_01.jpg',
+                    'images_chiens/Cachorro_Bulldog_francés/Cachorro_Bulldog_francés_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -70,7 +92,10 @@ class RaceSeeder extends Seeder
                 'id' => 8,
                 'slug' => 'cachorro-bulldog-ingles',
                 'description' => 'Cachorro Bulldog inglés',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/ii.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Bulldog_inglés/Cachorro_Bulldog_inglés_01.jpg',
+                    'images_chiens/Cachorro_Bulldog_inglés/Cachorro_Bulldog_inglés_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -78,7 +103,10 @@ class RaceSeeder extends Seeder
                 'id' => 9,
                 'slug' => 'cachorro-cane-corso',
                 'description' => 'Cachorro Cane Corso',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/can.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Cane_Corso/Cachorro_Cane_Corso_01.jpg',
+                    // 'images_chiens/Cachorro_Cane_Corso/Cachorro_Cane_Corso_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -86,7 +114,10 @@ class RaceSeeder extends Seeder
                 'id' => 10,
                 'slug' => 'caniche-cachorro',
                 'description' => 'Cachorro Caniche',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/toy_poodle__lovers-20250627-0044-296x296x9x0x282x296x1751359982.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Caniche/Cachorro_Caniche_01.jpg',
+                    'images_chiens/Cachorro_Caniche/Cachorro_Caniche_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -94,7 +125,10 @@ class RaceSeeder extends Seeder
                 'id' => 11,
                 'slug' => 'chihuahua-cachorro',
                 'description' => 'Cachorro Chihuahua',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/rose1-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Chihuahua/Cachorro_Chihuahua_01.jpg',
+                    'images_chiens/Cachorro_Chihuahua/Cachorro_Chihuahua_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -102,7 +136,10 @@ class RaceSeeder extends Seeder
                 'id' => 12,
                 'slug' => 'cachorro-dachshund',
                 'description' => 'Cachorro Dachshund',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/maisy5-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Dachshund/Cachorro_Dachshund_01.jpg',
+                    'images_chiens/Cachorro_Dachshund/Cachorro_Dachshund_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -110,7 +147,10 @@ class RaceSeeder extends Seeder
                 'id' => 13,
                 'slug' => 'cachorro-de-agua-espanol',
                 'description' => 'Cachorro De agua espanol',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/pixel_thewaterdog-20250814-0009-300x300.webp']),
+                'imagen' => json_encode([
+                    // 'images_chiens/Cachorro_De_agua_espanol/Cachorro_De_agua_espanol_01.jpg',
+                    'images_chiens/Cachorro_De_agua_espanol/Cachorro_De_agua_espanol_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -118,7 +158,10 @@ class RaceSeeder extends Seeder
                 'id' => 14,
                 'slug' => 'cachorro-galgo-espanol',
                 'description' => 'Cachorro Galgo espanol',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/numa-elgalgo-20250815-0001-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Galgo_espanol/Cachorro_Galgo_espanol_01.jpg',
+                    'images_chiens/Cachorro_Galgo_espanol/Cachorro_Galgo_espanol_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -126,7 +169,10 @@ class RaceSeeder extends Seeder
                 'id' => 15,
                 'slug' => 'cachorro-golden-retriever',
                 'description' => 'Cachorro Golden Retriever',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/sergio-male-4-330x296x24x0x282x296x1717854723.webp']),
+                'imagen' => json_encode([
+                    // 'images_chiens/Cachorro_Golden_Retriever/Cachorro_Golden_Retriever_01.jpg',
+                    'images_chiens/Cachorro_Golden_Retriever/Cachorro_Golden_Retriever_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -134,7 +180,10 @@ class RaceSeeder extends Seeder
                 'id' => 16,
                 'slug' => 'cachorro-ibiza-hound',
                 'description' => 'Cachorro Ibiza hound',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/austin-the-beezer-20250815-0007-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Ibiza_hound/Cachorro_Ibiza_hound_01.jpg',
+                    'images_chiens/Cachorro_Ibiza_hound/Cachorro_Ibiza_hound_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -142,7 +191,10 @@ class RaceSeeder extends Seeder
                 'id' => 17,
                 'slug' => 'cachorro-labrador',
                 'description' => 'Cachorro Labrador',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/labrador4-4-296x296x7x0x282x296x1751362269.webp']),
+                'imagen' => json_encode([
+                    // 'images_chiens/Cachorro_Labrador/Cachorro_Labrador_01.jpg',
+                    'images_chiens/Cachorro_Labrador/Cachorro_Labrador_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -150,7 +202,10 @@ class RaceSeeder extends Seeder
                 'id' => 18,
                 'slug' => 'cachorro-maltese',
                 'description' => 'Cachorro Maltese',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/maltese.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Maltese/Cachorro_Maltese_01.jpg',
+                    'images_chiens/Cachorro_Maltese/Cachorro_Maltese_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -158,7 +213,10 @@ class RaceSeeder extends Seeder
                 'id' => 19,
                 'slug' => 'maltipoo-cachorro',
                 'description' => 'Cachorro Maltipoo',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/maltipoo-zelda-6-282x340x0x22x282x296x1751253996.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Maltipoo/Cachorro_Maltipoo_01.jpg',
+                    'images_chiens/Cachorro_Maltipoo/Cachorro_Maltipoo_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -166,7 +224,10 @@ class RaceSeeder extends Seeder
                 'id' => 20,
                 'slug' => 'cachorro-pastor-aleman',
                 'description' => 'Cachorro Pastor alemán',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/german-shepherd-1-282x331x0x17x282x296x1751330528.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Pastor_Aleman/Cachorro_Pastor_Aleman_01.jpg',
+                    'images_chiens/Cachorro_Pastor_Aleman/Cachorro_Pastor_Aleman_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -174,7 +235,10 @@ class RaceSeeder extends Seeder
                 'id' => 21,
                 'slug' => 'pomerania-cachorro',
                 'description' => 'Cachorro Pomerania',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/billy2-18-35-19-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Pomerania/Cachorro_Pomerania_01.jpg',
+                    'images_chiens/Cachorro_Pomerania/Cachorro_Pomerania_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -182,7 +246,10 @@ class RaceSeeder extends Seeder
                 'id' => 22,
                 'slug' => 'cachorro-presa-canario',
                 'description' => 'Cachorro Presa canario',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/chapo_de_earthquake_kennels-20250815-0003-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Presa_canario/Cachorro_Presa_canario_01.jpg',
+                    'images_chiens/Cachorro_Presa_canario/Cachorro_Presa_canario_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -190,7 +257,10 @@ class RaceSeeder extends Seeder
                 'id' => 23,
                 'slug' => 'pug-cachorro',
                 'description' => 'Cachorro Pug',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/rio-300x300.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Pug/Cachorro_Pug_01.jpg',
+                    'images_chiens/Cachorro_Pug/Cachorro_Pug_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -198,47 +268,65 @@ class RaceSeeder extends Seeder
                 'id' => 24,
                 'slug' => 'cachorro-rottweiler',
                 'description' => 'Cachorro Rottweiler',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/rottweilers-22-282x352x0x28x282x296x1751361576.webp']),
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Rottweiler/Cachorro_Rottweiler_01.jpg',
+                    'images_chiens/Cachorro_Rottweiler/Cachorro_Rottweiler_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 25,
-                'slug' => 'cachorro-shiba-inu',
-                'description' => 'Cachorro Shiba Inu',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/shiba-inu-300x300.webp']),
+                'slug' => 'cachorros-goldendoodle',
+                'description' => 'Cachorros Goldendoodle',
+                'imagen' => json_encode([
+                    'images_chiens/Cachorros_Goldendoodle/Cachorros_Goldendoodle_01.jpg',
+                    'images_chiens/Cachorros_Goldendoodle/Cachorros_Goldendoodle_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 26,
-                'slug' => 'cachorro-yorkie',
-                'description' => 'Cachorro Yorkie',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/yorkie-300x300.webp']),
+                'slug' => 'cachorros-pastor-australiano',
+                'description' => 'Cachorros Pastor Australiano',
+                'imagen' => json_encode([
+                    'images_chiens/Cachorros_Pastor_Australiano/Cachorros_Pastor_Australiano_01.jpg',
+                    'images_chiens/Cachorros_Pastor_Australiano/Cachorros_Pastor_Australiano_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 27,
-                'slug' => 'cachorros-goldendoodle',
-                'description' => 'Cachorros Goldendoodle',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/goldendoodle-3-1-282x352x0x28x282x296x1751358336.webp']),
+                'slug' => 'cachorros-pomsky',
+                'description' => 'Cachorros Pomsky',
+                'imagen' => json_encode([
+                    'images_chiens/Cachorros_Pomsky/Cachorros_Pomsky_01.jpg',
+                    'images_chiens/Cachorros_Pomsky/Cachorros_Pomsky_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 28,
-                'slug' => 'cachorros-pastor-australiano',
-                'description' => 'Cachorros Pastor Australiano',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/aussi-d-12-18-296x296x7x0x282x296x1751249897.webp']),
+                'slug' => 'cachorro-yorkie',
+                'description' => 'Cachorro Yorkie',
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Yorkie/Cachorro_Yorkie_01.jpg',
+                    'images_chiens/Cachorro_Yorkie/Cachorro_Yorkie_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
                 'id' => 29,
-                'slug' => 'cachorros-pomsky',
-                'description' => 'Cachorros Pomsky',
-                'imagen' => json_encode(['/wp-content/uploads/2025/08/pomsky1-24-300x300.webp']),
+                'slug' => 'cachorro-dovon',
+                'description' => 'Cachorro Dovon',
+                'imagen' => json_encode([
+                    'images_chiens/Cachorro_Dovon/Cachorro_Dovon_01.jpg',
+                    'images_chiens/Cachorro_Dovon/Cachorro_Dovon_02.jpg'
+                ]),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
