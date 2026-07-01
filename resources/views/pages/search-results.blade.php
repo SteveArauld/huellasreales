@@ -46,7 +46,7 @@
                     @else
                         <div class="no-results">
                             <p>No se encontraron cachorros para "{{ $query }}".</p>
-                            <p>Prueba con otras palabras clave o <a href="{{ route('cachorros.index') }}">ve todos nuestros cachorros</a>.</p>
+                            <p>Prueba con otras palabras clave o <a href="{{ route('cats.venta', ['lang' => app()->getLocale()]) }}">ve todos nuestros cachorros</a>.</p>
                         </div>
                     @endif
                 </div>
