@@ -1,688 +1,610 @@
 @extends('layouts.app')
 
-@section('title', __('legal.title'))
+@section('title', $cachorro['nombre'] . ' — ' . $cachorro['raza'] . ' — Alma de Criador')
 
 @push('styles')
-    @include('pages.style')
-    @vite(['resources/css/contacto.css'])
-    @vite(['resources/css/show.css'])
+<style>
+    /* Toast notification styles */
+    .toast-container {
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        z-index: 9999;
+        max-width: 420px;
+        width: 100%;
+    }
     
-    <style>
-        /* Toast Notification System */
-        .toast-notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            max-width: 380px;
-            width: 100%;
-            animation: slideInRight 0.3s ease-out;
-        }
-        
-        .toast {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            margin-bottom: 12px;
-            overflow: hidden;
-            animation: slideIn 0.3s ease-out;
-            transition: all 0.3s ease;
-        }
-        
-        .toast:hover {
-            transform: translateX(-5px);
-            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.15);
-        }
-        
-        .toast-success {
-            border-left: 4px solid #10b981;
-        }
-        
-        .toast-error {
-            border-left: 4px solid #ef4444;
-        }
-        
-        .toast-warning {
-            border-left: 4px solid #f59e0b;
-        }
-        
-        .toast-info {
-            border-left: 4px solid #3b82f6;
-        }
-        
-        .toast-content {
-            display: flex;
-            align-items: flex-start;
-            padding: 16px;
-            gap: 12px;
-        }
-        
-        .toast-icon {
-            flex-shrink: 0;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        
-        .toast-success .toast-icon {
-            background: #10b981;
-            color: white;
-        }
-        
-        .toast-error .toast-icon {
-            background: #ef4444;
-            color: white;
-        }
-        
-        .toast-warning .toast-icon {
-            background: #f59e0b;
-            color: white;
-        }
-        
-        .toast-info .toast-icon {
-            background: #3b82f6;
-            color: white;
-        }
-        
-        .toast-message {
-            flex: 1;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #1f2937;
-        }
-        
-        .toast-message strong {
-            display: block;
-            margin-bottom: 4px;
-            font-size: 15px;
-        }
-        
-        .toast-close {
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            cursor: pointer;
-            color: #9ca3af;
-            font-size: 18px;
-            line-height: 1;
-            transition: color 0.2s;
-            background: none;
-            border: none;
-            padding: 0;
-        }
-        
-        .toast-close:hover {
-            color: #4b5563;
-        }
-        
-        .toast-progress {
-            height: 3px;
-            background: rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
-        
-        .toast-success .toast-progress-bar {
-            height: 100%;
-            background: #10b981;
-            animation: progress 5s linear forwards;
-        }
-        
-        .toast-error .toast-progress-bar {
-            height: 100%;
-            background: #ef4444;
-            animation: progress 5s linear forwards;
-        }
-        
-        .toast-warning .toast-progress-bar {
-            height: 100%;
-            background: #f59e0b;
-            animation: progress 5s linear forwards;
-        }
-        
-        .toast-info .toast-progress-bar {
-            height: 100%;
-            background: #3b82f6;
-            animation: progress 5s linear forwards;
-        }
-        
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes progress {
-            from {
-                width: 100%;
-            }
-            to {
-                width: 0%;
-            }
-        }
-        
-        /* Animation de sortie */
-        .toast-exit {
-            animation: slideOutRight 0.3s ease-out forwards;
-        }
-        
-        @keyframes slideOutRight {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
-        
-        /* Responsive */
-        @media (max-width: 640px) {
-            .toast-notification {
-                left: 20px;
-                right: 20px;
-                max-width: none;
-                top: 10px;
-            }
-        }
-        
-        /* Style pour les messages d'erreur/succès existants */
-        .alert {
-            display: none;
-        }
-    </style>
+    .toast {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 20px 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        border-left: 4px solid #2d7d46;
+        transform: translateX(120%);
+        transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .toast.show {
+        transform: translateX(0);
+    }
+    
+    .toast-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        background: #e8f5e9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2d7d46;
+    }
+    
+    .toast-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .toast-content {
+        flex: 1;
+    }
+    
+    .toast-title {
+        font-weight: 600;
+        font-size: 16px;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+    }
+    
+    .toast-message {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
+        margin: 0;
+    }
+    
+    .toast-close {
+        flex-shrink: 0;
+        background: none;
+        border: none;
+        color: #999;
+        cursor: pointer;
+        padding: 4px;
+        transition: color 0.2s;
+        margin-top: -4px;
+    }
+    
+    .toast-close:hover {
+        color: #333;
+    }
+    
+    .toast-close svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .toast.error {
+        border-left-color: #d32f2f;
+    }
+    
+    .toast.error .toast-icon {
+        background: #fce4ec;
+        color: #d32f2f;
+    }
+
+    /* Filtres */
+    .filter-btn {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .filter-btn.active {
+        background-color: rgba(167, 139, 112, 0.2) !important;
+        color: #2d2d2d !important;
+        border-color: rgba(167, 139, 112, 0.4) !important;
+    }
+    
+    .filter-btn:not(.active) {
+        background-color: rgba(255, 255, 255, 0.6);
+        color: #2d2d2d;
+    }
+    
+    .filter-btn:not(.active):hover {
+        background-color: rgba(167, 139, 112, 0.1);
+    }
+
+    /* Carte des chiots dans la galerie */
+    .puppy-card {
+        transition: all 0.3s ease;
+    }
+    
+    .puppy-card.hidden {
+        display: none !important;
+    }
+
+    .puppy-card .estado-badge {
+        font-size: 0.55rem;
+        padding: 2px 8px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+
+    .puppy-card .estado-badge.disponible {
+        background-color: #dcfce7;
+        color: #166534;
+    }
+
+    .puppy-card .estado-badge.vendido {
+        background-color: #fee2e2;
+        color: #991b1b;
+    }
+</style>
 @endpush
 
 @section('content')
-    <div class="brz brz-root__container brz-reset-all brz-root__container-page">
-        @include('layouts.partials.navbar.public')
+<main class="flex-1">
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
 
-        <!-- Toast Notification Container -->
-        <div id="toast-container" class="toast-notification"></div>
+    <div class="bg-ivory">
+        <div class="mx-auto max-w-[1200px] px-6 pb-24 pt-16 lg:px-12 lg:pt-24">
+            <a class="text-xs uppercase tracking-[0.2em] text-anthracite link-underline" href="/puppies">← Volver a los cachorros</a>
 
-        <section id="it5ZqxrL_Ma2_it5ZqxrL_Ma2" class="brz-section brz-css-sipr1f brz-css-68nc76">
-            <div class="brz-section__content brz-section--boxed brz-css-gtvn49 brz-css-1b6knpt"
-                 data-brz-custom-id="aOAcKrWLNhRQ">
-                <div class="brz-bg">
-                    <div class="brz-bg-color"></div>
-                    <div class="brz-bg-shape brz-bg-shape__top"></div>
-                    <div class="brz-bg-shape brz-bg-shape__bottom"></div>
-                </div>
-                <div class="brz-container brz-css-1e4tlw1 brz-css-14oksm5">
-                    <div class="brz-row__container brz-css-1aa16mz brz-css-14hdk3x" data-brz-custom-id="eeKmXqpQUhmC">
-                        <div class="brz-row brz-css-130imwm brz-css-1dljn8f brz-css-yxf2as">
-                            <div class="brz-columns brz-css-1tudti1 brz-css-mrd97t" data-brz-custom-id="i5Bdv_KWJQO1">
-                                <div class="brz-bg">
-                                    <div class="brz-bg-color"></div>
-                                </div>
-                                <div class="brz-column__items brz-css-15wp8cn brz-css-1b8kqaj">
-                                    <div id="" class="brz-css-1n92flo brz-css-7w9e5w brz-wrapper">
-                                        <div
-                                            class="brz-woo-gallery brz-woo-gallery__style-bottom brz-woo-gallery__thumbsTB-4 brz-css-pvawtk brz-css-ajfdo7"
-                                            data-brz-custom-id="dBUz1CUEQA8r">
-                                            <div style="min-height:20px">
-                                                <div
-                                                    class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
-                                                    data-columns="4"
-                                                    style="opacity: 1; transition: opacity 0.25s ease-in-out;">
-                                                    <div class="woocommerce-product-gallery__wrapper">
-                                                        @if(isset($cachorro['imagenes']) && count($cachorro['imagenes']) > 0)
-                                                            @php
-                                                                $imagen = $cachorro['imagenes'][0];
-                                                            @endphp
-                                                            <div
-                                                                data-thumb="{{ $imagen }}"
-                                                                data-thumb-alt="{{ $cachorro['nombre'] }}"
-                                                                class="woocommerce-product-gallery__image">
-                                                                <a href="{{ $imagen }}">
-                                                                    <img fetchpriority="high" decoding="async" width="600"
-                                                                         height="750"
-                                                                         src="{{ asset($imagen )}}"
-                                                                         class="wp-post-image"
-                                                                         alt="{{ $cachorro['nombre'] }}"
-                                                                         data-caption=""
-                                                                         data-src="{{ $imagen }}"
-                                                                         data-large_image="{{ $imagen }}"
-                                                                         data-large_image_width="1440"
-                                                                         data-large_image_height="1800">
-                                                                </a>
-                                                            </div>
-                                                        @endif
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="brz-columns brz-css-1tudti1 brz-css-10rxgm3" data-brz-custom-id="anpMKj3HsVbt">
-                                <div class="brz-column__items brz-css-15wp8cn brz-css-un9e4">
-                                    <div class="brz-row__container brz-css-1aa16mz brz-css-2zyr03"
-                                         data-brz-custom-id="kd5c0zJpEdPT">
-                                        <div
-                                            class="brz-row brz-row--inner brz-css-130imwm brz-css-1dljn8f brz-css-1c6a61b">
-                                            <div class="brz-columns brz-css-1tudti1 brz-css-k1gtjn"
-                                                 data-brz-custom-id="pjhPMyd3RlHH">
-                                                <div class="brz-column__items brz-css-15wp8cn brz-css-18xlmya">
-                                                    <div id="" class="brz-css-1n92flo brz-css-1pqcon3 brz-wrapper">
-                                                        <div class="brz-wp-title brz-css-1rol6nx brz-css-mp3a22"
-                                                             data-brz-custom-id="pGwixYbJ7dm0">
-                                            <span class="brz-wp-title-content" style="min-height:20px">
-                                                {{ $cachorro['nombre'] }}
-                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div id="" class="brz-css-1n92flo brz-css-10cs28o brz-wrapper">
-                                                        <div
-                                                            class="brz-rich-text brz-rich-text__custom brz-css-1bs9p3o brz-css-1pkl4oo"
-                                                            data-brz-custom-id="m5clm0D6FiOm">
-                                                            <div data-brz-translate-text="1">
-                                                                <p class="brz-text-lg-center brz-fs-xs-15 brz-tp-xs-empty brz-lh-sm-1_6 brz-lh-xs-1_6 brz-fs-sm-15 brz-fw-sm-400 brz-fw-xs-400 brz-ls-sm-1 brz-ls-xs-1 brz-fss-xs-px brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0_5 brz-lh-lg-1_9 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-css-oq1rJ"
-                                                                   data-generated-css="brz-css-kkHiT"
-                                                                   data-uniq-id="eR5BA">
-                                                                    <strong style="color: rgba(var(--brz-global-color8),1);"
-                                                                            class="brz-cp-color8 brz-bold-true">
-                                                                        <span class="text-population">{{ $cachorro['raza'] }}</span>
-                                                                    </strong>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id="" class="brz-css-1n92flo brz-css-sswmq1 brz-wrapper">
-                                        <div class="brz-rich-text brz-rich-text__custom brz-css-1bs9p3o brz-css-17wlqkq"
-                                             data-brz-custom-id="crAU5vTCZvwz">
-                                            <div data-brz-translate-text="1">
-                                                <p class="brz-fsft-lg-0 brz-fwdth-lg-100 brz-vfw-lg-400 brz-lh-lg-1_9 brz-ls-lg-0 brz-fw-lg-700 brz-fss-lg-px brz-fs-lg-29 brz-ft-google brz-ff-overpass brz-tp-lg-empty brz-css-xeT9R"
-                                                   data-generated-css="brz-css-nXLKN" data-uniq-id="xa77w">
-                                                    <br>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id="" class="brz-css-1n92flo brz-css-19gweml brz-wrapper">
-                                        <div class="brz-rich-text brz-rich-text__custom brz-css-1bs9p3o brz-css-jaj7pv"
-                                             data-brz-custom-id="hL189v1oSp0b">
-                                            <div data-brz-translate-text="1">
-                                                <p class="brz-fsft-xs-0 brz-fwdth-xs-100 brz-vfw-xs-400 brz-lh-xs-1_6 brz-ls-xs-0 brz-fss-xs-px brz-fs-xs-17 brz-tp-xs-empty brz-lh-sm-1_6 brz-fs-sm-15 brz-ls-sm-0 brz-fw-sm-400 brz-text-lg-center brz-fw-xs-700 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-0 brz-lh-lg-1_9 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-tp-lg-empty brz-ff-lexend_deca brz-ft-google brz-fs-lg-33 brz-css-aG9Ig"
-                                                   data-generated-css="brz-css-fjiJh" data-uniq-id="oaOgJ">
-                                                    <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.your_new_companion') }}</span>
-                                                </p>
-                                                <p class="brz-fsft-xs-0 brz-fwdth-xs-100 brz-vfw-xs-400 brz-lh-xs-1_6 brz-ls-xs-0 brz-fss-xs-px brz-fs-xs-17 brz-tp-xs-empty brz-lh-sm-1_6 brz-fs-sm-15 brz-ls-sm-0 brz-fw-sm-400 brz-text-lg-center brz-fw-xs-700 brz-fss-lg-px brz-fw-lg-700 brz-ls-lg-0 brz-lh-lg-1_9 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-tp-lg-empty brz-ff-lexend_deca brz-ft-google brz-fs-lg-25 brz-css-nE9UG"
-                                                   data-generated-css="brz-css-xMiDC" data-uniq-id="bU7BQ">
-                                                    <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.lovely_healthy_puppies') }}</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="brz-row__container brz-css-1aa16mz brz-css-1j8mmoq"
-                                         data-brz-custom-id="tObSr1_0MUB2">
-                                        <div class="brz-row brz-row--inner brz-css-130imwm brz-css-1y6hlbz">
-                                            <div class="brz-columns brz-css-1tudti1 brz-css-48xqbe"
-                                                 data-brz-custom-id="fhIkEN3wkSyE">
-                                                <div class="brz-rich-text brz-rich-text__custom brz-css-1bs9p3o brz-css-bf2q95" data-brz-custom-id="nF0ZU4R7cL0G"><div data-brz-translate-text="1">
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-pnPlD" data-generated-css="brz-css-u8bjl" data-uniq-id="c1zgK">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.imagine_this_puppy') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-nIUdy" data-generated-css="brz-css-rf3wZ" data-uniq-id="op5Pa">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.imagine_your_new_puppy') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-qVJbk" data-generated-css="brz-css-z0icP" data-uniq-id="hHpzQ"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-dqfZX" data-generated-css="brz-css-kuPTw" data-uniq-id="fF5dA">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.why_best_option') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-nD3LB" data-generated-css="brz-css-egOjF" data-uniq-id="c92l_"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-lrhaW" data-generated-css="brz-css-oVZlj" data-uniq-id="ga6Od">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.impeccable_health') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-eU1yZ" data-generated-css="brz-css-ivz4Q" data-uniq-id="rGxy2"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-r44qf" data-generated-css="brz-css-fXWjQ" data-uniq-id="eFlA3">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.ethical_breeder') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-lz4G8" data-generated-css="brz-css-nrCAO" data-uniq-id="iuyXn"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-uOWUb" data-generated-css="brz-css-tUXwT" data-uniq-id="lyxCl">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.welcome_package') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-x5keW" data-generated-css="brz-css-iCdzr" data-uniq-id="tKNqD"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-clb3F" data-generated-css="brz-css-gKXQn" data-uniq-id="sHXup">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.permanent_support') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-kWp1x" data-generated-css="brz-css-hZV2k" data-uniq-id="u2Ton"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-wuT0O" data-generated-css="brz-css-cGvOf" data-uniq-id="o4z_U">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.reserve_today') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-bl15U" data-generated-css="brz-css-rz5Zc" data-uniq-id="gQYGb"><br></p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-wLFO4" data-generated-css="brz-css-wx2yB" data-uniq-id="tbu0h">
-                                                        <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.ready_to_meet') }}</span>
-                                                    </p>
-                                                    <p class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-css-mg5Ph" data-generated-css="brz-css-kth7j" data-uniq-id="gY1Cb"><br></p>
-                                                    <ul>
-                                                        <li class="brz-text-xs-center brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-20 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0 brz-lh-lg-1_5 brz-vfw-lg-400 brz-fwdth-lg-100 brz-fsft-lg-0 brz-bcp-color8 brz-css-movgR" data-generated-css="brz-css-cyPLo" data-uniq-id="kNkMj" style="color: rgba(var(--brz-global-color8),1);">
-                                                            <span class="brz-cp-color8" style="color: rgba(var(--brz-global-color8),1);">{{ __('puppy.hurry_message') }}</span>
-                                                        </li>
-                                                    </ul>
-                                                </div></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Filtres pour les autres chiots de la même race -->
+            @if(isset($otrosCachorros) && count($otrosCachorros) > 0)
+            <div class="mt-6">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="text-sm text-anthracite-soft">Otros cachorros de la misma raza:</span>
+                    <div class="flex flex-wrap gap-2" id="filterButtons">
+                        <button type="button" class="filter-btn active inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.16em] ring-1 backdrop-blur-sm transition-colors bg-sage/20 text-anthracite ring-sage/40" data-filter="all" onclick="filterPuppies('all')">
+                            Todos ({{ count($otrosCachorros) }})
+                        </button>
+                        <button type="button" class="filter-btn inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.16em] ring-1 backdrop-blur-sm transition-colors bg-white/60 text-anthracite ring-black/5 hover:bg-sage/10" data-filter="hembra" onclick="filterPuppies('hembra')">
+                            Hembras
+                        </button>
+                        <button type="button" class="filter-btn inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.16em] ring-1 backdrop-blur-sm transition-colors bg-white/60 text-anthracite ring-black/5 hover:bg-sage/10" data-filter="macho" onclick="filterPuppies('macho')">
+                            Machos
+                        </button>
+                        <button type="button" class="filter-btn inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs uppercase tracking-[0.16em] ring-1 backdrop-blur-sm transition-colors bg-white/60 text-anthracite ring-black/5 hover:bg-sage/10" data-filter="disponible" onclick="filterPuppies('disponible')">
+                            Disponibles
+                        </button>
                     </div>
+                </div>
+                
+                <!-- Galerie des autres chiots de la même race -->
+                <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5" id="puppiesGallery">
+                    @foreach($otrosCachorros as $otro)
+                    @php
+                        $sexo = stripos($otro['nombre'], 'Hembra') !== false ? 'hembra' : (stripos($otro['nombre'], 'Macho') !== false ? 'macho' : '');
+                        $estado = (stripos($otro['nombre'], 'VENDID') !== false || stripos($otro['nombre'], 'VENDIDO') !== false) ? 'vendido' : 'disponible';
+                        $estadoLabel = $estado === 'disponible' ? 'Disponible' : 'Vendido';
+                        $estadoClass = $estado === 'disponible' ? 'disponible' : 'vendido';
+                    @endphp
+                    <a href="{{ route('cachorros.show', ['slug' => $otro['slug']]) }}" 
+                       class="puppy-card group block transition-transform hover:scale-105"
+                       data-sexo="{{ $sexo }}"
+                       data-estado="{{ $estado }}">
+                        <div class="overflow-hidden rounded-[8px] bg-white shadow-[0_4px_12px_-8px_rgba(0,0,0,0.15)] ring-1 ring-black/5 relative">
+                            @if($estado === 'vendido')
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center z-10">
+                                <span class="text-white font-bold text-xs uppercase tracking-widest bg-black/60 px-3 py-1 rounded">Vendido</span>
+                            </div>
+                            @endif
+                            <img 
+                                src="{{ $otro['imagenes'][0] ?? asset('assets/images/default-puppy.jpg') }}" 
+                                alt="{{ $otro['nombre'] }}" 
+                                loading="lazy"
+                                class="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                onerror="this.src='{{ asset('assets/images/default-puppy.jpg') }}'"
+                            >
+                        </div>
+                        <div class="mt-2 text-center">
+                            <p class="text-xs font-serif text-anthracite truncate">{{ $otro['nombre'] }}</p>
+                            <p class="text-[0.55rem] text-anthracite-soft">
+                                @if($sexo === 'hembra')
+                                    Hembra
+                                @elseif($sexo === 'macho')
+                                    Macho
+                                @endif
+                                <span class="estado-badge {{ $estadoClass }}">{{ $estadoLabel }}</span>
+                            </p>
+                        </div>
+                    </a>
+                    @endforeach
                 </div>
             </div>
-        </section>
-        
-        <section id="u3we0xmGreV9_u3we0xmGreV9" class="brz-section brz-css-u04mp6 brz-css-1ne98t4">
-            <div class="brz-section__content brz-section--boxed brz-css-1ymvyj5 brz-css-14g43d3"
-                 data-brz-custom-id="qO7RT3JZnOCi">
-                <div class="brz-container brz-css-xjz3jo brz-css-1xm1g2s">
-                    <div id="" class="brz-css-1vsnqqu brz-css-1bixs69 brz-wrapper">
-                        <div class="brz-rich-text brz-rich-text__custom brz-css-51enc6 brz-css-1szqbc"
-                             data-brz-custom-id="wKZuGpNVt3b_">
-                            <div data-brz-translate-text="1">
-                                <p class="brz-fs-xs-13 brz-tp-xs-empty brz-lh-xs-1_6 brz-ls-xs-0 brz-fw-xs-400 brz-fss-xs-px brz-lh-sm-1_6 brz-fs-sm-15 brz-fw-sm-400 brz-ls-sm-1 brz-tp-lg-empty brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-16 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0_5 brz-lh-lg-1 brz-text-lg-center brz-css-kzg83"
-                                   data-generated-css="brz-css-rL7Kb" data-uniq-id="lbQbf"><br></p>
-                                <h3 class="brz-tp-lg-heading3 brz-lh-sm-1_6 brz-fs-sm-15 brz-fw-sm-400 brz-ls-sm-1 brz-ff-barlow_semi_condensed brz-ft-google brz-fs-lg-16 brz-fss-lg-px brz-fw-lg-400 brz-ls-lg-0_5 brz-lh-lg-1 brz-text-lg-center brz-fss-xs-px brz-fw-xs-700 brz-ls-xs-m_0_5 brz-lh-xs-1_3 brz-vfw-xs-400 brz-fwdth-xs-100 brz-fsft-xs-0 brz-tp-xs-empty brz-fs-xs-21 brz-css-lNEEo"
-                                    data-generated-css="brz-css-rvAvK" data-uniq-id="yQQUS">
-                                    <span style="color: rgb(0, 116, 249);">{{ __('order.fill_data_to_buy') }}</span>
-                                </h3>
-                            </div>
-                        </div>
+            @endif
+
+            <div class="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+                <!-- Colonne gauche - Informations du chiot -->
+                <div>
+                    <!-- Image du chiot -->
+                    <div class="overflow-hidden rounded-[4px] mb-8">
+                        <img
+                            src="{{ $cachorro['imagenes'][0] ?? asset('assets/images/default-puppy.jpg') }}"
+                            alt="{{ $cachorro['nombre'] }}"
+                            class="w-full aspect-[4/3] object-cover"
+                            onerror="this.src='{{ asset('assets/images/default-puppy.jpg') }}'">
                     </div>
 
-                    {{-- Messages de succès/erreur cachés pour être affichés en toast --}}
-                    @if(session('success'))
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                showToast('success', '✓ {{ __('order.success_title') }}', '{{ session('success') }}');
-                            });
-                        </script>
-                    @endif
+                    <p class="eyebrow">Cachorro {{ $cachorro['raza'] }}</p>
+                    <h1 class="mt-4 font-serif text-[clamp(2rem,4vw,3.2rem)] leading-[1.05] text-anthracite">
+                        {{ $cachorro['nombre'] }}
+                        <span class="italic">
+                            @if(stripos($cachorro['nombre'], 'Hembra') !== false)
+                            – Hembra
+                            @elseif(stripos($cachorro['nombre'], 'Macho') !== false)
+                            – Macho
+                            @endif
+                        </span>
+                    </h1>
 
-                    @if($errors->any())
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                @foreach($errors->all() as $error)
-                                    showToast('error', '⚠️ {{ __('order.error_title') }}', '{{ addslashes($error) }}');
-                                @endforeach
-                            });
-                        </script>
-                    @endif
+                    <p class="mt-3 text-sm text-anthracite-soft">
+                        {{ stripos($cachorro['nombre'], 'Hembra') !== false ? 'Hembra' : (stripos($cachorro['nombre'], 'Macho') !== false ? 'Macho' : '') }}
+                        · Consultar
+                    </p>
 
-                    <div id="" class="brz-css-1vsnqqu brz-css-p42jaw brz-wrapper">
-                        <div class="brz-wp-shortcode brz-css-12qir1d brz-css-1rlewbp" data-brz-custom-id="oHrDkq3AQq0_">
-                            <div>
-                                <form id="order-form" method="POST" action="{{ route('order.process', ['lang' => app()->getLocale(),  'slug' => __($cachorro['slug']) ]) }}"
-                                      class="wpforms-container wpforms-container-full wpforms-render-modern">
+                    <div class="mt-8 space-y-5 text-anthracite-soft">
+                        <p class="font-serif text-lg text-anthracite italic">Su nuevo compañero</p>
+                        <p>{{ $cachorro['descripcion'] ?? 'Cachorro encantador y sano. ¡Imagine a este cachorro alegrando su hogar!' }}</p>
+                        <p>Imagine a su nuevo cachorro corriendo a saludarle, moviendo la cola de emoción. Este cachorro es perfecto para familias, paseos o apartamentos acogedores, listo para llenar su vida de amor. Criados con esmero durante más de 15 años, nuestras camadas exclusivas se distinguen por su salud, temperamento y belleza. ¡Solo quedan unos pocos este mes!</p>
+                    </div>
+
+                    <div class="mt-10 border-t border-hairline pt-8">
+                        <h2 class="font-serif text-xl text-anthracite">¿Por qué somos su mejor opción?</h2>
+                        <ul class="mt-5 space-y-3 text-sm text-anthracite-soft">
+                            <li><strong class="text-anthracite">Salud impecable:</strong> Vacunados, desparasitados, con microchip, certificado veterinario y 2 años de garantía genética.</li>
+                            <li><strong class="text-anthracite">Criador ético:</strong> Miembro de la RSCE, pedigrí oficial, linaje verificado.</li>
+                            <li><strong class="text-anthracite">Pack de bienvenida:</strong> Pienso premium (1 semana), manta con olor materno, juguete y guías de cuidados.</li>
+                            <li><strong class="text-anthracite">Apoyo permanente:</strong> Llamada posparto, apoyo de por vida y asistencia para la reubicación.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Colonne droite - Formulaire de réservation -->
+                <div>
+                    <p class="eyebrow">Reserve a su cachorro hoy mismo</p>
+                    <h2 class="mt-4 font-serif text-[clamp(1.6rem,2.8vw,2.4rem)] leading-tight text-anthracite">
+                        Rellene sus datos para <span class="italic">comprar el cachorro</span>
+                    </h2>
+                    <p class="mt-4 text-anthracite-soft">¿Listo para conocer a su nuevo cachorro? Rellene nuestro formulario gratuito (¡solo 2 minutos!) para obtener fotos y videos exclusivos. 5% de descuento por pago total.</p>
+
+                    <div class="mt-10">
+                        <div class="rounded-xl border text-card-foreground overflow-hidden border-hairline bg-white shadow-[0_10px_40px_-20px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
+                            <div class="flex flex-col space-y-1.5 bg-ivory-deep/50 p-6 lg:p-8">
+                                <div class="font-semibold tracking-tight font-serif text-xl text-anthracite">
+                                    Reservar a {{ $cachorro['nombre'] }}
+                                </div>
+                                <div class="text-sm text-anthracite-soft">Rellene el formulario y le contactaremos por WhatsApp o email.</div>
+                            </div>
+
+                            <div class="p-6 lg:p-8">
+                                <form action="{{ route('process.order') }}" method="POST" class="grid gap-5" id="orderForm">
                                     @csrf
 
-                                    <div class="wpforms-field-container">
-                                        {{-- Nombre completo --}}
-                                        <div id="nombre-container" class="wpforms-field wpforms-field-text" data-field-type="text">
-                                            <label class="wpforms-field-label" for="nombre">
-                                                {{ __('order.full_name') }}
-                                                <span class="wpforms-required-label" aria-hidden="true">*</span>
-                                            </label>
-                                            <input type="text" id="nombre" class=""
-                                                   name="nombre" value="{{ old('nombre') }}" required>
+                                    <input type="hidden" name="language" value="es">
+
+                                    <div class="grid gap-5 md:grid-cols-2">
+                                        <!-- Nom complet -->
+                                        <div class="space-y-2">
+                                            <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="fullName">Nombre completo *</label>
+                                            <input
+                                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('fullName') border-red-500 @enderror"
+                                                id="fullName"
+                                                placeholder="Su nombre completo"
+                                                required
+                                                name="fullName"
+                                                value="{{ old('fullName') }}">
+                                            @error('fullName')
+                                            <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
 
-                                        {{-- Raza del cachorro --}}
-                                        <div id="raza_cachorro-container" class="wpforms-field wpforms-field-text" data-field-type="text">
-                                            <label class="wpforms-field-label" for="raza_cachorro">
-                                                {{ __('order.puppy_breed') }}
-                                                <span class="wpforms-required-label" aria-hidden="true">*</span>
-                                            </label>
-                                            <input type="text" id="raza_cachorro" class=""
-                                                   name="raza_cachorro" value="{{ $cachorro['raza'] }}" required readonly>
+                                        <!-- Raza -->
+                                        <div class="space-y-2">
+                                            <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="breed">Raza del cachorro *</label>
+                                            <input
+                                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                                id="breed"
+                                                required
+                                                value="{{ $cachorro['raza'] }}"
+                                                name="breed"
+                                                readonly>
                                         </div>
 
-                                        {{-- Nombre del cachorro --}}
-                                        <div id="nombre_cachorro-container" class="wpforms-field wpforms-field-text" data-field-type="text">
-                                            <label class="wpforms-field-label" for="nombre_cachorro">
-                                                {{ __('order.puppy_name') }}
-                                                <span class="wpforms-required-label" aria-hidden="true">*</span>
-                                            </label>
-                                            <input type="text" id="nombre_cachorro" class=""
-                                                   name="nombre_cachorro" value="{{ old('nombre_cachorro', $cachorro['nombre']) }}" required>
+                                        <!-- Nom du chiot -->
+                                        <div class="space-y-2">
+                                            <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="puppyName">Nombre del cachorro *</label>
+                                            <input
+                                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                                id="puppyName"
+                                                required
+                                                value="{{ $cachorro['nombre'] }}"
+                                                name="puppyName"
+                                                readonly>
                                         </div>
 
-                                        {{-- Email --}}
-                                        <div id="email-container" class="wpforms-field wpforms-field-email" data-field-type="email">
-                                            <label class="wpforms-field-label" for="email">
-                                                {{ __('order.email') }}
-                                                <span class="wpforms-required-label" aria-hidden="true">*</span>
-                                            </label>
-                                            <input type="email" id="email" class=""
-                                                   name="email" value="{{ old('email') }}" required>
+                                        <!-- Email -->
+                                        <div class="space-y-2">
+                                            <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="email">Email *</label>
+                                            <input
+                                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('email') border-red-500 @enderror"
+                                                id="email"
+                                                placeholder="hola@email.com"
+                                                required
+                                                type="email"
+                                                name="email"
+                                                value="{{ old('email') }}">
+                                            @error('email')
+                                            <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
 
-                                        {{-- WhatsApp --}}
-                                        <div id="whatsapp-container" class="wpforms-field wpforms-field-number" data-field-type="number">
-                                            <label class="wpforms-field-label" for="whatsapp">
-                                                {{ __('order.whatsapp_number') }}
-                                                <span class="wpforms-required-label" aria-hidden="true">*</span>
-                                            </label>
-                                            <input type="tel" id="whatsapp" class=""
-                                                   name="whatsapp" value="{{ old('whatsapp') }}" required>
+                                        <!-- WhatsApp -->
+                                        <div class="space-y-2">
+                                            <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="whatsapp">WhatsApp *</label>
+                                            <input
+                                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('whatsapp') border-red-500 @enderror"
+                                                id="whatsapp"
+                                                placeholder="+34 600 000 000"
+                                                required
+                                                type="tel"
+                                                name="whatsapp"
+                                                value="{{ old('whatsapp') }}">
+                                            @error('whatsapp')
+                                            <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
 
-                                        {{-- Ciudad --}}
-                                        <div id="ciudad-container" class="wpforms-field wpforms-field-text" data-field-type="text">
-                                            <label class="wpforms-field-label" for="ciudad">
-                                                {{ __('order.city_region') }}
-                                                <span class="wpforms-required-label" aria-hidden="true">*</span>
-                                            </label>
-                                            <input type="text" id="ciudad" class=""
-                                                   name="ciudad" value="{{ old('ciudad') }}" required>
+                                        <!-- Ville -->
+                                        <div class="space-y-2">
+                                            <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="city">Ciudad / Región *</label>
+                                            <input
+                                                class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('city') border-red-500 @enderror"
+                                                id="city"
+                                                placeholder="Su ciudad o provincia"
+                                                required
+                                                name="city"
+                                                value="{{ old('city') }}">
+                                            @error('city')
+                                            <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                            @enderror
                                         </div>
-
-                                        {{-- Comentario --}}
-                                        <div id="comentario-container" class="wpforms-field wpforms-field-textarea" data-field-type="textarea">
-                                            <label class="wpforms-field-label" for="comentario">
-                                                {{ __('order.comment') }}
-                                            </label>
-                                            <textarea id="comentario" class=""
-                                                      name="comentario">{{ old('comentario') }}</textarea>
-                                        </div>
-
-                                        {{-- Champs cachés pour référence --}}
-                                        <input type="hidden" name="slug_cachorro" value="{{ __($cachorro['slug'])  }}">
-                                        <input type="hidden" name="imagen_cachorro" value="{{ !empty($cachorro['imagenes']) ? $cachorro['imagenes'][0] : '' }}">
                                     </div>
 
-                                    <div class="wpforms-submit-container">
-                                        <button type="submit" class="wpforms-submit" id="submit-order">
-                                            {{ __('order.submit_order') }}
-                                        </button>
-                                        <div id="loading-spinner" style="display: none; text-align: center; margin-top: 10px;">
-                                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMyIgY3k9IjEzIiByPSIxMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjE1LDIwIiBzdHJva2UtbGluZWNhcD0icm91bmQiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDEzIDEzIiB0bz0iMzYwIDEzIDEzIiBkdXI9IjFzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIvPjwvY2lyY2xlPjwvc3ZnPgo="
-                                                 alt="{{ __('common.loading') }}" width="26" height="26">
-                                            <p>{{ __('order.processing') }}</p>
-                                        </div>
+                                    <!-- Message -->
+                                    <div class="space-y-2">
+                                        <label class="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 eyebrow text-xs" for="message">Mensaje</label>
+                                        <textarea
+                                            class="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('message') border-red-500 @enderror"
+                                            id="message"
+                                            name="message"
+                                            rows="4"
+                                            placeholder="Cuéntenos un poco sobre su hogar y su familia…">{{ old('message') }}</textarea>
+                                        @error('message')
+                                        <p class="text-xs text-red-500 mt-1">{{ $message }}</p>
+                                        @enderror
                                     </div>
+
+                                    <button
+                                        class="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-2 btn-primary h-12 w-full gap-2 text-xs uppercase tracking-[0.12em]"
+                                        type="submit"
+                                        id="submitBtn">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true">
+                                            <path d="M12 11c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"></path>
+                                            <ellipse cx="5.8" cy="9" rx="1.8" ry="2.3"></ellipse>
+                                            <ellipse cx="10.2" cy="5.5" rx="1.8" ry="2.3"></ellipse>
+                                            <ellipse cx="13.8" cy="5.5" rx="1.8" ry="2.3"></ellipse>
+                                            <ellipse cx="18.2" cy="9" rx="1.8" ry="2.3"></ellipse>
+                                        </svg>
+                                        Enviar pedido
+                                    </button>
+
+                                    <p class="text-center text-xs text-muted-ink">Al enviar acepta nuestra política de privacidad. No compartimos sus datos.</p>
                                 </form>
-
-                                {{-- JavaScript pour les toasts --}}
-                                <script>
-                                    // Fonction pour afficher les toasts
-                                    function showToast(type, title, message) {
-                                        const container = document.getElementById('toast-container');
-                                        if (!container) return;
-                                        
-                                        const toastId = 'toast_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-                                        
-                                        const icons = {
-                                            success: '✓',
-                                            error: '✗',
-                                            warning: '⚠',
-                                            info: 'ℹ'
-                                        };
-                                        
-                                        const titles = {
-                                            success: title || '{{ __("order.success_title") }}',
-                                            error: title || '{{ __("order.error_title") }}',
-                                            warning: title || '{{ __("order.warning_title") }}',
-                                            info: title || '{{ __("order.info_title") }}'
-                                        };
-                                        
-                                        const toast = document.createElement('div');
-                                        toast.className = `toast toast-${type}`;
-                                        toast.id = toastId;
-                                        toast.innerHTML = `
-                                            <div class="toast-content">
-                                                <div class="toast-icon">${icons[type]}</div>
-                                                <div class="toast-message">
-                                                    <strong>${titles[type]}</strong>
-                                                    <span>${message}</span>
-                                                </div>
-                                                <button class="toast-close" onclick="closeToast('${toastId}')">×</button>
-                                            </div>
-                                            <div class="toast-progress">
-                                                <div class="toast-progress-bar"></div>
-                                            </div>
-                                        `;
-                                        
-                                        container.appendChild(toast);
-                                        
-                                        // Auto-close après 5 secondes
-                                        setTimeout(() => {
-                                            closeToast(toastId);
-                                        }, 5000);
-                                    }
-                                    
-                                    // Fonction pour fermer un toast
-                                    function closeToast(toastId) {
-                                        const toast = document.getElementById(toastId);
-                                        if (toast) {
-                                            toast.classList.add('toast-exit');
-                                            setTimeout(() => {
-                                                if (toast && toast.parentNode) {
-                                                    toast.remove();
-                                                }
-                                            }, 300);
-                                        }
-                                    }
-                                    
-                                    // Validation côté client avec toasts
-                                    document.addEventListener('DOMContentLoaded', function() {
-                                        const form = document.getElementById('order-form');
-                                        const emailInput = document.getElementById('email');
-                                        const whatsappInput = document.getElementById('whatsapp');
-                                        const nombreInput = document.getElementById('nombre');
-                                        const ciudadInput = document.getElementById('ciudad');
-                                        
-                                        // Supprimer les anciens messages d'erreur inline
-                                        const errorSpans = document.querySelectorAll('.error-message');
-                                        errorSpans.forEach(span => span.remove());
-                                        
-                                        // Validation email
-                                        if (emailInput) {
-                                            emailInput.addEventListener('blur', function() {
-                                                const email = this.value;
-                                                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                                
-                                                if (email && !emailRegex.test(email)) {
-                                                    this.style.borderColor = 'red';
-                                                    showToast('error', '{{ __("validation.email_invalid_title") }}', '{{ __("validation.valid_email") }}');
-                                                } else {
-                                                    this.style.borderColor = '';
-                                                }
-                                            });
-                                        }
-                                        
-                                        // Validation whatsapp (au moins 9 chiffres)
-                                        if (whatsappInput) {
-                                            whatsappInput.addEventListener('blur', function() {
-                                                const whatsapp = this.value.replace(/\D/g, '');
-                                                if (whatsapp && whatsapp.length < 9) {
-                                                    this.style.borderColor = 'red';
-                                                    showToast('warning', '{{ __("validation.whatsapp_invalid_title") }}', '{{ __("validation.whatsapp_min_digits") }}');
-                                                } else {
-                                                    this.style.borderColor = '';
-                                                }
-                                            });
-                                        }
-                                        
-                                        // Validation formulaire avant soumission
-                                        if (form) {
-                                            form.addEventListener('submit', function(e) {
-                                                let hasError = false;
-                                                
-                                                // Vérifier les champs requis
-                                                const requiredFields = ['nombre', 'email', 'whatsapp', 'ciudad', 'nombre_cachorro', 'raza_cachorro'];
-                                                requiredFields.forEach(fieldId => {
-                                                    const field = document.getElementById(fieldId);
-                                                    if (field && !field.value.trim()) {
-                                                        field.style.borderColor = 'red';
-                                                        hasError = true;
-                                                    } else if (field) {
-                                                        field.style.borderColor = '';
-                                                    }
-                                                });
-                                                
-                                                // Vérifier email
-                                                if (emailInput && emailInput.value) {
-                                                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                                    if (!emailRegex.test(emailInput.value)) {
-                                                        emailInput.style.borderColor = 'red';
-                                                        hasError = true;
-                                                        showToast('error', '{{ __("validation.email_invalid_title") }}', '{{ __("validation.valid_email") }}');
-                                                    }
-                                                }
-                                                
-                                                if (hasError) {
-                                                    e.preventDefault();
-                                                    showToast('error', '{{ __("validation.form_incomplete_title") }}', '{{ __("validation.fill_required_fields") }}');
-                                                    return false;
-                                                }
-                                                
-                                                // Afficher le spinner
-                                                const submitBtn = document.getElementById('submit-order');
-                                                const loadingSpinner = document.getElementById('loading-spinner');
-                                                if (submitBtn && loadingSpinner) {
-                                                    submitBtn.disabled = true;
-                                                    submitBtn.innerHTML = '{{ __('order.sending') }}';
-                                                    loadingSpinner.style.display = 'block';
-                                                }
-                                            });
-                                        }
-                                    });
-                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        @include('layouts.partials.footer.public')
+        </div>
     </div>
+</main>
 @endsection
+
+@push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toastContainer = document.getElementById('toastContainer');
+    let toastTimer = null;
+
+    function showToast(title, message, type = 'success') {
+        const existingToasts = toastContainer.querySelectorAll('.toast');
+        existingToasts.forEach(toast => toast.remove());
+
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+            <div class="toast-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    ${type === 'success' ? `
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    ` : `
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    `}
+                </svg>
+            </div>
+            <div class="toast-content">
+                <div class="toast-title">${title}</div>
+                <p class="toast-message">${message}</p>
+            </div>
+            <button class="toast-close" aria-label="Fermer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        `;
+
+        const closeBtn = toast.querySelector('.toast-close');
+        closeBtn.addEventListener('click', function() {
+            hideToast(toast);
+        });
+
+        toastContainer.appendChild(toast);
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 50);
+
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => {
+            hideToast(toast);
+        }, 6000);
+    }
+
+    function hideToast(toast) {
+        toast.classList.remove('show');
+        clearTimeout(toastTimer);
+        setTimeout(() => {
+            if (toast.parentNode) {
+                toast.remove();
+            }
+        }, 500);
+    }
+
+    // Gestion du formulaire
+    const form = document.getElementById('orderForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const action = this.action;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Envoi en cours...';
+
+            fetch(action, {
+                method: 'POST',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showToast(
+                        '✅ ¡Mensaje enviado con éxito!',
+                        'Le contactaremos en las próximas 24 horas para responder a su consulta.',
+                        'success'
+                    );
+                    form.reset();
+                } else {
+                    showToast(
+                        '❌ Error al enviar',
+                        data.message || 'Ha ocurrido un error. Por favor, inténtelo de nuevo.',
+                        'error'
+                    );
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showToast(
+                    '❌ Error de conexión',
+                    'No se pudo enviar el mensaje. Verifique su conexión y vuelva a intentarlo.',
+                    'error'
+                );
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true">
+                        <path d="M12 11c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"></path>
+                        <ellipse cx="5.8" cy="9" rx="1.8" ry="2.3"></ellipse>
+                        <ellipse cx="10.2" cy="5.5" rx="1.8" ry="2.3"></ellipse>
+                        <ellipse cx="13.8" cy="5.5" rx="1.8" ry="2.3"></ellipse>
+                        <ellipse cx="18.2" cy="9" rx="1.8" ry="2.3"></ellipse>
+                    </svg>
+                    Enviar pedido
+                `;
+            });
+        });
+    }
+
+    // Fonction de filtrage des chiots dans la galerie
+    window.filterPuppies = function(filter) {
+        const cards = document.querySelectorAll('.puppy-card');
+        const btns = document.querySelectorAll('.filter-btn');
+        
+        // Mettre à jour les boutons
+        btns.forEach(btn => {
+            btn.classList.remove('active', 'bg-sage/20', 'text-anthracite', 'ring-sage/40');
+            btn.classList.add('bg-white/60', 'ring-black/5');
+            
+            if (btn.dataset.filter === filter) {
+                btn.classList.add('active', 'bg-sage/20', 'text-anthracite', 'ring-sage/40');
+                btn.classList.remove('bg-white/60', 'ring-black/5');
+            }
+        });
+        
+        // Filtrer les cartes
+        let visibleCount = 0;
+        cards.forEach(card => {
+            const sexo = card.dataset.sexo;
+            const estado = card.dataset.estado;
+            
+            let show = false;
+            
+            if (filter === 'all') {
+                show = true;
+            } else if (filter === 'hembra' && sexo === 'hembra') {
+                show = true;
+            } else if (filter === 'macho' && sexo === 'macho') {
+                show = true;
+            } else if (filter === 'disponible' && estado === 'disponible') {
+                show = true;
+            }
+            
+            if (show) {
+                card.classList.remove('hidden');
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        
+        // Mettre à jour le compteur
+        const filterBtnAll = document.querySelector('.filter-btn[data-filter="all"]');
+        if (filterBtnAll) {
+            filterBtnAll.textContent = `Todos (${visibleCount})`;
+        }
+        
+        // Message "Aucun résultat"
+        const gallery = document.getElementById('puppiesGallery');
+        let noResults = gallery.querySelector('.no-results');
+        
+        if (visibleCount === 0) {
+            if (!noResults) {
+                const msg = document.createElement('p');
+                msg.className = 'no-results col-span-full text-center text-anthracite-soft py-8 text-sm';
+                msg.textContent = 'No hay cachorros que coincidan con este filtro.';
+                gallery.appendChild(msg);
+            }
+        } else if (noResults) {
+            noResults.remove();
+        }
+    };
+});
+</script>
+@endpush

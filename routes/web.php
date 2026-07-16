@@ -3,12 +3,10 @@
 use App\Http\Controllers\CachorroController;
 use App\Http\Controllers\CatController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EmailController;
 use Illuminate\Support\Facades\Route;
 
-// Redirection automatique vers la langue par défaut
-Route::get('/', function () {
-    return redirect(config('app.locale'));
-});
+
 
 
 
@@ -16,67 +14,67 @@ Route::get('/search', [CachorroController::class, 'search'])->name('search');
 Route::get('/search/autocomplete', [CachorroController::class, 'autocomplete'])->name('search.autocomplete');
 Route::get('/search/race-details', [CachorroController::class, 'raceDetails'])->name('search.race-details');
 
-Route::group([ 'prefix' => '{lang}','middleware' => 'setLocale','where' => ['lang' => implode('|', array_keys(config('languages')))],],
-    function () {
-
-        Route::get('/', [CachorroController::class, 'home'])->name('home');
-
-        Route::get('/cachorros-disponibles/{slug}', [CachorroController::class, 'show'])->name('cachorros.show');
-
-        Route::get('/cachorrosraza/{slug}', [CachorroController::class, 'cachorrosraza'])->name('cachorrosraza');
-
-        Route::post('/order/{slug}', [CachorroController::class, 'processOrder'])->name('order.process');
 
 
-        Route::post('/orderchat/{slug}', [CatController::class, 'processOrder'])->name('order.processcats');
-
-        Route::get('/cachorros-en-venta', [CachorroController::class, 'venta'])->name('venta');
-
-     Route::get('/gatos-en-venta', [CatController::class, 'venta'])->name('cats.venta');
-    Route::get('/gatos-disponibles/{slug}', [CatController::class, 'show'])->name('cats.show');
-    Route::get('/gatos-por-raza/{slug}', [CatController::class, 'catsRace'])->name('cats.race');
-    Route::get('/buscar-gatos', [CatController::class, 'search'])->name('cats.search');
-
-        Route::get('/quienes-somos', function () {
-            return view('pages.quienes');
-        })->name('quienes');
+Route::get('/', [CachorroController::class, 'home'])->name('home');
 
 
-        Route::get('/envio-de-cachorros', function () {
-            return view('pages.envio');
-        })->name('envio');
-
-        Route::get('/garantia-sanitaria', function () {
-            return view('pages.garantia');
-        })->name('garantia');
-
-        Route::get('/referencias', function () {
-            return view('pages.referencias');
-        })->name('referencias');
-
-        Route::get('/contacto', function () {
-            return view('pages.contacto');
-        })->name('contacto');
+// Dans routes/web.php
+Route::post('/puppies/reserve/{slug}', [CachorroController::class, 'reserve'])->name('puppies.reserve');
 
 
 
-        Route::get('/politica-de-privacidad', function () {
-            return view('pages.privacidad');
-        })->name('privacidad');
 
-        Route::get('/politica-de-devoluciones', function () {
-            return view('pages.devoluciones');
-        })->name('devoluciones');
+// Dans routes/web.php
+Route::post('/contact-form', [EmailController::class, 'sendContactForm'])->name('contact.form');
+Route::post('/process-order', [EmailController::class, 'processOrder'])->name('process.order');
 
-        Route::get('/politica-de-cookies', function () {
-            return view('pages.cookies');
-        })->name('cookies');
+
+Route::post('/notify-admin', [EmailController::class, 'notifyAdmin']);
+
+
+
+Route::post('/order/{slug}', [CachorroController::class, 'processOrder'])->name('order.process');
+
+
+Route::get('/breeds/{slug}', [CachorroController::class, 'cachorrosraza'])->name('cachorrosraza');
+
+Route::get('/cachorros-disponibles/{slug}', [CachorroController::class, 'show'])->name('cachorros.show');
+
+
+
+
+Route::get('/puppies', [CachorroController::class, 'puppies'])->name('puppies');
+
+Route::get('/entrega', [CatController::class, 'entrega'])->name('entrega');
+
+
+Route::get('/garantia', [CatController::class, 'garantia'])->name('garantia');
+
+Route::get('/testimonials', [CatController::class, 'testimonials'])->name('testimonials');
+Route::get('/buscar-gatos', [CatController::class, 'search'])->name('cats.search');
+
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');
 
 
 
 
 
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
+Route::get('/process', function () {
+    return view('pages.process');
+})->name('process');
+
+Route::get('/referencias', function () {
+    return view('pages.referencias');
+})->name('referencias');
 
 
-    }
-);
+
+
+

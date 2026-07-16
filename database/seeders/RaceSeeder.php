@@ -13,7 +13,7 @@ class RaceSeeder extends Seeder
         $races = [
             [
                 'id' => 1,
-                'slug' => 'cachorro-beagle',
+                'slug' => 'beagle',
                 'description' => 'Cachorro Beagle',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Beagle/Cachorro_Beagle_01.jpg',
@@ -24,7 +24,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'slug' => 'cachorro-bichon-frise',
+                'slug' => 'bichon-frise',
                 'description' => 'Cachorro Bichon Frise',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Bichon_Frise/Cachorro_Bichon_Frise_01.jpg',
@@ -35,7 +35,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 3,
-                'slug' => 'cachorro-border-collie',
+                'slug' => 'border-collie',
                 'description' => 'Cachorro Border Collie',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Border_Collie/Cachorro_Border_Collie_01.jpg',
@@ -46,7 +46,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 4,
-                'slug' => 'cachorro-boston-terrier',
+                'slug' => 'boston-terrier',
                 'description' => 'Cachorro Boston Terrier',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Boston_Terrier/Cachorro_Boston_Terrier_01.jpg',
@@ -57,7 +57,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 5,
-                'slug' => 'boxer-cachorro',
+                'slug' => 'boxer',
                 'description' => 'Cachorro Boxer',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Boxer/Cachorro_Boxer_01.jpg',
@@ -68,7 +68,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 6,
-                'slug' => 'cachorro-boyero-de-berna',
+                'slug' => 'boyero-de-berna',
                 'description' => 'Cachorro Boyero de Berna',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Boyero_de_Berna/Cachorro_Boyero_de_Berna_01.jpg',
@@ -79,7 +79,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 7,
-                'slug' => 'cachorro-bulldog-frances',
+                'slug' => 'bulldog-frances',
                 'description' => 'Cachorro Bulldog francés',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Bulldog_francés/Cachorro_Bulldog_francés_01.jpg',
@@ -90,7 +90,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 8,
-                'slug' => 'cachorro-bulldog-ingles',
+                'slug' => 'bulldog-ingles',
                 'description' => 'Cachorro Bulldog inglés',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Bulldog_inglés/Cachorro_Bulldog_inglés_01.jpg',
@@ -101,7 +101,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 9,
-                'slug' => 'cachorro-cane-corso',
+                'slug' => 'cane-corso',
                 'description' => 'Cachorro Cane Corso',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Cane_Corso/Cachorro_Cane_Corso_01.jpg',
@@ -112,7 +112,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 10,
-                'slug' => 'caniche-cachorro',
+                'slug' => 'caniche',
                 'description' => 'Cachorro Caniche',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Caniche/Cachorro_Caniche_01.jpg',
@@ -123,7 +123,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 11,
-                'slug' => 'chihuahua-cachorro',
+                'slug' => 'chihuahua',
                 'description' => 'Cachorro Chihuahua',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Chihuahua/Cachorro_Chihuahua_01.jpg',
@@ -134,7 +134,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 12,
-                'slug' => 'cachorro-dachshund',
+                'slug' => 'dachshund',
                 'description' => 'Cachorro Dachshund',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Dachshund/Cachorro_Dachshund_01.jpg',
@@ -145,7 +145,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 13,
-                'slug' => 'cachorro-de-agua-espanol',
+                'slug' => 'de-agua-espanol',
                 'description' => 'Cachorro De agua espanol',
                 'imagen' => json_encode([
                     // 'images_chiens/Cachorro_De_agua_espanol/Cachorro_De_agua_espanol_01.jpg',
@@ -156,7 +156,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 14,
-                'slug' => 'cachorro-galgo-espanol',
+                'slug' => 'galgo-espanol',
                 'description' => 'Cachorro Galgo espanol',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Galgo_espanol/Cachorro_Galgo_espanol_01.jpg',
@@ -167,7 +167,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 15,
-                'slug' => 'cachorro-golden-retriever',
+                'slug' => 'golden-retriever',
                 'description' => 'Cachorro Golden Retriever',
                 'imagen' => json_encode([
                     // 'images_chiens/Cachorro_Golden_Retriever/Cachorro_Golden_Retriever_01.jpg',
@@ -178,7 +178,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 16,
-                'slug' => 'cachorro-ibiza-hound',
+                'slug' => 'ibiza-hound',
                 'description' => 'Cachorro Ibiza hound',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Ibiza_hound/Cachorro_Ibiza_hound_01.jpg',
@@ -189,7 +189,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 17,
-                'slug' => 'cachorro-labrador',
+                'slug' => 'labrador',
                 'description' => 'Cachorro Labrador',
                 'imagen' => json_encode([
                     // 'images_chiens/Cachorro_Labrador/Cachorro_Labrador_01.jpg',
@@ -200,7 +200,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 18,
-                'slug' => 'cachorro-maltese',
+                'slug' => 'maltese',
                 'description' => 'Cachorro Maltese',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Maltese/Cachorro_Maltese_01.jpg',
@@ -211,7 +211,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 19,
-                'slug' => 'maltipoo-cachorro',
+                'slug' => 'maltipoo',
                 'description' => 'Cachorro Maltipoo',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Maltipoo/Cachorro_Maltipoo_01.jpg',
@@ -222,7 +222,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 20,
-                'slug' => 'cachorro-pastor-aleman',
+                'slug' => 'pastor-aleman',
                 'description' => 'Cachorro Pastor alemán',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Pastor_Aleman/Cachorro_Pastor_Aleman_01.jpg',
@@ -233,7 +233,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 21,
-                'slug' => 'pomerania-cachorro',
+                'slug' => 'pomerania',
                 'description' => 'Cachorro Pomerania',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Pomerania/Cachorro_Pomerania_01.jpg',
@@ -244,7 +244,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 22,
-                'slug' => 'cachorro-presa-canario',
+                'slug' => 'presa-canario',
                 'description' => 'Cachorro Presa canario',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Presa_canario/Cachorro_Presa_canario_01.jpg',
@@ -255,7 +255,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 23,
-                'slug' => 'pug-cachorro',
+                'slug' => 'pug',
                 'description' => 'Cachorro Pug',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Pug/Cachorro_Pug_01.jpg',
@@ -266,7 +266,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 24,
-                'slug' => 'cachorro-rottweiler',
+                'slug' => 'rottweiler',
                 'description' => 'Cachorro Rottweiler',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Rottweiler/Cachorro_Rottweiler_01.jpg',
@@ -310,7 +310,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 28,
-                'slug' => 'cachorro-yorkie',
+                'slug' => 'yorkie',
                 'description' => 'Cachorro Yorkie',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Yorkie/Cachorro_Yorkie_01.jpg',
@@ -321,7 +321,7 @@ class RaceSeeder extends Seeder
             ],
             [
                 'id' => 29,
-                'slug' => 'cachorro-dovon',
+                'slug' => 'dovon',
                 'description' => 'Cachorro Dovon',
                 'imagen' => json_encode([
                     'images_chiens/Cachorro_Dovon/Cachorro_Dovon_01.jpg',

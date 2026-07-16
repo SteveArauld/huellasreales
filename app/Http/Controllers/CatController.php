@@ -29,6 +29,12 @@ class CatController extends Controller
             'catsCollection' => $catsCollection
         ]);
     }
+    public function entrega()
+    {
+
+
+        return view('pages.entrega');
+    }
 
     public function show($lang, $slug)
     {
@@ -39,6 +45,12 @@ class CatController extends Controller
         }
 
         return view('cats.show', compact('cat'));
+    }
+    public function garantia()
+    {
+
+
+        return view('pages.garantia');
     }
 
     public function catsRace($lang, $slug)
@@ -70,6 +82,11 @@ class CatController extends Controller
             'cats' => $catsFiltrados,
             'race' => $raceParaMostrar
         ]);
+    }
+    public function testimonials()
+    {
+     
+        return view('pages.testimonials');
     }
 
     public function search(Request $request)

@@ -4,7 +4,7 @@ return [
         'id' => 1,
         'nombre' => 'Ann- miniatura Hembra',
         'slug' => 'ann-miniatura-hembra',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche miniatura hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/ann-6-350x350x0x43x350x263x1764681342.webp',
@@ -16,7 +16,7 @@ return [
         'id' => 2,
         'nombre' => 'Lila – Miniatura Hembra',
         'slug' => 'lila-miniatura-hembra',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche miniatura hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/lila-3-350x437x0x86x350x263x1764681208.webp',
@@ -28,7 +28,7 @@ return [
         'id' => 3,
         'nombre' => 'Kenny- miniatura Macho',
         'slug' => 'kenny-miniatura-macho',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche miniatura macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/kenny-4-350x350x0x43x350x263x1764681101.webp',
@@ -40,7 +40,7 @@ return [
         'id' => 4,
         'nombre' => 'Cynthia – estándar Hembra',
         'slug' => 'cynthia-estandar-hembra',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche estándar hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/cynthia-1-350x437x0x86x350x263x1764680928.webp',
@@ -52,7 +52,7 @@ return [
         'id' => 5,
         'nombre' => 'Kattie – Hembra',
         'slug' => 'kattie-hembra',
-        'raza' => 'Cachorro Dachshund',
+        'raza' => 'Dachshund',
         'descripcion' => 'Cachorro Dachshund hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/taksa_best_irisson-20250911-0007-350x350x0x43x350x263x1764678215.webp',
@@ -64,7 +64,7 @@ return [
         'id' => 6,
         'nombre' => 'Jokic – Macho',
         'slug' => 'jokic-macho',
-        'raza' => 'Cachorro Boyero de Berna',
+        'raza' => 'Boyero de Berna',
         'descripcion' => 'Cachorro Boyero de Berna macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/jokic-12-e1764594189680-350x298x0x17x350x263x1764594189.webp',
@@ -76,7 +76,7 @@ return [
         'id' => 7,
         'nombre' => 'Herman- Macho',
         'slug' => 'herman-macho',
-        'raza' => 'Cachorro Boyero de Berna',
+        'raza' => 'Boyero de Berna',
         'descripcion' => 'Cachorro Boyero de Berna macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/herman-7-350x437x0x86x350x263x1764587960.webp',
@@ -88,7 +88,7 @@ return [
         'id' => 8,
         'nombre' => 'Sam – Macho',
         'slug' => 'sam-macho',
-        'raza' => 'Cachorro Dachshund',
+        'raza' => 'Dachshund',
         'descripcion' => 'Cachorro Dachshund macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/sam-4-350x350x0x43x350x263x1764678008.webp',
@@ -100,7 +100,7 @@ return [
         'id' => 9,
         'nombre' => 'Barbie – TOY Hembra',
         'slug' => 'barbie-toy-hembra',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche TOY hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-2-12-39-am-1-350x263x0x0x350x263x1762133578.webp',
@@ -112,7 +112,7 @@ return [
         'id' => 10,
         'nombre' => 'Wendy- Hembra',
         'slug' => 'wendy-hembra',
-        'raza' => 'Cachorro Yorkie',
+        'raza' => 'Yorkie',
         'descripcion' => 'Cachorro Yorkie hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/wagginbuddieslitter-20250914-0010-e1757888282819-361x263x5x0x350x263x1757888283.webp',
@@ -124,7 +124,7 @@ return [
         'id' => 11,
         'nombre' => 'waggin- Macho',
         'slug' => 'waggin-macho',
-        'raza' => 'Cachorro Yorkie',
+        'raza' => 'Yorkie',
         'descripcion' => 'Cachorro Yorkie macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/wagginbuddieslitter-20250914-0001-350x399x0x67x350x263x1757888152.webp',
@@ -136,7 +136,7 @@ return [
         'id' => 12,
         'nombre' => 'Elise- Hembra',
         'slug' => 'elise-hembra',
-        'raza' => 'Cachorro Yorkie',
+        'raza' => 'Yorkie',
         'descripcion' => 'Cachorro Yorkie hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/elite_toy_yorkies_-20250914-0010-350x437x0x86x350x263x1757888050.webp',
@@ -148,7 +148,7 @@ return [
         'id' => 13,
         'nombre' => 'Edgar- Macho',
         'slug' => 'edgar-macho',
-        'raza' => 'Cachorro Yorkie',
+        'raza' => 'Yorkie',
         'descripcion' => 'Cachorro Yorkie macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/elite_toy_yorkies_-20250914-0002-350x437x0x86x350x263x1757887978.webp',
@@ -160,7 +160,7 @@ return [
         'id' => 14,
         'nombre' => 'Chester- Macho',
         'slug' => 'chester-macho',
-        'raza' => 'Cachorro Yorkie',
+        'raza' => 'Yorkie',
         'descripcion' => 'Cachorro Yorkie macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/chestertontheyorkie-20250914-0008-e1757888392396-350x263x0x0x350x263x1757888393.webp',
@@ -172,7 +172,7 @@ return [
         'id' => 15,
         'nombre' => 'Mookie – Macho',
         'slug' => 'mookie-macho',
-        'raza' => 'Cachorro Maltese',
+        'raza' => 'Maltese',
         'descripcion' => 'Cachorro Maltese macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/mookiethemalti-20250914-0005-350x350x0x43x350x263x1757887701.webp',
@@ -184,7 +184,7 @@ return [
         'id' => 16,
         'nombre' => 'Paris – Hembra',
         'slug' => 'paris-hembra',
-        'raza' => 'Cachorro Maltese',
+        'raza' => 'Maltese',
         'descripcion' => 'Cachorro Maltese hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/missparis_the_maltese-20250914-0001-350x437x0x86x350x263x1757887596.webp',
@@ -196,7 +196,7 @@ return [
         'id' => 17,
         'nombre' => 'Kira- Hembra',
         'slug' => 'kira-hembra',
-        'raza' => 'Cachorro Maltese',
+        'raza' => 'Maltese',
         'descripcion' => 'Cachorro Maltese hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/kira_the_maltese_puppy-20250914-0003-350x350x0x43x350x263x1757887522.webp',
@@ -208,7 +208,7 @@ return [
         'id' => 18,
         'nombre' => 'FIfi – Hembra',
         'slug' => 'fifi-hembra',
-        'raza' => 'Cachorro Maltese',
+        'raza' => 'Maltese',
         'descripcion' => 'Cachorro Maltese hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/filippamaltese-20250914-0010-350x350x0x43x350x263x1757887343.webp',
@@ -220,7 +220,7 @@ return [
         'id' => 19,
         'nombre' => 'VENDIDO',
         'slug' => 'vendido-bichon-frise',
-        'raza' => 'Cachorro Bichon Frise',
+        'raza' => 'Bichon Frise',
         'descripcion' => 'Cachorro Bichon Frise vendido.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/quincy_flynn_the_bichon-20250914-0001-350x349x0x42x350x263x1757887229.webp',
@@ -232,7 +232,7 @@ return [
         'id' => 20,
         'nombre' => 'Marnie – Hembra',
         'slug' => 'marnie-hembra',
-        'raza' => 'Cachorro Bichon Frise',
+        'raza' => 'Bichon Frise',
         'descripcion' => 'Cachorro Bichon Frise hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/marnie_the_bichon_frise-20250914-0005-350x437x0x86x350x263x1757887119.webp',
@@ -244,7 +244,7 @@ return [
         'id' => 21,
         'nombre' => 'Hojic – Macho',
         'slug' => 'hojic-macho',
-        'raza' => 'Cachorro Bichon Frise',
+        'raza' => 'Bichon Frise',
         'descripcion' => 'Cachorro Bichon Frise macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/hojichathebichon-20250914-0025-350x386x0x61x350x263x1757887005.webp',
@@ -256,7 +256,7 @@ return [
         'id' => 22,
         'nombre' => 'Austin- Macho',
         'slug' => 'austin-macho',
-        'raza' => 'Cachorro Ibiza hound',
+        'raza' => 'Ibiza hound',
         'descripcion' => 'Cachorro Ibiza hound macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/austin-the-beezer-20250815-0004-350x437x0x86x350x263x1757883641.webp',
@@ -268,7 +268,7 @@ return [
         'id' => 23,
         'nombre' => 'Bimbim – Macho',
         'slug' => 'bimbim-macho',
-        'raza' => 'Cachorro Bichon Frise',
+        'raza' => 'Bichon Frise',
         'descripcion' => 'Cachorro Bichon Frise macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/bimbim-bichon-20250914-0002-350x350x0x43x350x263x1757886875.webp',
@@ -280,7 +280,7 @@ return [
         'id' => 24,
         'nombre' => 'Churro – Macho',
         'slug' => 'churro-macho',
-        'raza' => 'Cachorro De agua espanol',
+        'raza' => 'De agua espanol',
         'descripcion' => 'Cachorro De agua español macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/churrothespanishwaterdog-20250814-0005-350x350x0x43x350x263x1757883321.webp',
@@ -292,7 +292,7 @@ return [
         'id' => 25,
         'nombre' => 'Samira – Hembra',
         'slug' => 'samira-hembra',
-        'raza' => 'Cachorro De agua espanol',
+        'raza' => 'De agua espanol',
         'descripcion' => 'Cachorro De agua español hembra disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/milaperronen-20250814-0005-361x263x5x0x350x263x1757883223.webp',
@@ -304,7 +304,7 @@ return [
         'id' => 26,
         'nombre' => 'Chapo – Macho',
         'slug' => 'chapo-macho',
-        'raza' => 'Cachorro Presa canario',
+        'raza' => 'Presa canario',
         'descripcion' => 'Cachorro Presa canario macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/chapo_de_earthquake_kennels-20250815-0003-350x350x0x43x350x263x1757882773.webp',
@@ -316,7 +316,7 @@ return [
         'id' => 27,
         'nombre' => 'Tesla- Macho',
         'slug' => 'tesla-macho',
-        'raza' => 'Cachorro Presa canario',
+        'raza' => 'Presa canario',
         'descripcion' => 'Cachorro Presa canario macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/tesla-the-presa-canario-dog-20250815-0001-350x432x0x84x350x263x1757882693.webp',
@@ -328,7 +328,7 @@ return [
         'id' => 28,
         'nombre' => 'Hanse – Macho',
         'slug' => 'hanse-macho',
-        'raza' => 'Cachorro Presa canario',
+        'raza' => 'Presa canario',
         'descripcion' => 'Cachorro Presa canario macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/15-350x350x0x43x350x263x1757882595.webp',
@@ -352,7 +352,7 @@ return [
         'id' => 30,
         'nombre' => 'veni – Macho',
         'slug' => 'veni-macho',
-        'raza' => 'Cachorro De agua espanol',
+        'raza' => 'De agua espanol',
         'descripcion' => 'Cachorro De agua español macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/roxywaterdog-20250814-0013-350x350x0x43x350x263x1763742258.webp',
@@ -376,7 +376,7 @@ return [
         'id' => 32,
         'nombre' => 'Yamal – Macho',
         'slug' => 'yamal-macho',
-        'raza' => 'Cachorro Golden Retriever',
+        'raza' => 'Golden Retriever',
         'descripcion' => 'Cachorro Golden Retriever macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/pawhillseattle-20250912-0001-350x437x0x86x350x263x1764679747.webp',
@@ -388,7 +388,7 @@ return [
         'id' => 33,
         'nombre' => 'Ben – TOY Macho',
         'slug' => 'ben-toy-macho',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche TOY macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-1-44-51-am-350x263x0x0x350x263x1762131056.webp',
@@ -400,7 +400,7 @@ return [
         'id' => 34,
         'nombre' => 'Hans- TOY Macho',
         'slug' => 'hans-toy-macho',
-        'raza' => 'Cachorro Caniche',
+        'raza' => 'Caniche',
         'descripcion' => 'Cachorro Caniche TOY macho disponible para adopción.',
         'imagenes' => [
             '/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-1-44-51-am-1-350x263x0x0x350x263x1762131285.webp',
@@ -413,7 +413,7 @@ return [
         "id" => 35,
         "slug" => "max-macho-1000-fb",
         "nombre" => "VENDIDA",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/french-b3-bella-1-350x437x0x86x350x263x1757856852.webp"
@@ -424,7 +424,7 @@ return [
         "id" => 36,
         "slug" => "ester-hembra-border-collie",
         "nombre" => "Ester – Hembra",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/border-collie-3-1-350x263x0x0x350x263x1757845512.webp"
@@ -435,7 +435,7 @@ return [
         "id" => 37,
         "slug" => "river-macho-border-collie",
         "nombre" => "River – Macho",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/border-c7-river-1-350x350x0x43x350x263x1757845376.webp"
@@ -446,7 +446,7 @@ return [
         "id" => 38,
         "slug" => "leo-macho-beagle",
         "nombre" => "Leo- Macho",
-        "raza" => "Cachorro Beagle",
+        "raza" => "Beagle",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/beagle5-cali-1-350x437x0x86x350x263x1763720382.webp"
@@ -457,7 +457,7 @@ return [
         "id" => 39,
         "slug" => "nala-hembra-beagle",
         "nombre" => "Nala – Hembra",
-        "raza" => "Cachorro Beagle",
+        "raza" => "Beagle",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/beagle-nala-1-350x413x0x74x350x263x1763739739.webp"
@@ -479,7 +479,7 @@ return [
         "id" => 41,
         "slug" => "audrey-hembra0",
         "nombre" => "Audrey- Hembra",
-        "raza" => "Cachorro Galgo espanol",
+        "raza" => "Galgo espanol",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/ekkogreyhound-20250814-0002-350x350x0x43x350x263x1755347960.webp"
@@ -490,7 +490,7 @@ return [
         "id" => 42,
         "slug" => "capitan-macho",
         "nombre" => "Capitan – Macho",
-        "raza" => "Cachorro Galgo espanol",
+        "raza" => "Galgo espanol",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/capitan-elgalgo-20250815-0001-350x350x0x43x350x263x1755347682.webp"
@@ -501,7 +501,7 @@ return [
         "id" => 43,
         "slug" => "numa-macho",
         "nombre" => "Numa- Macho",
-        "raza" => "Cachorro Galgo espanol",
+        "raza" => "Galgo espanol",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/numa-elgalgo-20250815-0001-1-350x350x0x43x350x263x1755347518.webp"
@@ -512,7 +512,7 @@ return [
         "id" => 44,
         "slug" => "elga-macho",
         "nombre" => "Elga – Macho",
-        "raza" => "Cachorro Galgo espanol",
+        "raza" => "Galgo espanol",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/elgalgofugitivo-20250815-0002-350x437x0x86x350x263x1755347356.webp"
@@ -523,7 +523,7 @@ return [
         "id" => 45,
         "slug" => "jesse-macho0",
         "nombre" => "Jeff – Macho",
-        "raza" => "Cachorro Maltipoo",
+        "raza" => "Maltipoo",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/2-3-350x437x0x86x350x263x1763553450.webp"
@@ -534,7 +534,7 @@ return [
         "id" => 46,
         "slug" => "zita-hembra0",
         "nombre" => "Sindy – Hembra",
-        "raza" => "Cachorro Maltipoo",
+        "raza" => "Maltipoo",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/1-1-350x437x0x86x350x263x1763556308.webp"
@@ -545,7 +545,7 @@ return [
         "id" => 47,
         "slug" => "balde-macho-gr",
         "nombre" => "Balde – Macho",
-        "raza" => "Cachorro Labrador",
+        "raza" => "Labrador",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/david_amal_luiz-20241105-0008-350x437x0x86x350x263x1757878052.webp"
@@ -556,7 +556,7 @@ return [
         "id" => 48,
         "slug" => "nala3-hembra",
         "nombre" => "Nala – Hembra",
-        "raza" => "Cachorro Pastor Aleman",
+        "raza" => "Pastor Aleman",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/laika_thegermanshepherdpuppy-20250814-0011-350x350x0x43x350x263x1755345074.webp"
@@ -567,7 +567,7 @@ return [
         "id" => 49,
         "slug" => "lanez-macho",
         "nombre" => "Lanez – Macho",
-        "raza" => "Cachorro Pastor alemán",
+        "raza" => "Pastor alemán",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/beargsdpuppy-20250814-0010-350x350x0x43x350x263x1755344984.webp"
@@ -578,7 +578,7 @@ return [
         "id" => 50,
         "slug" => "bieber-macho",
         "nombre" => "Bieber – Macho",
-        "raza" => "Cachorro Pastor alemán",
+        "raza" => "Pastor alemán",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/buzzthebeast-20250814-0003-350x350x0x43x350x263x1757879487.webp"
@@ -589,7 +589,7 @@ return [
         "id" => 51,
         "slug" => "austin0-macho",
         "nombre" => "Austin – Macho",
-        "raza" => "Cachorro Pastor alemán",
+        "raza" => "Pastor alemán",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/keepingupwith_kaiser-20250814-0001-350x350x0x43x350x263x1755344740.webp"
@@ -600,7 +600,7 @@ return [
         "id" => 52,
         "slug" => "benny-macho-chihuahua",
         "nombre" => "Bradley (Cabello largo) – Macho",
-        "raza" => "Cachorro Chihuahua",
+        "raza" => "Chihuahua",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/the_chihuahua_duo-20241104-0009-1-350x350x0x43x350x263x1763741376.webp"
@@ -611,7 +611,7 @@ return [
         "id" => 53,
         "slug" => "jolla-hembra-chihuahua",
         "nombre" => "jolla (Pelo corto)- hembra",
-        "raza" => "Cachorro Chihuahua",
+        "raza" => "Chihuahua",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/spencerthelilacchihuahua-20241104-0015-350x350x0x43x350x263x1763741466.webp"
@@ -622,7 +622,7 @@ return [
         "id" => 54,
         "slug" => "jina2-hembra-chihuahua",
         "nombre" => "Jina – Hembra",
-        "raza" => "Cachorro Chihuahua",
+        "raza" => "Chihuahua",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/chihuahua-1-1-350x350x0x43x350x263x1757872901.webp"
@@ -633,7 +633,7 @@ return [
         "id" => 55,
         "slug" => "beatrice-hembra-chihuahua",
         "nombre" => "Beatrice – Hembra",
-        "raza" => "Cachorro Chihuahua",
+        "raza" => "Chihuahua",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/s_noopy19-20241104-0001-350x350x0x43x350x263x1755344158.webp"
@@ -644,7 +644,7 @@ return [
         "id" => 56,
         "slug" => "kara-hembra",
         "nombre" => "Kara – Hembra",
-        "raza" => "Cachorro Dachshund",
+        "raza" => "Dachshund",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/pitomnik-taks-20250911-0009-350x350x0x43x350x263x1764678132.webp"
@@ -655,7 +655,7 @@ return [
         "id" => 57,
         "slug" => "micky-hembra",
         "nombre" => "Micky – Hembra",
-        "raza" => "Cachorro Dachshund",
+        "raza" => "Dachshund",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/taksa_best_irisson-20250911-0001-350x350x0x43x350x263x1764678059.webp"
@@ -666,7 +666,7 @@ return [
         "id" => 58,
         "slug" => "bella-hembra",
         "nombre" => "Bella – Hembra",
-        "raza" => "Cachorro Pomerania",
+        "raza" => "Pomerania",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/mini_mishki_boo-20250911-0025-350x466x0x101x350x263x1757724509.webp"
@@ -677,7 +677,7 @@ return [
         "id" => 59,
         "slug" => "erik-macho",
         "nombre" => "Erik – Macho",
-        "raza" => "Cachorro Pomerania",
+        "raza" => "Pomerania",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/mini_mishki_boo-20250911-0114-350x350x0x43x350x263x1757724140.webp"
@@ -688,7 +688,7 @@ return [
         "id" => 60,
         "slug" => "bernd-macho",
         "nombre" => "Bernd – Macho",
-        "raza" => "Cachorro Pomerania",
+        "raza" => "Pomerania",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/mini_mishki_boo-20250911-0067-350x350x0x43x350x263x1757724616.webp"
@@ -699,7 +699,7 @@ return [
         "id" => 61,
         "slug" => "liesel-hembra",
         "nombre" => "Liesel – Hembra",
-        "raza" => "Cachorro Pomerania",
+        "raza" => "Pomerania",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/mini_mishki_boo-20250911-0049-350x419x0x77x350x263x1757725115.webp"
@@ -710,7 +710,7 @@ return [
         "id" => 62,
         "slug" => "hermann-macho",
         "nombre" => "Hermann – Macho",
-        "raza" => "Cachorro Pomerania",
+        "raza" => "Pomerania",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/pomeranian-58-350x319x0x27x350x263x1757724944.webp"
@@ -721,7 +721,7 @@ return [
         "id" => 63,
         "slug" => "edith-hembra",
         "nombre" => "Edith – Hembra",
-        "raza" => "Cachorro Pomerania",
+        "raza" => "Pomerania",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/pomeranian-22-350x308x0x22x350x263x1757724777.webp"
@@ -732,7 +732,7 @@ return [
         "id" => 64,
         "slug" => "ron-macho",
         "nombre" => "Ron  – Macho",
-        "raza" => "Cachorro Rottweiler",
+        "raza" => "Rottweiler",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/rottweilers-3-350x350x0x43x350x263x1757880574.webp"
@@ -743,7 +743,7 @@ return [
         "id" => 65,
         "slug" => "jessica-hembra",
         "nombre" => "Jessica – Hembra",
-        "raza" => "Cachorro Rottweiler",
+        "raza" => "Rottweiler",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/rottweilers-57-350x341x0x38x350x263x1757880646.webp"
@@ -754,7 +754,7 @@ return [
         "id" => 66,
         "slug" => "bailey-macho",
         "nombre" => "Bailey – Macho",
-        "raza" => "Cachorro Rottweiler",
+        "raza" => "Rottweiler",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/rottweilers-22-350x437x0x29x350x263x1757880744.webp"
@@ -765,7 +765,7 @@ return [
         "id" => 67,
         "slug" => "nila-hembra",
         "nombre" => "Nila- Hembra",
-        "raza" => "Cachorro Rottweiler",
+        "raza" => "Rottweiler",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/rottweilers-8-350x396x0x66x350x263x1757880677.webp"
@@ -776,7 +776,7 @@ return [
         "id" => 68,
         "slug" => "edgar-macho-caniche",
         "nombre" => "Edgar- TOY Macho",
-        "raza" => "Cachorro Caniche",
+        "raza" => "Caniche",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-2-12-41-am-350x263x0x0x350x263x1762132792.webp"
@@ -787,7 +787,7 @@ return [
         "id" => 69,
         "slug" => "maco-macho-caniche",
         "nombre" => "Maco – TOY Macho",
-        "raza" => "Cachorro Caniche",
+        "raza" => "Caniche",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-2-12-40-am-1-350x263x0x0x350x263x1762132668.webp"
@@ -798,7 +798,7 @@ return [
         "id" => 70,
         "slug" => "sonia-hembra-caniche",
         "nombre" => "Sonia – TOY Hembra",
-        "raza" => "Cachorro Caniche",
+        "raza" => "Caniche",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-2-12-39-am-350x318x0x27x350x263x1762133431.webp"
@@ -810,7 +810,7 @@ return [
         "id" => 71,
         "slug" => "lola-hembra",
         "nombre" => "Lola – TOY Hembra",
-        "raza" => "Cachorro Caniche",
+        "raza" => "Caniche",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-1-44-53-am-1-350x263x0x0x350x263x1762133224.webp"
@@ -821,7 +821,7 @@ return [
         "id" => 72,
         "slug" => "telma-hembra",
         "nombre" => "Telma- TOY Hembra",
-        "raza" => "Cachorro Caniche",
+        "raza" => "Caniche",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/whatsapp-image-2025-11-03-at-1-44-50-am-350x263x0x0x350x263x1762133081.webp"
@@ -887,7 +887,7 @@ return [
         "id" => 78,
         "slug" => "cooper-macho",
         "nombre" => "Cooper – Macho",
-        "raza" => "Cachorro Pug",
+        "raza" => "Pug",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/sunshinepugs-20250108-0065-350x437x0x86x350x263x1757880403.webp"
@@ -898,7 +898,7 @@ return [
         "id" => 79,
         "slug" => "crystal-hembra",
         "nombre" => "Crystal – Hembra",
-        "raza" => "Cachorro Pug",
+        "raza" => "Pug",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/sunshinepugs-20250108-0017-350x331x0x33x350x263x1757879928.webp"
@@ -909,7 +909,7 @@ return [
         "id" => 80,
         "slug" => "nikita-hembra",
         "nombre" => "Nikita -Hembra",
-        "raza" => "Cachorro Pug",
+        "raza" => "Pug",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/pug-1-2-350x376x0x56x350x263x1757879614.webp"
@@ -920,7 +920,7 @@ return [
         "id" => 81,
         "slug" => "jayla-hembra",
         "nombre" => "Jayla- Hembra",
-        "raza" => "Cachorro Maltipoo",
+        "raza" => "Maltipoo",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/5-15-350x437x0x86x350x263x1763556755.webp"
@@ -931,7 +931,7 @@ return [
         "id" => 82,
         "slug" => "zelda-hembra",
         "nombre" => "Gabi- Hembra",
-        "raza" => "Cachorro Maltipoo",
+        "raza" => "Maltipoo",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/4-4-350x437x0x86x350x263x1763556546.webp"
@@ -942,7 +942,7 @@ return [
         "id" => 83,
         "slug" => "mariah-hembra",
         "nombre" => "VENDIDA",
-        "raza" => "Cachorro Maltipoo",
+        "raza" => "Maltipoo",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/maltipoo-nederland-20251118-0043-350x437x0x86x350x263x1763556947.webp"
@@ -953,7 +953,7 @@ return [
         "id" => 84,
         "slug" => "dior-macho2",
         "nombre" => "Dior – Macho",
-        "raza" => "Cachorro Maltipoo",
+        "raza" => "Maltipoo",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/3-4-350x466x0x101x350x263x1763556861.webp"
@@ -964,7 +964,7 @@ return [
         "id" => 85,
         "slug" => "kingston-macho-labrador",
         "nombre" => "Kingston – Macho",
-        "raza" => "Cachorro Labrador",
+        "raza" => "Labrador",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/img-20250906-wa0004-350x350x0x50x350x263x1763743980.webp"
@@ -975,7 +975,7 @@ return [
         "id" => 86,
         "slug" => "laney-hembra-labrador",
         "nombre" => "Laney – Hembra",
-        "raza" => "Cachorro Labrador",
+        "raza" => "Labrador",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/labrador4-5-350x350x0x43x350x263x1757878412.webp"
@@ -986,7 +986,7 @@ return [
         "id" => 87,
         "slug" => "juanna-hembra-labrador",
         "nombre" => "Juanna – Hembra",
-        "raza" => "Cachorro Labrador",
+        "raza" => "Labrador",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/labrador5-8-350x263x0x0x350x263x1763743828.webp"
@@ -997,7 +997,7 @@ return [
         "id" => 88,
         "slug" => "dex-hembra-labrador",
         "nombre" => "Dex – Macho",
-        "raza" => "Cachorro Labrador",
+        "raza" => "Labrador",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/labrador-fox-12-350x350x0x43x350x263x1757878682.webp"
@@ -1041,7 +1041,7 @@ return [
         "id" => 92,
         "slug" => "ashgem-hembra-gr",
         "nombre" => "Ash – Hembra",
-        "raza" => "Cachorro Golden Retriever",
+        "raza" => "Golden Retriever",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/ash_thegoldenretriever-20251202-0011-354x263x2x0x350x263x1764679982.webp"
@@ -1052,7 +1052,7 @@ return [
         "id" => 93,
         "slug" => "bella-macho-gretriever",
         "nombre" => "Bella – Hembra",
-        "raza" => "Cachorro Golden Retriever",
+        "raza" => "Golden Retriever",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/bella_thegoldenretriever2025-20251201-0004-350x466x0x101x350x263x1764679833.webp"
@@ -1074,7 +1074,7 @@ return [
         "id" => 95,
         "slug" => "max-macho-fb",
         "nombre" => "Jack – Macho",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/f1-jack-8-350x350x0x43x350x263x1764678897.webp"
@@ -1085,7 +1085,7 @@ return [
         "id" => 96,
         "slug" => "justin-macho-fb",
         "nombre" => "Justin- Macho",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/justin-8-350x466x0x101x350x263x1764678991.webp"
@@ -1096,7 +1096,7 @@ return [
         "id" => 97,
         "slug" => "malouth-hembra-fb",
         "nombre" => "Malouth – Hembra",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/fb-malouth-4-1-350x350x0x43x350x263x1764678949.webp"
@@ -1107,7 +1107,7 @@ return [
         "id" => 98,
         "slug" => "kayla1-hembra-fb",
         "nombre" => "Kayla – Hembra",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/frenchbun_oscar-20250911-0003-350x316x0x26x350x263x1764679420.webp"
@@ -1118,7 +1118,7 @@ return [
         "id" => 99,
         "slug" => "kiwi-hembra-fb",
         "nombre" => "Baby – Hembra",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/fb2-baby-6-350x350x0x43x350x263x1764679270.webp"
@@ -1129,7 +1129,7 @@ return [
         "id" => 100,
         "slug" => "bullet-macho-fb",
         "nombre" => "Bullet – Macho",
-        "raza" => "Cachorro Bulldog francés",
+        "raza" => "Bulldog francés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/bullet-1-350x350x0x43x350x263x1764679075.webp"
@@ -1140,7 +1140,7 @@ return [
         "id" => 101,
         "slug" => "tina-hembra-chihuahua",
         "nombre" => "Lenna – Hembra",
-        "raza" => "Cachorro Chihuahua",
+        "raza" => "Chihuahua",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/lenna-3-350x350x0x43x350x263x1763741730.webp"
@@ -1151,7 +1151,7 @@ return [
         "id" => 102,
         "slug" => "ester-hembra-chihuahua",
         "nombre" => "Ester (cabello corto)- Hembra",
-        "raza" => "Cachorro Chihuahua",
+        "raza" => "Chihuahua",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/hazelhazel-thechihuahua-20241104-0005-1-350x437x0x86x350x263x1763741603.webp"
@@ -1162,7 +1162,7 @@ return [
         "id" => 103,
         "slug" => "oreo-hembra-eb",
         "nombre" => "VENDIDA",
-        "raza" => "Cachorro Bulldog inglés",
+        "raza" => "Bulldog inglés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/english-b2-7-282x352x0x28x282x296x1751331695-1-350x367x0x51x350x263x1755254882.webp"
@@ -1173,7 +1173,7 @@ return [
         "id" => 104,
         "slug" => "cash-macho-eb",
         "nombre" => "VENDIDO",
-        "raza" => "Cachorro Bulldog inglés",
+        "raza" => "Bulldog inglés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/english-b3-10-350x263x0x0x350x263x1757857629.webp"
@@ -1184,7 +1184,7 @@ return [
         "id" => 105,
         "slug" => "daisy-hembra-eb",
         "nombre" => "Daisy – Hembra",
-        "raza" => "Cachorro Bulldog inglés",
+        "raza" => "Bulldog inglés",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/english-b2-23-350x350x0x43x350x263x1757857554.webp"
@@ -1195,7 +1195,7 @@ return [
         "id" => 106,
         "slug" => "gavi-macho",
         "nombre" => "Gavi – Macho",
-        "raza" => "Cachorro Pastor alemán",
+        "raza" => "Pastor alemán",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/german-shepherd-1-350x411x0x73x350x263x1757879254.webp"
@@ -1207,7 +1207,7 @@ return [
         "id" => 107,
         "slug" => "glenda-hembra",
         "nombre" => "VENDIDA",
-        "raza" => "Cachorro Pastor alemán",
+        "raza" => "Pastor alemán",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/german-shepherd-7-350x466x0x101x350x263x1757879424.webp"
@@ -1218,7 +1218,7 @@ return [
         "id" => 108,
         "slug" => "nuza-macho-cane-corso",
         "nombre" => "Nuza – Hembra",
-        "raza" => "Cachorro Cane Corso",
+        "raza" => "Cane Corso",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/cane-corso-8-350x437x0x86x350x263x1757857832.webp"
@@ -1229,7 +1229,7 @@ return [
         "id" => 109,
         "slug" => "otto-macho-cane-corso",
         "nombre" => "Otto – Macho",
-        "raza" => "Cachorro Cane Corso",
+        "raza" => "Cane Corso",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/cane-corso-10-350x437x0x86x350x263x1757857898.webp"
@@ -1240,7 +1240,7 @@ return [
         "id" => 110,
         "slug" => "klaus-macho",
         "nombre" => "Klaus – Macho",
-        "raza" => "Cachorro Cane Corso",
+        "raza" => "Cane Corso",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/kl-350x367x0x51x350x263x1755191690.webp"
@@ -1251,7 +1251,7 @@ return [
         "id" => 111,
         "slug" => "tino-macho-cane-corso",
         "nombre" => "Tino – Macho",
-        "raza" => "Cachorro Cane Corso",
+        "raza" => "Cane Corso",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/cane-corso-1-350x437x0x86x350x263x1757858026.webp"
@@ -1262,7 +1262,7 @@ return [
         "id" => 112,
         "slug" => "banksy-macho-boston-terrier",
         "nombre" => "Banksy – Macho",
-        "raza" => "Cachorro Boston Terrier",
+        "raza" => "Boston Terrier",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/boster-t-1-bansky-1-350x350x0x43x350x263x1757845774.webp"
@@ -1273,7 +1273,7 @@ return [
         "id" => 113,
         "slug" => "philip-macho-boston-terrier",
         "nombre" => "Philip – Macho",
-        "raza" => "Cachorro Boston Terrier",
+        "raza" => "Boston Terrier",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/boston-terrier-philip-9-350x350x0x43x350x263x1757845687.webp"
@@ -1284,7 +1284,7 @@ return [
         "id" => 114,
         "slug" => "miba-hembra-boston-terrier",
         "nombre" => "Miba – Hembra",
-        "raza" => "Cachorro Boston Terrier",
+        "raza" => "Boston Terrier",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/boston-terrier-miba-12-350x437x0x86x350x263x1757846076.webp"
@@ -1295,7 +1295,7 @@ return [
         "id" => 115,
         "slug" => "mabel-hembra-boston-terrier",
         "nombre" => "Mabel – Hembra",
-        "raza" => "Cachorro Boston Terrier",
+        "raza" => "Boston Terrier",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/boston-terrier-mabel-4-350x350x0x43x350x263x1757845978.webp"
@@ -1306,7 +1306,7 @@ return [
         "id" => 116,
         "slug" => "music-macho-boston-terrier",
         "nombre" => "Music – Macho",
-        "raza" => "Cachorro Boston Terrier",
+        "raza" => "Boston Terrier",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/boston-terrier-music-1-350x375x0x55x350x263x1757845866.webp"
@@ -1317,7 +1317,7 @@ return [
         "id" => 117,
         "slug" => "pepper-macho-boxer",
         "nombre" => "Pepper – Macho",
-        "raza" => "Cachorro Boxer",
+        "raza" => "Boxer",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/pepper-the-boxer_-20250630-0004-350x263x0x0x350x263x1757846908.webp"
@@ -1328,7 +1328,7 @@ return [
         "id" => 118,
         "slug" => "babe-hembra-boxer",
         "nombre" => "Babe – Hembra",
-        "raza" => "Cachorro Boxer",
+        "raza" => "Boxer",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/daisytheboxerpuppy-20250630-0007-350x348x0x42x350x263x1757846683.webp"
@@ -1339,7 +1339,7 @@ return [
         "id" => 119,
         "slug" => "bee-macho-boxer",
         "nombre" => "Bee – Macho",
-        "raza" => "Cachorro Boxer",
+        "raza" => "Boxer",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/bacchus_the_boxer-20250630-0005-350x308x0x22x350x263x1757846601.webp"
@@ -1350,7 +1350,7 @@ return [
         "id" => 120,
         "slug" => "alfie-macho-border-collie",
         "nombre" => "Alfie – Macho",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/bc1alfie-28-350x437x0x86x350x263x1757844901.webp"
@@ -1361,7 +1361,7 @@ return [
         "id" => 121,
         "slug" => "nova-hembra-border-collie",
         "nombre" => "VENDIDO",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/border-collie-nova-1-350x437x0x86x350x263x1757844785.webp"
@@ -1372,7 +1372,7 @@ return [
         "id" => 122,
         "slug" => "ted-macho-border-collie",
         "nombre" => "Ted – Macho",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/border-21-350x437x0x86x350x263x1757845005.webp"
@@ -1383,7 +1383,7 @@ return [
         "id" => 123,
         "slug" => "zoe-hembra-border-collie",
         "nombre" => "Zoe – Hembra",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/border-collie-zoe-14-350x263x0x0x350x263x1757845295.webp"
@@ -1394,7 +1394,7 @@ return [
         "id" => 124,
         "slug" => "bunny-macho-border-collie",
         "nombre" => "Bunny – Macho",
-        "raza" => "Cachorro Border Collie",
+        "raza" => "Border Collie",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/border-42-350x350x0x43x350x263x1757845170.webp"
@@ -1405,7 +1405,7 @@ return [
         "id" => 125,
         "slug" => "bear-hembra-b",
         "nombre" => "Teddy – Macho",
-        "raza" => "Cachorro Boyero de Berna",
+        "raza" => "Boyero de Berna",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/teddy-1-350x350x0x43x350x263x1764587500.webp"
@@ -1416,7 +1416,7 @@ return [
         "id" => 126,
         "slug" => "cora-hembra-b",
         "nombre" => "Eva – Hembra",
-        "raza" => "Cachorro Boyero de Berna",
+        "raza" => "Boyero de Berna",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/eva_the_bernese_mountain_dog-20251201-0017-350x437x0x86x350x263x1764597302.webp"
@@ -1427,7 +1427,7 @@ return [
         "id" => 127,
         "slug" => "karen-hembra-b",
         "nombre" => "Irene – Hembra",
-        "raza" => "Cachorro Boyero de Berna",
+        "raza" => "Boyero de Berna",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/irene-1-350x437x0x86x350x263x1764595678.webp"
@@ -1438,7 +1438,7 @@ return [
         "id" => 128,
         "slug" => "bob-macho-beagle",
         "nombre" => "VENDIDO",
-        "raza" => "Cachorro Beagle",
+        "raza" => "Beagle",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/beagle-3-bobs-74-e1763740021183-408x263x29x0x350x263x1763740021.webp"
@@ -1449,7 +1449,7 @@ return [
         "id" => 129,
         "slug" => "winston_the_beagle",
         "nombre" => "Winston – Macho",
-        "raza" => "Cachorro Beagle",
+        "raza" => "Beagle",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/winston_the_beagle_puppy-20240811-0019-351x263x0x0x350x263x1757844291.webp"
@@ -1460,7 +1460,7 @@ return [
         "id" => 130,
         "slug" => "cali-hembra",
         "nombre" => "Calin – Hembra",
-        "raza" => "Cachorro Beagle",
+        "raza" => "Beagle",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/beagle5-cali-1-350x437x0x86x350x263x1757844053.webp"
@@ -1471,7 +1471,7 @@ return [
         "id" => 131,
         "slug" => "loki-macho-beagle",
         "nombre" => "Loki – Macho",
-        "raza" => "Cachorro Beagle",
+        "raza" => "Beagle",
         "descripcion" => "",
         "imagenes" => [
             "/wp-content/uploads/brizy/imgs/beagle-5-loki-1-350x263x0x0x350x263x1757843881.webp"

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Chio;
+use App\Models\Chios;
 use App\Models\Race;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,28 +18,16 @@ class CachorroController extends Controller
 {
     public function home()
     {
-        $races = Race::all();
+   
         
-        $cachorrosp = $races->take(6);
-        $cachorrosf = $races->skip(6)->take(6);
-
-       // dd($cachorrosp, $cachorrosf);
-        
-        $catsCollection = Cat::all();
-
-        $racesUniques = $catsCollection
-            ->pluck('race')
-            ->unique()
-            ->values()
-            ->toArray();
-
-        
-        return view('home', compact('cachorrosp', 'cachorrosf', 'racesUniques','catsCollection'));
+        return view('home');
     }
     
-    public function show($lang, $slug)
+    public function show( $slug)
     {
-        $cachorro = Chio::where('slug', $slug)->first();
+
+    
+        $cachorro = Chios::where('slug', $slug)->first();
 
         if (empty($cachorro)) {
             abort(404);
@@ -48,55 +36,59 @@ class CachorroController extends Controller
         return view('chios.show', compact('cachorro'));
     }
 
-    public function cachorrosraza($lang, $slug)
-    {
-        $normalize = function($str) {
-            $str = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
-            $str = strtolower($str);
-            $str = trim($str);
-            return $str;
-        };
+ public function cachorrosraza($slug)
+{
+    // Charger le fichier de données
+    $cachorrosData = include config_path('chios.php');
     
-        $razaBuscada1 = ucwords(str_replace('-', ' ', $slug));
-        $razaBuscada2 = implode(' ', array_reverse(explode(' ', $razaBuscada1)));
+    $normalize = function($str) {
+        $str = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
+        $str = strtolower($str);
+        $str = trim($str);
+        return $str;
+    };
+
+    $razaBuscada1 = ucwords(str_replace('-', ' ', $slug));
+    $razaBuscada2 = implode(' ', array_reverse(explode(' ', $razaBuscada1)));
+
+    $razaBuscada1Norm = $normalize($razaBuscada1);
+    $razaBuscada2Norm = $normalize($razaBuscada2);
+
+    // Filtrer les chiots par race
+    $cachorrosFiltrados = array_filter($cachorrosData, function($cachorro) use ($normalize, $razaBuscada1Norm, $razaBuscada2Norm) {
+        $razaNorm = $normalize($cachorro['raza']);
+        return $razaNorm === $razaBuscada1Norm || $razaNorm === $razaBuscada2Norm;
+    });
+
+    if (empty($cachorrosFiltrados)) {
+        abort(404, __('controller.race.not_found'));
+    }
+
+    // Déterminer le nom de la race à afficher
+    $razaParaMostrar = $razaBuscada1;
+    $existeFormato1 = false;
     
-        $razaBuscada1Norm = $normalize($razaBuscada1);
-        $razaBuscada2Norm = $normalize($razaBuscada2);
-    
-        $allCachorros = Chio::all();
-        
-        $cachorrosFiltrados = $allCachorros->filter(function($cachorro) use ($normalize, $razaBuscada1Norm, $razaBuscada2Norm) {
-            $razaNorm = $normalize($cachorro->raza);
-            return $razaNorm === $razaBuscada1Norm || $razaNorm === $razaBuscada2Norm;
-        });
-    
-        if ($cachorrosFiltrados->isEmpty()) {
-            abort(404, __('controller.race.not_found'));
+    foreach ($cachorrosFiltrados as $cachorro) {
+        if ($normalize($cachorro['raza']) === $razaBuscada1Norm) {
+            $existeFormato1 = true;
+            break;
         }
-    
-        $razaParaMostrar = $razaBuscada1;
-        $existeFormato1 = false;
-        
-        foreach ($cachorrosFiltrados as $cachorro) {
-            if ($normalize($cachorro->raza) === $razaBuscada1Norm) {
-                $existeFormato1 = true;
-                break;
-            }
-        }
-        
-        if (!$existeFormato1) {
-            $razaParaMostrar = $razaBuscada2;
-        }
-    
-        return view('chios.cachorrosraza', [
-            'cachorros' => $cachorrosFiltrados->toArray(),
-            'raza' => $razaParaMostrar
-        ]);
     }
     
- public function venta()
+    if (!$existeFormato1) {
+        $razaParaMostrar = $razaBuscada2;
+    }
+
+    return view('chios.cachorrosraza', [
+        'cachorros' => $cachorrosFiltrados,
+        'raza' => $razaParaMostrar,
+        'total' => count($cachorrosFiltrados)
+    ]);
+}
+    
+ public function puppies()
 {
-    $cachorrosCollection = Chio::all();
+    $cachorrosCollection = Chios::all();
 
     // Récupérer les races uniques depuis la table 'races' (le seeder)
     $razasUnicas = DB::table('races')
@@ -110,9 +102,9 @@ class CachorroController extends Controller
             ];
         });
 
-    $cachorrosPaginated = Chio::paginate(36);
+    $cachorrosPaginated = Chios::paginate(36);
 
-    return view('pages.venta', [
+    return view('pages.puppies', [
         'cachorros' => $cachorrosPaginated,
         'razasUnicas' => $razasUnicas,
         'cachorrosCollection' => $cachorrosCollection
@@ -124,7 +116,7 @@ class CachorroController extends Controller
         try {
             $orderData = $request->validated();
 
-            $cachorro = Chio::where('slug', $slug)->first();
+            $cachorro = Chios::where('slug', $slug)->first();
 
             if (empty($cachorro)) {
                 return redirect()->back()
@@ -162,7 +154,7 @@ public function search(Request $request)
     }
 
     // Recherche sur les chiots
-    $cachorros = Chio::search($query)->get();
+    $cachorros = Chios::search($query)->get();
 
     // Recherche sur les chats
     $cats = Cat::where('nom', 'like', "%{$query}%")
@@ -212,7 +204,7 @@ public function autocomplete(Request $request)
     $razasUniquesCats = [];
 
     // Récupérer tous les chiots
-    $cachorros = Chio::all();
+    $cachorros = Chios::all();
 
     foreach ($cachorros as $cachorro) {
         $raza = $cachorro->raza;
@@ -220,7 +212,7 @@ public function autocomplete(Request $request)
         // Suggestions par race de chiot
         if (stripos($raza, $query) !== false && !in_array($raza, $razasUniquesChiots)) {
             $razasUniquesChiots[] = $raza;
-            $count = Chio::byRaza($raza)->count();
+            $count = Chios::byRaza($raza)->count();
 
             $suggestions[] = [
                 'type' => 'race_dog',
@@ -307,7 +299,7 @@ public function raceDetails(Request $request)
         return response()->json(['error' => 'Race non spécifiée'], 400);
     }
 
-    $cachorros = Chio::byRaza($race)->get();
+    $cachorros = Chios::byRaza($race)->get();
     // $cats = Cat::where('race', $race)->get();
 
     $resultats = [];
@@ -350,6 +342,27 @@ private function generateRaceUrlCat($raza)
 {
     $slug = strtolower(str_replace(' ', '-', $raza));
     return route('cats.race', ['lang' => app()->getLocale(), 'slug' => $slug]);
+}
+
+
+
+public function reserve(Request $request, $slug)
+{
+    $validated = $request->validate([
+        'fullName' => 'required|string|max:255',
+        'breed' => 'required|string|max:255',
+        'puppyName' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'whatsapp' => 'required|string|max:20',
+        'city' => 'required|string|max:255',
+        'message' => 'nullable|string|max:1000',
+    ]);
+
+    // Envoyer un email ou enregistrer dans la base de données
+    // Mail::to('info@almadecriador.es')->send(new ReservationRequest($validated));
+
+    // Rediriger avec un message de succès
+    return redirect()->back()->with('success', '¡Gracias por su interés! Le contactaremos en las próximas 24 horas.');
 }
 
   
