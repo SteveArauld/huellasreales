@@ -135,7 +135,7 @@
                         </div>
                         <span class="text-xs uppercase tracking-[0.16em] text-sage">11 razas</span>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
                         <a href="/breeds/bichon-frise" class="breed-card group flex flex-col text-center" data-name="Bichón Frise" data-breed="bichon-frise">
                             <div class="overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 group-hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
                                 <img alt="Cachorro Bichón Frise en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="assets/images/bichon-frise.jpg">
@@ -238,7 +238,7 @@
                         </div>
                         <span class="text-xs uppercase tracking-[0.16em] text-sage">9 razas</span>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
                         <a href="/breeds/beagle" class="breed-card group flex flex-col text-center" data-name="Beagle" data-breed="beagle">
                             <div class="overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 group-hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
                                 <img alt="Cachorro Beagle en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="assets/images/beagle-puppy.jpg">
@@ -325,7 +325,7 @@
                         </div>
                         <span class="text-xs uppercase tracking-[0.16em] text-sage">8 razas</span>
                     </div>
-                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8">
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
                         <a href="/breeds/boyero-de-berna" class="breed-card group flex flex-col text-center" data-name="Boyero de Berna" data-breed="boyero-de-berna">
                             <div class="overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 group-hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
                                 <img alt="Cachorro Boyero de Berna en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="assets/images/bernese-mountain-dog.jpg">
