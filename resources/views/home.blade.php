@@ -302,7 +302,7 @@
                 </h2>
                     <p class="mt-8 max-w-md leading-relaxed text-anthracite-soft">Cuéntenos qué raza tiene en mente. Responderemos en menos de 24 horas con disponibilidad real, próximas camadas y la posibilidad de visitar el criadero.</p>
                     <div class="mt-12 space-y-4 border-t border-hairline pt-8 text-sm">
-                        <p><span class="text-muted-ink">Teléfono · </span>+34 600 000 000</p>
+                        <p><span class="text-muted-ink">Teléfono · </span>+34 603 85 94 05</p>
                         <p><span class="text-muted-ink">Email · </span>hola@almadecriador.es</p>
                         <p><span class="text-muted-ink">Criadero · </span>Provincia de Toledo</p>
                     </div>
@@ -364,7 +364,7 @@
                                     <input
                                         class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('phone') border-red-500 @enderror"
                                         id="phone"
-                                        placeholder="+34 600 000 000"
+                                        placeholder="+34 603 85 94 05"
                                         type="tel"
                                         name="phone"
                                         value="{{ old('phone') }}">

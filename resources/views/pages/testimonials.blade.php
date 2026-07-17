@@ -41,7 +41,7 @@
                     </div>
                 </figure>
                 <figure class="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                    <div class="overflow-hidden"><img alt="Cachorro Maltipoo de Natalia" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/testim-maltipoo.jpg"></div>
+                    <div class="overflow-hidden"><img alt="Cachorro Maltipoo de Natalia" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/testim-maltipoos.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
                         <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Recibimos a nuestra pequeña hembra maltipoo hace dos semanas y ya forma parte de la familia. Llegó vacunada, desparasitada y con su cartilla sanitaria al día. Se nota que está criada con amor. No dudaría en comprarles de nuevo.</blockquote>
@@ -63,7 +63,7 @@
                     </div>
                 </figure>
                 <figure class="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                    <div class="overflow-hidden"><img alt="Cachorro Cane Corso de Pablo y Marta" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/db02d388-6ed5-4bb8-b7b9-6eae9235ed34/cane-corso.jpg"></div>
+                    <div class="overflow-hidden"><img alt="Cachorro Cane Corso de Pablo y Marta" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/cane-corso.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
                         <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Quería un cane corso para compañía y protección, y me entregaron un cachorro magnífico y equilibrado. Me aconsejaron sobre su adiestramiento y alimentación. Profesionalidad total.</blockquote>
@@ -74,7 +74,7 @@
                     </div>
                 </figure>
                 <figure class="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                    <div class="overflow-hidden"><img alt="Cachorro Pomerania de Sonia" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/e8920f47-1480-401b-8d07-20c1449e0da3/pomeranian.jpg"></div>
+                    <div class="overflow-hidden"><img alt="Cachorro Pomerania de Sonia" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/pomeranian.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
                         <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Adoptamos un pomerania y fue la mejor decisión. Es activo, inteligente y muy cariñoso. La garantía de salud nos dio mucha tranquilidad. ¡Gracias por cuidar tanto de sus cachorros!</blockquote>
@@ -96,7 +96,7 @@
                     </div>
                 </figure>
                 <figure class="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                    <div class="overflow-hidden"><img alt="Cachorro Teckel de Yvonne, Murcia" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/8febe666-e5be-4bf4-b31b-f954723617ea/dachshund.jpg"></div>
+                    <div class="overflow-hidden"><img alt="Cachorro Teckel de Yvonne, Murcia" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/dachshund.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
                         <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Siempre quise un teckel y me preocupaba encontrar un criador serio. Aquí encontré profesionalidad, buena genética y un acompañamiento constante. Mi cachorro es fuerte y está sano.</blockquote>
@@ -107,7 +107,7 @@
                     </div>
                 </figure>
                 <figure class="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                    <div class="overflow-hidden"><img alt="Cachorro Bulldog Francés de Roberto" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/a4f42873-cd27-47cf-82b2-aa6ef43db8b2/french-bulldog.jpg"></div>
+                    <div class="overflow-hidden"><img alt="Cachorro Bulldog Francés de Roberto" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/french-bulldog.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
                         <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Recibimos nuestro bulldog francés hace un mes y es la alegría de la casa. Es sano, juguetón y muy cariñoso. Todo el proceso fue sencillo y sin sorpresas.</blockquote>
@@ -118,7 +118,7 @@
                     </div>
                 </figure>
                 <figure class="group flex flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                    <div class="overflow-hidden"><img alt="Cachorro Bulldog Francés de Andrés" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/a4f42873-cd27-47cf-82b2-aa6ef43db8b2/french-bulldog.jpg"></div>
+                    <div class="overflow-hidden"><img alt="Cachorro Bulldog Francés de Andrés" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/french-bulldogs.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
                         <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Compré mi bulldog francés aquí y estoy encantada. Llegó feliz, bien cuidado y adaptado. Me dieron todas las indicaciones para su cuidado y hasta hoy responden a todas mis preguntas.</blockquote>
