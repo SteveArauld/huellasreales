@@ -26,7 +26,7 @@
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">WhatsApp &amp; Teléfono</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>+35 191  202 64 53</p>
+                            <p>+351 912 026 453</p>
                             <p>Lun–Sáb · 10:00–20:00</p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                                     <input
                                         class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('phone') border-red-500 @enderror"
                                         id="phone"
-                                        placeholder="+35 191  202 64 53"
+                                        placeholder="+351 912 026 453"
                                         type="tel"
                                         name="phone"
                                         value="{{ old('phone') }}">
