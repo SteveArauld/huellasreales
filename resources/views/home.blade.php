@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Alma de Criador — Cachorros de raza, criados en familia')
+@section('title', 'Damaxis Criadores — Cachorros de raza, criados en familia')
 
 @push('styles')
 <style>
@@ -106,17 +106,17 @@ body:has(.home-refresh) footer a:hover [class*="text-sky"] { color: #F0CE8F !imp
         <div class="absolute inset-0" id="hero-slider">
             <!-- Slide 1 -->
             <div class="slide absolute inset-0 transition-opacity duration-[1600ms] ease-in-out opacity-0" data-index="0">
-                <img src="{{ asset('assets/images/hero-background.png') }}" alt="Julie con sus compañeros peludos en el espacio de cuidado diurno" width="1920" height="1280" class="size-full object-cover kenburns" style="object-position:center 25%">
+                <img src="{{ asset('assets/images/hero-slide-1.jpg') }}" alt="Cachorros de Damaxis Criadores criados en familia" width="960" height="1280" class="size-full object-cover kenburns" style="object-position:center 25%">
             </div>
             
             <!-- Slide 2 (actif par défaut) -->
             <div class="slide absolute inset-0 transition-opacity duration-[1600ms] ease-in-out opacity-100" data-index="1">
-                <img src="{{ asset('assets/images/hero-slide-2.png') }}" alt="Julie rodeada de perros sobre una mesa de picnic" width="1920" height="1280" class="size-full object-cover kenburns" style="object-position:center 30%">
+                <img src="{{ asset('assets/images/hero-slide-2.jpg') }}" alt="Ejemplar adulto de nuestra línea Damaxis Criadores" width="960" height="1280" class="size-full object-cover kenburns" style="object-position:center 30%">
             </div>
             
             <!-- Slide 3 -->
             <div class="slide absolute inset-0 transition-opacity duration-[1600ms] ease-in-out opacity-0" data-index="2">
-                <img src="{{ asset('assets/images/hero-slide-3.png') }}" alt="Julie jugando con la manada al aire libre" width="1920" height="1280" class="size-full object-cover kenburns" style="object-position:center 30%">
+                <img src="{{ asset('assets/images/hero-slide-3.jpg') }}" alt="Camada de cachorros socializados en Damaxis Criadores" width="1054" height="1280" class="size-full object-cover kenburns" style="object-position:center 30%">
             </div>
             
             <!-- Overlay gradient -->
@@ -246,8 +246,8 @@ body:has(.home-refresh) footer a:hover [class*="text-sky"] { color: #F0CE8F !imp
 
     <section class="bg-ivory py-6 lg:py-8">
         <div class="mx-auto max-w-[1400px] px-6 text-center lg:px-12">
-            <img src="{{ asset("assets/logo/logo.png") }}" alt="Alma de Criador" class="mx-auto h-20 w-auto lg:h-28">
-            <h2 class="mt-2 text-[clamp(1.4rem,2.6vw,2.2rem)] leading-[1.1]">Bienvenido a almas de criador</h2>
+            <img src="{{ asset("assets/logo/logo.png") }}" alt="Damaxis Criadores" class="mx-auto h-20 w-auto lg:h-28">
+            <h2 class="mt-2 text-[clamp(1.4rem,2.6vw,2.2rem)] leading-[1.1]">Bienvenido a Damaxis Criadores</h2>
             <p class="mx-auto mt-2 max-w-2xl text-base leading-relaxed text-anthracite-soft md:text-lg">Su familia de confianza para cachorros sanos en España</p>
         </div>
     </section>
@@ -394,7 +394,7 @@ body:has(.home-refresh) footer a:hover [class*="text-sky"] { color: #F0CE8F !imp
                     <p class="mt-8 max-w-md leading-relaxed text-anthracite-soft">Cuéntenos qué raza tiene en mente. Responderemos en menos de 24 horas con disponibilidad real, próximas camadas y la posibilidad de visitar el criadero.</p>
                     <div class="mt-12 space-y-4 border-t border-hairline pt-8 text-sm">
                         <p><span class="text-muted-ink">Teléfono · </span>+34 683 57 35 16</p>
-                        <p><span class="text-muted-ink">Email · </span>hola@almadecriador.es</p>
+                        <p><span class="text-muted-ink">Email · </span>contacto@damaxiscriadores.es</p>
                         <p><span class="text-muted-ink">Criadero · </span>Provincia de Toledo</p>
                     </div>
                 </div>

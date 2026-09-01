@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Entrega de Cachorros — Alma de Criador')
+@section('title', 'Entrega de Cachorros — Damaxis Criadores')
 
 @section('content')
 <main class="flex-1">

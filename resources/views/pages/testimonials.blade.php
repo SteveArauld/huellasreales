@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Referencias y Opiniones — Alma de Criador')
+@section('title', 'Referencias y Opiniones — Damaxis Criadores')
 
 @push('styles')
 
@@ -12,7 +12,7 @@
         <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
             <p class="eyebrow">Referencias</p>
             <h1 class="mt-6 max-w-4xl text-[clamp(2.6rem,5vw,5rem)] leading-[1.02]">Vea lo que dicen <span class="italic">los clientes.</span></h1>
-            <div class="mt-10 max-w-2xl text-lg leading-relaxed text-anthracite-soft">La mejor descripción de Alma de Criador no la escribimos nosotros. La escriben las familias que ya forman parte de nuestra casa, con la voz —y las fotos— de sus cachorros.</div>
+            <div class="mt-10 max-w-2xl text-lg leading-relaxed text-anthracite-soft">La mejor descripción de Damaxis Criadores no la escribimos nosotros. La escriben las familias que ya forman parte de nuestra casa, con la voz —y las fotos— de sus cachorros.</div>
         </div>
     </section>
     <section class="bg-ivory pb-16 lg:pb-24">
@@ -22,7 +22,7 @@
                     <div class="overflow-hidden"><img alt="Cachorro Maltipoo de Laura y Martínez Sánchez" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/testim-maltipoo.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
-                        <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Compramos nuestro maltipoo en Alma de Criador y no podríamos estar más contentos. Es juguetón, cariñoso y llegó a casa perfectamente cuidado. El transporte fue seguro y rápido, y nos enviaron fotos y videos antes de la entrega. ¡Mil gracias por todo!</blockquote>
+                        <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Compramos nuestro maltipoo en Damaxis Criadores y no podríamos estar más contentos. Es juguetón, cariñoso y llegó a casa perfectamente cuidado. El transporte fue seguro y rápido, y nos enviaron fotos y videos antes de la entrega. ¡Mil gracias por todo!</blockquote>
                         <figcaption class="mt-6 border-t border-hairline pt-5">
                             <p class="text-sm font-medium text-anthracite">Laura y Martínez Sánchez</p>
                             <div class="mt-1 flex items-center justify-between text-xs uppercase tracking-[0.16em] text-muted-ink"><span>24.11.2025</span><span class="text-sage">Maltipoo</span></div>
@@ -55,7 +55,7 @@
                     <div class="overflow-hidden"><img alt="Cachorro Carlino / Pug de Familia Martínez" loading="lazy" class="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/assets/images/testim-pug.jpg"></div>
                     <div class="flex flex-1 flex-col p-6 lg:p-8">
                         <p class="font-serif text-3xl leading-none text-sage">“</p>
-                        <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Mi hijo siempre quiso un carlino, y gracias a Alma de Criador ahora tenemos a Bruno en casa. Es sano, alegre y muy sociable. La entrega fue impecable y el servicio al cliente excelente.</blockquote>
+                        <blockquote class="mt-2 flex-1 font-serif text-base italic leading-relaxed text-anthracite lg:text-lg">Mi hijo siempre quiso un carlino, y gracias a Damaxis Criadores ahora tenemos a Bruno en casa. Es sano, alegre y muy sociable. La entrega fue impecable y el servicio al cliente excelente.</blockquote>
                         <figcaption class="mt-6 border-t border-hairline pt-5">
                             <p class="text-sm font-medium text-anthracite">Familia Martínez</p>
                             <div class="mt-1 flex items-center justify-between text-xs uppercase tracking-[0.16em] text-muted-ink"><span>09.08.2024</span><span class="text-sage">Carlino / Pug</span></div>
@@ -136,7 +136,7 @@
             <div class="mx-auto max-w-3xl rounded-[10px] bg-white/70 p-8 text-center shadow-[0_6px_24px_-12px_rgba(0,0,0,0.2)] ring-1 ring-black/5 backdrop-blur-sm lg:p-12">
                 <p class="eyebrow">Su experiencia</p>
                 <h2 class="mt-6 text-[clamp(1.6rem,2.8vw,2.4rem)] leading-[1.08]">Publique su <span class="italic">reseña</span></h2>
-                <p class="mt-4 text-sm leading-relaxed text-anthracite-soft lg:text-base">¿Ya tiene a su cachorro en casa? Comparta unas palabras y una foto: nos encanta ver crecer a los pequeños de Alma de Criador en su nueva familia.</p><a href="/contact" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white/60 px-6 py-3 text-xs uppercase tracking-[0.16em] text-anthracite shadow-sm ring-1 ring-black/5 backdrop-blur-sm transition-colors hover:bg-sage/20"><svg viewBox="0 0 24 24" fill="currentColor" class="size-3.5 text-sage" aria-hidden="true">
+                <p class="mt-4 text-sm leading-relaxed text-anthracite-soft lg:text-base">¿Ya tiene a su cachorro en casa? Comparta unas palabras y una foto: nos encanta ver crecer a los pequeños de Damaxis Criadores en su nueva familia.</p><a href="/contact" class="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white/60 px-6 py-3 text-xs uppercase tracking-[0.16em] text-anthracite shadow-sm ring-1 ring-black/5 backdrop-blur-sm transition-colors hover:bg-sage/20"><svg viewBox="0 0 24 24" fill="currentColor" class="size-3.5 text-sage" aria-hidden="true">
                         <path d="M12 11c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"></path>
                         <ellipse cx="5.8" cy="9" rx="1.8" ry="2.3"></ellipse>
                         <ellipse cx="10.2" cy="5.5" rx="1.8" ry="2.3"></ellipse>

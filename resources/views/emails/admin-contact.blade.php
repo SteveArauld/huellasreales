@@ -160,7 +160,7 @@
         </div>
 
         <div class="footer">
-            <span class="brand">Alma de Criador</span> · Email automatique
+            <span class="brand">Damaxis Criadores</span> · Email automatique
         </div>
     </div>
 

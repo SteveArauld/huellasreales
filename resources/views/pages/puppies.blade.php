@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Cachorros en venta en España | +27 razas — Alma de Criador")
+@section('title', "Cachorros en venta en España | +27 razas — Damaxis Criadores")
 
 @push('styles')
 <style>

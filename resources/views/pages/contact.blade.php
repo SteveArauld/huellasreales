@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contacto — Alma de Criador')
+@section('title', 'Contacto — Damaxis Criadores')
 
 @push('styles')
 
@@ -33,7 +33,7 @@
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">Email</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>hola@almadecriador.es</p>
+                            <p>contacto@damaxiscriadores.es</p>
                             <p>Respuesta en menos de 24 h</p>
                         </div>
                     </div>
@@ -48,8 +48,8 @@
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">Síganos</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>Instagram · @almadecriador</p>
-                            <p>Facebook · Alma de Criador</p>
+                            <p>Instagram · @damaxiscriadores</p>
+                            <p>Facebook · Damaxis Criadores</p>
                         </div>
                     </div>
                 </aside>

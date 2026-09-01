@@ -359,7 +359,7 @@ public function reserve(Request $request, $slug)
     ]);
 
     // Envoyer un email ou enregistrer dans la base de données
-    // Mail::to('info@almadecriador.es')->send(new ReservationRequest($validated));
+    // Mail::to('contacto@damaxiscriadores.es')->send(new ReservationRequest($validated));
 
     // Rediriger avec un message de succès
     return redirect()->back()->with('success', '¡Gracias por su interés! Le contactaremos en las próximas 24 horas.');

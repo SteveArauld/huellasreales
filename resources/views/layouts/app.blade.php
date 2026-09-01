@@ -7,9 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="preload" as="image" href="{{ asset("assets/images/hero-background.png") }}">
-    <link rel="preload" as="image" href="{{ asset("assets/images/hero-slide-2.png") }}">
-    <link rel="preload" as="image" href="{{ asset("assets/images/hero-slide-3.png") }}">
+    <link rel="preload" as="image" href="{{ asset("assets/images/hero-slide-1.jpg") }}">
+    <link rel="preload" as="image" href="{{ asset("assets/images/hero-slide-2.jpg") }}">
+    <link rel="preload" as="image" href="{{ asset("assets/images/hero-slide-3.jpg") }}">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,380;9..144,450&amp;family=Inter+Tight:wght@300;400;500;600&amp;display=swap" data-precedence="default">
 
@@ -27,15 +27,15 @@
 
 
 
-    <meta name="author" content="Alma de Criador">
+    <meta name="author" content="Damaxis Criadores">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Alma de Criador">
+    <meta property="og:site_name" content="Damaxis Criadores">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Alma de Criador — Cachorros de raza, criados en familia">
+    <meta name="twitter:title" content="Damaxis Criadores — Cachorros de raza, criados en familia">
     <meta name="twitter:description" content="Criadero certificado en España. +15 años seleccionando cachorros de raza pura con garantía sanitaria, microchip y envío nacional.">
 
     <meta name="description" content="Criadero certificado en España. +15 años seleccionando cachorros de raza pura con garantía sanitaria, microchip y envío nacional.">
-    <meta property="og:title" content="Alma de Criador — Cachorros de raza, criados en familia">
+    <meta property="og:title" content="Damaxis Criadores — Cachorros de raza, criados en familia">
     <meta property="og:description" content="Criadero certificado en España. +15 años seleccionando cachorros de raza pura con garantía sanitaria, microchip y envío nacional.">
     <meta property="og:url" content="/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
