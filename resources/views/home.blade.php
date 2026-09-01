@@ -3,11 +3,89 @@
 @section('title', 'Alma de Criador — Cachorros de raza, criados en familia')
 
 @push('styles')
+<style>
+/* ============================================================
+   Home — palette chaleureuse "terre & miel" (page d'accueil only)
+   ============================================================ */
+.home-refresh {
+    /* remap des tokens de marque -> tons chauds, portée locale */
+    --ivory: #FBF6EE;
+    --ivory-deep: #F3E8D8;
+    --bone: #EADFCB;
+    --anthracite: #33261F;
+    --anthracite-soft: #6B5A4E;
+    --muted-ink: #8A7563;
+    --hairline: #E7DAC6;
+    --sage: #C56A3D;
+    --sage-deep: #A0522D;
+    --sky: #D9A441;
+    --sky-deep: #C08A2E;
 
+    background:
+        radial-gradient(1200px 600px at 100% -5%, rgba(217,164,65,.10), transparent 60%),
+        linear-gradient(180deg, #FBF6EE 0%, #F7EFE2 55%, #F3E8D8 100%);
+}
+
+/* les sections perdent leur fond ivoire opaque pour laisser respirer le dégradé */
+.home-refresh > section { background-color: transparent !important; }
+
+/* rythme visuel : une section sur deux légèrement teintée */
+.home-refresh > section.bg-ivory:nth-child(even) {
+    background-color: rgba(243, 232, 216, .5) !important;
+}
+
+/* couleurs de texte (utilitaires Tailwind "inlined") */
+.home-refresh .text-anthracite { color: #33261F !important; }
+.home-refresh .text-anthracite-soft { color: #6B5A4E !important; }
+.home-refresh .text-muted-ink { color: #8A7563 !important; }
+.home-refresh .text-sage { color: #C56A3D !important; }
+
+.home-refresh h1, .home-refresh h2, .home-refresh h3 { color: #33261F; }
+.home-refresh h2 .italic { color: #C56A3D; }
+
+/* eyebrow doré */
+.home-refresh .eyebrow { color: #B4832E !important; }
+
+/* ---- Héros ---- */
+.home-refresh > section:first-of-type .bg-gradient-to-b {
+    background: linear-gradient(180deg,
+        rgba(38, 26, 20, .52) 0%,
+        rgba(38, 26, 20, .14) 42%,
+        rgba(160, 82, 45, .58) 100%) !important;
+}
+.home-refresh > section:first-of-type h1,
+.home-refresh > section:first-of-type p { text-shadow: 0 2px 22px rgba(0, 0, 0, .32); }
+
+/* ---- Cartes de races ---- */
+.home-refresh .group > div.overflow-hidden {
+    border-radius: 20px !important;
+    box-shadow: 0 12px 32px -16px rgba(120, 72, 40, .45) !important;
+    --tw-ring-color: rgba(197, 106, 61, .20) !important;
+    transition: box-shadow .35s ease, transform .35s ease;
+}
+.home-refresh .group:hover > div.overflow-hidden {
+    box-shadow: 0 20px 44px -16px rgba(120, 72, 40, .55) !important;
+    transform: translateY(-4px);
+}
+.home-refresh .group h3 { transition: color .3s ease; }
+.home-refresh .group:hover h3 { color: #C56A3D !important; }
+.home-refresh .group button[aria-label^="Ver"] { background: #fff !important; }
+.home-refresh .group button[aria-label^="Ver"]:hover { background: rgba(217, 164, 65, .22) !important; }
+
+/* ---- Carte formulaire de contact ---- */
+.home-refresh .rounded-xl.overflow-hidden {
+    border-color: #E7DAC6 !important;
+    box-shadow: 0 24px 56px -28px rgba(120, 72, 40, .38) !important;
+}
+.home-refresh .bg-ivory-deep\/50 { background-color: #F3E8D8 !important; }
+
+/* filet de séparation plus doux */
+.home-refresh .border-hairline { border-color: #E7DAC6 !important; }
+</style>
 @endpush
 
 @section('content')
-<main class="flex-1">
+<main class="flex-1 home-refresh">
     <!-- Toast Container -->
     <div class="toast-container" id="toastContainer"></div>
 
@@ -302,7 +380,7 @@
                 </h2>
                     <p class="mt-8 max-w-md leading-relaxed text-anthracite-soft">Cuéntenos qué raza tiene en mente. Responderemos en menos de 24 horas con disponibilidad real, próximas camadas y la posibilidad de visitar el criadero.</p>
                     <div class="mt-12 space-y-4 border-t border-hairline pt-8 text-sm">
-                        <p><span class="text-muted-ink">Teléfono · </span>+34 682 46 90 67</p>
+                        <p><span class="text-muted-ink">Teléfono · </span>+34 683 57 35 16</p>
                         <p><span class="text-muted-ink">Email · </span>hola@almadecriador.es</p>
                         <p><span class="text-muted-ink">Criadero · </span>Provincia de Toledo</p>
                     </div>
@@ -364,7 +442,7 @@
                                     <input
                                         class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm @error('phone') border-red-500 @enderror"
                                         id="phone"
-                                        placeholder="+34 682 46 90 67"
+                                        placeholder="+34 683 57 35 16"
                                         type="tel"
                                         name="phone"
                                         value="{{ old('phone') }}">
