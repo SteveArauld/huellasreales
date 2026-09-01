@@ -81,6 +81,19 @@
 
 /* filet de séparation plus doux */
 .home-refresh .border-hairline { border-color: #E7DAC6 !important; }
+
+/* ---- Pied de page aligné sur la palette chaude (uniquement sur l'accueil) ---- */
+body:has(.home-refresh) footer {
+    background: linear-gradient(180deg, #2E241E 0%, #241C17 100%) !important;
+    color: #FBF6EE;
+}
+body:has(.home-refresh) footer [class*="text-sky"] { color: #E0B25C !important; }
+body:has(.home-refresh) footer .bg-gradient-to-r {
+    background: linear-gradient(to right, transparent, rgba(224, 178, 92, .5), transparent) !important;
+}
+body:has(.home-refresh) footer [class*="border-ivory"] { border-color: rgba(224, 178, 92, .18) !important; }
+body:has(.home-refresh) footer [class*="bg-ivory"] { background-color: rgba(224, 178, 92, .07) !important; }
+body:has(.home-refresh) footer a:hover [class*="text-sky"] { color: #F0CE8F !important; }
 </style>
 @endpush
 
