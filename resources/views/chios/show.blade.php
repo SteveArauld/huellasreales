@@ -251,7 +251,7 @@
                     <div class="mt-8 space-y-5 text-anthracite-soft">
                         <p class="font-serif text-lg text-anthracite italic">Su nuevo compañero</p>
                         <p>{{ $cachorro['descripcion'] ?? 'Cachorro encantador y sano. ¡Imagine a este cachorro alegrando su hogar!' }}</p>
-                        <p>Imagine a su nuevo cachorro corriendo a saludarle, moviendo la cola de emoción. Este cachorro es perfecto para familias, paseos o apartamentos acogedores, listo para llenar su vida de amor. Criados con esmero durante más de 15 años, nuestras camadas exclusivas se distinguen por su salud, temperamento y belleza. ¡Solo quedan unos pocos este mes!</p>
+                        <p>Imagine a su nuevo cachorro corriendo a saludarle, moviendo la cola de emoción. Este cachorro es perfecto para familias, paseos o apartamentos acogedores, listo para llenar su vida de amor. Criados con esmero durante más de una década, nuestras camadas exclusivas se distinguen por su salud, temperamento y belleza. ¡Solo quedan unos pocos este mes!</p>
                     </div>
 
                     <div class="mt-10 border-t border-hairline pt-8">

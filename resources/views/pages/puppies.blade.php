@@ -344,7 +344,7 @@
                         </a>
                         <a href="/breeds/galgo-espanol" class="breed-card group flex flex-col text-center" data-name="Galgo Español" data-breed="galgo-espanol">
                             <div class="overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 group-hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                                <img alt="Cachorro Galgo Español en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://huellasreales.es/wp-content/uploads/brizy/imgs/ekkogreyhound-20250814-0002-350x350x0x43x350x263x1755347960.webp">
+                                <img alt="Cachorro Galgo Español en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/wp-content/uploads/brizy/imgs/ekkogreyhound-20250814-0002-350x350x0x43x350x263x1755347960.webp">
                             </div>
                             <div class="mt-4 flex items-center justify-center gap-2">
                                 <h4 class="font-serif text-base text-anthracite lg:text-lg">Cachorro Galgo Español <span class="text-anthracite-soft">(4)</span></h4>
@@ -376,7 +376,7 @@
                         </a>
                         <a href="/breeds/presa-canario" class="breed-card group flex flex-col text-center" data-name="Presa Canario" data-breed="presa-canario">
                             <div class="overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 group-hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                                <img alt="Cachorro Presa Canario en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://huellasreales.es/wp-content/uploads/brizy/imgs/chapo_de_earthquake_kennels-20250815-0003-350x350x0x43x350x263x1757882773.webp">
+                                <img alt="Cachorro Presa Canario en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/wp-content/uploads/brizy/imgs/chapo_de_earthquake_kennels-20250815-0003-350x350x0x43x350x263x1757882773.webp">
                             </div>
                             <div class="mt-4 flex items-center justify-center gap-2">
                                 <h4 class="font-serif text-base text-anthracite lg:text-lg">Cachorro Presa Canario <span class="text-anthracite-soft">(3)</span></h4>
@@ -384,7 +384,7 @@
                         </a>
                         <a href="/breeds/rottweiler" class="breed-card group flex flex-col text-center" data-name="Rottweiler" data-breed="rottweiler">
                             <div class="overflow-hidden rounded-[10px] bg-white shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] ring-1 ring-black/5 transition-shadow duration-300 group-hover:shadow-[0_10px_32px_-10px_rgba(0,0,0,0.35)]">
-                                <img alt="Cachorro Rottweiler en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="https://huellasreales.es/wp-content/uploads/brizy/imgs/rottweilers-3-350x350x0x43x350x263x1757880574.webp">
+                                <img alt="Cachorro Rottweiler en venta" loading="lazy" class="aspect-square w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]" src="/wp-content/uploads/brizy/imgs/rottweilers-3-350x350x0x43x350x263x1757880574.webp">
                             </div>
                             <div class="mt-4 flex items-center justify-center gap-2">
                                 <h4 class="font-serif text-base text-anthracite lg:text-lg">Cachorro Rottweiler <span class="text-anthracite-soft">(4)</span></h4>

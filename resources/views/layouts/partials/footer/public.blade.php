@@ -7,10 +7,10 @@
                      <div class="flex items-center gap-4"><img src="{{ asset("assets/logo/logo.png") }}" alt="Damaxis Criadores" class="h-20 w-auto">
                          <div>
                              <h2 class="font-serif text-3xl font-medium tracking-tight text-ivory">Damaxis Criadores</h2>
-                             <p class="mt-1 text-sm text-sky">Criadero certificado · España</p>
+                             <p class="mt-1 text-sm text-sky">Criadero familiar registrado · Galicia</p>
                          </div>
                      </div>
-                     <p class="max-w-sm text-sm leading-relaxed text-ivory/70">Criadero familiar certificado en España. Más de quince años criando cachorros de raza pura con respeto, ciencia y mimo.</p>
+                     <p class="max-w-sm text-sm leading-relaxed text-ivory/70">Criadero familiar registrado en Barbadás (Ourense), Galicia. Más de una década criando cachorros con pedigrí LOE, con respeto, ciencia y mimo.</p>
                  </div>
                  <div class="flex flex-wrap gap-3">
                      <div class="flex items-center gap-2 rounded-full border border-ivory/10 bg-ivory/5 px-3 py-1.5 text-xs text-ivory/80">
@@ -33,14 +33,14 @@
                         </div>
                  </div>
                  <div class="flex gap-3">
-                     <a href="#" aria-label="Instagram" class="flex size-10 items-center justify-center rounded-full border border-ivory/20 text-ivory/70 transition-all duration-300 hover:border-ivory/40 hover:bg-ivory/10 hover:text-ivory">
+                     <a href="https://www.instagram.com/damaxiscriadores/" target="_blank" rel="noreferrer" aria-label="Instagram" class="flex size-10 items-center justify-center rounded-full border border-ivory/20 text-ivory/70 transition-all duration-300 hover:border-ivory/40 hover:bg-ivory/10 hover:text-ivory">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram size-4" aria-hidden="true">
                              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                          </svg>
                         </a>
-                     <a href="#" aria-label="Facebook" class="flex size-10 items-center justify-center rounded-full border border-ivory/20 text-ivory/70 transition-all duration-300 hover:border-ivory/40 hover:bg-ivory/10 hover:text-ivory">
+                     <a href="https://www.facebook.com/damaxiscriadores" target="_blank" rel="noreferrer" aria-label="Facebook" class="flex size-10 items-center justify-center rounded-full border border-ivory/20 text-ivory/70 transition-all duration-300 hover:border-ivory/40 hover:bg-ivory/10 hover:text-ivory">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook size-4" aria-hidden="true">
                              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                          </svg>
@@ -70,14 +70,14 @@
                      <li class="flex items-start gap-3 text-ivory/70"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin mt-0.5 size-4 shrink-0 text-sky" aria-hidden="true">
                              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
                              <circle cx="12" cy="10" r="3"></circle>
-                         </svg><span>España · Entrega nacional</span></li>
+                         </svg><span>Barbadás (Ourense), Galicia · Entrega nacional</span></li>
                  </ul>
                  <div class="mt-8 border-t border-ivory/10 pt-6">
                      <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-sky/80">Legal</h4>
                      <ul class="mt-4 space-y-2 text-xs text-ivory/50">
-                         <li>CIF: B74839261</li>
-                         <li>Núcleo Zoológico: ES320540000287</li>
-                         <li>RSCE Asociado n.º 0000</li>
+                         <li>Titular: David Vázquez Rodríguez</li>
+                         <li>Núcleo Zoológico REGANUZ (Galicia): 32/008/0005/CC</li>
+                         <li>Barbadás (Ourense), Galicia · Cachorros con pedigrí LOE</li>
                      </ul>
                  </div>
              </div>
@@ -90,7 +90,7 @@
              <div class="flex flex-wrap gap-6"><a href="#" class="transition-colors duration-300 hover:text-ivory">Aviso Legal</a>
              <a href="#" class="transition-colors duration-300 hover:text-ivory">Política de Privacidad</a>
              <a href="#" class="transition-colors duration-300 hover:text-ivory">Política de Cookies</a></div>
-             <div class="flex items-center gap-2 font-medium tracking-wider uppercase"><span class="size-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Criadero certificado · España</div>
+             <div class="flex items-center gap-2 font-medium tracking-wider uppercase"><span class="size-2 rounded-full bg-emerald-400" aria-hidden="true"></span>Criadero familiar registrado · Galicia</div>
          </div>
      </div>
  </footer>

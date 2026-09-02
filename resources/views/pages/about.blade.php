@@ -11,7 +11,7 @@
     <section class="pt-40 pb-20 lg:pt-52 lg:pb-28">
         <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
             <p class="eyebrow">Quiénes somos</p>
-            <h1 class="mt-6 max-w-4xl text-[clamp(2.6rem,5vw,5rem)] leading-[1.02]">15 años de excelencia <span class="italic">en cría ética.</span></h1>
+            <h1 class="mt-6 max-w-4xl text-[clamp(2.6rem,5vw,5rem)] leading-[1.02]">Más de una década <span class="italic">de cría ética.</span></h1>
             <div class="mt-10 max-w-2xl text-lg leading-relaxed text-anthracite-soft">Fundada en 2010, Damaxis Criadores nació con una misión simple: conectar a las familias españolas con cachorros sanos y bien socializados, procedentes de prácticas de cría éticas.</div>
         </div>
     </section>
@@ -23,7 +23,7 @@
             <div class="grid gap-16 lg:grid-cols-[1fr_1.4fr] lg:gap-24">
                 <p class="eyebrow lg:pt-3">Nuestra historia</p>
                 <div class="space-y-6 text-lg leading-relaxed text-anthracite-soft">
-                    <p>Lo que comenzó como un pequeño negocio familiar se ha convertido en una fuente de confianza para familias de toda España. Atendemos a más de 3000 familias en todas las provincias, siempre con el mismo compromiso de cercanía y honestidad.</p>
+                    <p>Lo que comenzó como un proyecto familiar en Barbadás (Ourense) se ha convertido en una fuente de confianza para familias de toda España. No somos una empresa: somos un núcleo zoológico familiar registrado, con el mismo compromiso de cercanía y honestidad desde el primer día.</p>
                     <p>Aquí no solo encontrará a su nuevo compañero de cuatro patas, sino también todos los consejos y el apoyo que necesita para su cuidado: consejos de alimentación, accesorios recomendados y pautas para una adaptación exitosa al hogar. Nuestra experiencia y pasión por los animales nos convierten en un referente en la venta responsable de cachorros en España.</p>
                 </div>
             </div>
@@ -68,15 +68,15 @@
                 <div class="space-y-10 text-lg leading-relaxed text-anthracite-soft">
                     <div class="grid gap-6 sm:grid-cols-2">
                         <div>
-                            <p class="font-serif text-2xl text-anthracite">Registro oficial</p>
-                            <p class="mt-2">ES410490000237</p>
+                            <p class="font-serif text-2xl text-anthracite">Núcleo Zoológico (REGANUZ)</p>
+                            <p class="mt-2">32/008/0005/CC · Barbadás (Ourense), Galicia</p>
                         </div>
                         <div>
-                            <p class="font-serif text-2xl text-anthracite">Licencia del centro</p>
-                            <p class="mt-2">Centro de cría registrado ante las autoridades españolas.</p>
+                            <p class="font-serif text-2xl text-anthracite">Titular</p>
+                            <p class="mt-2">David Vázquez Rodríguez — núcleo zoológico familiar, no es una empresa.</p>
                         </div>
                     </div>
-                    <p>Colaboramos con veterinarios certificados en Madrid, Barcelona y Valencia para garantizar un seguimiento clínico continuo.</p>
+                    <p>Colaboramos con veterinarios certificados en Ourense y el resto de Galicia para garantizar un seguimiento clínico continuo. Nuestros cachorros se entregan con pedigrí LOE.</p>
                     <div>
                         <p class="font-serif text-2xl text-anthracite">Membresías profesionales</p>
                         <ul class="mt-4 list-disc space-y-2 pl-5 text-muted-ink">

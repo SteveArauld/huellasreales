@@ -40,8 +40,8 @@
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">Criadero</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>Finca del Criadero</p>
-                            <p>Provincia de Toledo, España</p>
+                            <p>Núcleo zoológico familiar</p>
+                            <p>Barbadás (Ourense), Galicia, España</p>
                             <p>Visitas con cita previa</p>
                         </div>
                     </div>

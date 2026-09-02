@@ -132,7 +132,7 @@ body:has(.home-refresh) footer a:hover [class*="text-sky"] { color: #F0CE8F !imp
 
         <div class="relative z-10 mx-auto flex h-full max-w-[1400px] flex-col justify-end px-6 pb-20 lg:px-12 lg:pb-28">
             <div class="max-w-3xl reveal">
-                <p class="text-[0.72rem] uppercase tracking-[0.32em] text-ivory/85">Criadero certificado · Desde 2008</p>
+                <p class="text-[0.72rem] uppercase tracking-[0.32em] text-ivory/85">Criadero familiar registrado · Desde 2010</p>
                 <h1 class="mt-7 text-[clamp(2.6rem,6vw,5.4rem)] leading-[1.02] text-ivory">Cachorros sanos,<br>
                     <span class="italic text-ivory/95">criados en familia.</span>
                 </h1>
@@ -395,7 +395,7 @@ body:has(.home-refresh) footer a:hover [class*="text-sky"] { color: #F0CE8F !imp
                     <div class="mt-12 space-y-4 border-t border-hairline pt-8 text-sm">
                         <p><span class="text-muted-ink">Teléfono · </span>+34 683 57 35 16</p>
                         <p><span class="text-muted-ink">Email · </span>contacto@damaxiscriadores.es</p>
-                        <p><span class="text-muted-ink">Criadero · </span>Provincia de Toledo</p>
+                        <p><span class="text-muted-ink">Criadero · </span>Barbadás (Ourense), Galicia</p>
                     </div>
                 </div>
                 <div class="rounded-xl border text-card-foreground overflow-hidden border-hairline bg-white shadow-[0_10px_40px_-20px_rgba(0,0,0,0.15)] ring-1 ring-black/5">

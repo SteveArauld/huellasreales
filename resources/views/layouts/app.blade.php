@@ -32,11 +32,11 @@
     <meta property="og:site_name" content="Damaxis Criadores">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Damaxis Criadores — Cachorros de raza, criados en familia">
-    <meta name="twitter:description" content="Criadero certificado en España. +15 años seleccionando cachorros de raza pura con garantía sanitaria, microchip y envío nacional.">
+    <meta name="twitter:description" content="Criadero familiar registrado en Barbadás (Ourense), Galicia. Más de una década seleccionando cachorros con pedigrí LOE, garantía sanitaria, microchip y envío nacional.">
 
-    <meta name="description" content="Criadero certificado en España. +15 años seleccionando cachorros de raza pura con garantía sanitaria, microchip y envío nacional.">
+    <meta name="description" content="Criadero familiar registrado en Barbadás (Ourense), Galicia. Más de una década seleccionando cachorros con pedigrí LOE, garantía sanitaria, microchip y envío nacional.">
     <meta property="og:title" content="Damaxis Criadores — Cachorros de raza, criados en familia">
-    <meta property="og:description" content="Criadero certificado en España. +15 años seleccionando cachorros de raza pura con garantía sanitaria, microchip y envío nacional.">
+    <meta property="og:description" content="Criadero familiar registrado en Barbadás (Ourense), Galicia. Más de una década seleccionando cachorros con pedigrí LOE, garantía sanitaria, microchip y envío nacional.">
     <meta property="og:url" content="/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
