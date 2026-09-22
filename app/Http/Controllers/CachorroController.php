@@ -26,8 +26,8 @@ class CachorroController extends Controller
     public function show( $slug)
     {
 
-    
-        $cachorro = Chios::where('slug', $slug)->first();
+
+        $cachorro = \App\Repositories\ChiosRepository::findBySlug($slug);
 
         if (empty($cachorro)) {
             abort(404);
@@ -116,7 +116,7 @@ class CachorroController extends Controller
         try {
             $orderData = $request->validated();
 
-            $cachorro = Chios::where('slug', $slug)->first();
+            $cachorro = \App\Repositories\ChiosRepository::findBySlug($slug);
 
             if (empty($cachorro)) {
                 return redirect()->back()
