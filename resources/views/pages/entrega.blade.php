@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Entrega de Cachorros — Damaxis Criadores')
+@section('title', 'Entrega de Cachorros — Tesoros del Mediterráneo')
 
 @section('content')
 <main class="flex-1">
@@ -248,6 +248,32 @@
                     </svg>
                     Consultar envío a mi zona
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PLAZOS LEGALES -->
+    <section class="bg-ivory-deep py-28 lg:py-36">
+        <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
+            <p class="eyebrow">Marco legal</p>
+            <h2 class="mt-6 max-w-3xl text-4xl leading-tight lg:text-5xl">Plazo de entrega <span class="italic">conforme a la ley.</span></h2>
+            <div class="mt-10 grid gap-12 md:grid-cols-2">
+                <div class="border-t border-hairline pt-8">
+                    <p class="font-serif text-2xl">Plazo máximo legal</p>
+                    <p class="mt-4 leading-relaxed text-anthracite-soft">De acuerdo con el artículo 43 del Real Decreto Legislativo 1/2007 (TRLGDCU), la entrega debe realizarse en un plazo máximo de 30 días naturales desde la celebración del contrato (la firma de la reserva), salvo que ambas partes acuerden expresamente otra fecha. En Tesoros del Mediterráneo confirmamos siempre por escrito la fecha de entrega prevista en el contrato de reserva.</p>
+                </div>
+                <div class="border-t border-hairline pt-8">
+                    <p class="font-serif text-2xl">Ajuste por bienestar animal</p>
+                    <p class="mt-4 leading-relaxed text-anthracite-soft">Al tratarse de la venta de un ser vivo, la fecha de entrega puede ajustarse dentro de ese plazo razonable a las exigencias sanitarias y de bienestar animal: edad mínima de destete de 8 semanas exigida por la normativa española, calendario de vacunación, implantación del microchip y expedición del pasaporte o certificado sanitario cuando el cachorro deba viajar. Estos ajustes se comunican siempre al comprador antes de la firma del contrato.</p>
+                </div>
+                <div class="border-t border-hairline pt-8">
+                    <p class="font-serif text-2xl">Riesgo durante el transporte</p>
+                    <p class="mt-4 leading-relaxed text-anthracite-soft">Conforme al artículo 47 del TRLGDCU, cuando el envío se realiza mediante un transportista profesional contratado por Tesoros del Mediterráneo, el riesgo de pérdida o deterioro del animal durante el transporte corre a cargo del vendedor hasta que el comprador, o un tercero indicado por este, tome posesión material del cachorro o gatito. Si es el propio comprador quien designa y contrata el transportista, el riesgo se transmite desde la entrega al transportista elegido por él.</p>
+                </div>
+                <div class="border-t border-hairline pt-8">
+                    <p class="font-serif text-2xl">Modalidad recomendada</p>
+                    <p class="mt-4 leading-relaxed text-anthracite-soft">Priorizamos la entrega en mano en nuestras instalaciones de Barbadás (Ourense), Galicia, que permite comprobar conjuntamente el estado del animal en el momento de la entrega. Cuando el comprador lo solicita, ofrecemos también el envío encadrado a cualquier punto de España en las condiciones descritas anteriormente.</p>
+                </div>
             </div>
         </div>
     </section>

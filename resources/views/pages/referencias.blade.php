@@ -4,7 +4,7 @@
 
 @push('styles')
     <title>{{ __("references.page_title") }}</title>
-    @vite(['resources/css/referencias.css'])
+    <link rel="stylesheet" href="{{ asset('css/referencias.css') }}">
     @include('pages.style')
 @endpush
 
@@ -15,7 +15,6 @@
                 <article class="post-502 page type-page status-publish ast-article-single" id="post-502">
                     <div class="entry-content clear" itemprop="text">
                         <div class="brz brz-root__container brz-reset-all brz-root__container-page">
-                            @include('layouts.partials.navbar.public')
 
                             <section id="oirlivtxhcmmgwvmwebjmbpwhwvopvuvxzzb_oirlivtxhcmmgwvmwebjmbpwhwvopvuvxzzb"
                                      class="brz-section brz-css-mg5c9r brz-css-1x7xkjk">
@@ -713,7 +712,6 @@
                                 </div>
                             </section>
 
-                            @include('layouts.partials.footer.public')
                         </div>
                     </div>
                 </article>

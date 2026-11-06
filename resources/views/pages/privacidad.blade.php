@@ -5,13 +5,12 @@
 @push('styles')
     <title>{{ __('legal_notice.meta_title') }}</title>
     @include('pages.style')
-    @vite(['resources/css/privaciadad.css'])
+    <link rel="stylesheet" href="{{ asset('css/privacidad.css') }}">
 @endpush
 
 @section('content')
 
     <div class="brz brz-root__container brz-reset-all brz-root__container-page">
-        @include('layouts.partials.navbar.public')
 
         <section id="yHi7lTSYWZo1_yHi7lTSYWZo1" class="brz-section brz-css-1hb2gg6 brz-css-uiouu7">
             <div class="brz-section__content brz-section--boxed brz-css-1asrsbh brz-css-1ef7za9"
@@ -813,8 +812,6 @@
                 </div>
             </div>
         </section>
-
-        @include('layouts.partials.footer.public')
 
     </div>
 

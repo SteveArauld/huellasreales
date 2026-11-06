@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Proceso de Adopción — Damaxis Criadores')
+@section('title', 'Proceso de Adopción — Tesoros del Mediterráneo')
 
 @push('styles')
 

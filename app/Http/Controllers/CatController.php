@@ -136,7 +136,7 @@ public function processOrder(OrderRequest $request, $lang, $slug)
         Mail::to($orderData['email'])
             ->send(new OrderConfirmationMail($orderData, $cat));
 
-        $adminEmail = env('ADMIN_EMAIL', 'contacto@damaxiscriadores.es');
+        $adminEmail = env('ADMIN_EMAIL', 'contacto@tesorosdelmediterraneo.es');
         Mail::to($adminEmail)
             ->send(new OrderConfirmationMail($orderData, $cat, true));
 

@@ -160,7 +160,7 @@
         </div>
 
         <div class="footer">
-            <span class="brand">Damaxis Criadores</span> · Email automatique
+            <span class="brand">Tesoros del Mediterráneo</span> · Email automatique
         </div>
     </div>
 

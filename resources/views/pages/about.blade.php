@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Quiénes Somos — Damaxis Criadores')
+@section('title', 'Quiénes Somos — Tesoros del Mediterráneo')
 
 @push('styles')
 
@@ -12,11 +12,11 @@
         <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
             <p class="eyebrow">Quiénes somos</p>
             <h1 class="mt-6 max-w-4xl text-[clamp(2.6rem,5vw,5rem)] leading-[1.02]">Más de una década <span class="italic">de cría ética.</span></h1>
-            <div class="mt-10 max-w-2xl text-lg leading-relaxed text-anthracite-soft">Fundada en 2010, Damaxis Criadores nació con una misión simple: conectar a las familias españolas con cachorros sanos y bien socializados, procedentes de prácticas de cría éticas.</div>
+            <div class="mt-10 max-w-2xl text-lg leading-relaxed text-anthracite-soft">Fundada en 2010, Tesoros del Mediterráneo nació con una misión simple: conectar a las familias españolas con cachorros sanos y bien socializados, procedentes de prácticas de cría éticas.</div>
         </div>
     </section>
     <section class="pb-28">
-        <div class="mx-auto max-w-[1400px] px-6 lg:px-12"><img alt="Equipo de Damaxis Criadores con varios perros" width="1408" height="1760" loading="lazy" class="aspect-[16/9] w-full rounded-[4px] object-cover shadow-[var(--shadow-soft)]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/af839824-6660-47bc-83de-4a1424cc628a/about-team-dogs.jpg"></div>
+        <div class="mx-auto max-w-[1400px] px-6 lg:px-12"><img alt="Equipo de Tesoros del Mediterráneo con varios perros" width="1408" height="1760" loading="lazy" class="aspect-[16/9] w-full rounded-[4px] object-cover shadow-[var(--shadow-soft)]" src="https://noble-paw-showcase.lovable.app/__l5e/assets-v1/af839824-6660-47bc-83de-4a1424cc628a/about-team-dogs.jpg"></div>
     </section>
     <section class="pb-28 lg:pb-40">
         <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
@@ -35,7 +35,7 @@
                 <div>
                     <p class="eyebrow">Nuestra misión</p>
                     <h2 class="mt-6 text-4xl leading-tight lg:text-5xl">Creando familias <span class="italic">perfectas.</span></h2>
-                    <p class="mt-8 leading-relaxed text-anthracite-soft">En Damaxis Criadores, creemos que cada familia merece el compañero cachorro perfecto, y cada cachorro merece un hogar amoroso para siempre. Nuestra misión va más allá de la cría: somos ensambladores de familias, creando conexiones que duran toda la vida.</p>
+                    <p class="mt-8 leading-relaxed text-anthracite-soft">En Tesoros del Mediterráneo, creemos que cada familia merece el compañero cachorro perfecto, y cada cachorro merece un hogar amoroso para siempre. Nuestra misión va más allá de la cría: somos ensambladores de familias, creando conexiones que duran toda la vida.</p>
                 </div>
                 <div class="space-y-8">
                     <div class="border-l border-sage pl-6">
@@ -68,8 +68,8 @@
                 <div class="space-y-10 text-lg leading-relaxed text-anthracite-soft">
                     <div class="grid gap-6 sm:grid-cols-2">
                         <div>
-                            <p class="font-serif text-2xl text-anthracite">Núcleo Zoológico (REGANUZ)</p>
-                            <p class="mt-2">32/008/0005/CC · Barbadás (Ourense), Galicia</p>
+                            <p class="font-serif text-2xl text-anthracite">Núcleo Zoológico</p>
+                            <p class="mt-2">ES300030440050 · Barbadás (Ourense), Galicia</p>
                         </div>
                         <div>
                             <p class="font-serif text-2xl text-anthracite">Titular</p>
@@ -115,7 +115,7 @@
     </section>
     <section class="py-28 lg:py-40">
         <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
-            <p class="eyebrow">El proceso Damaxis Criadores</p>
+            <p class="eyebrow">El proceso Tesoros del Mediterráneo</p>
             <h2 class="mt-6 max-w-4xl text-4xl leading-tight lg:text-5xl">Transparencia <span class="italic">en cada etapa.</span></h2>
             <div class="mt-16 grid gap-12 md:grid-cols-2 lg:grid-cols-3">
                 <div class="border-t border-hairline pt-8">
@@ -175,10 +175,10 @@
     <section class="py-28 lg:py-40">
         <div class="mx-auto max-w-[1400px] px-6 lg:px-12">
             <p class="eyebrow">Testimonios reales</p>
-            <h2 class="mt-6 max-w-4xl text-4xl leading-tight lg:text-5xl">Por qué las familias <span class="italic">eligen Damaxis Criadores.</span></h2>
+            <h2 class="mt-6 max-w-4xl text-4xl leading-tight lg:text-5xl">Por qué las familias <span class="italic">eligen Tesoros del Mediterráneo.</span></h2>
             <div class="mt-16 grid gap-12 md:grid-cols-3">
                 <div class="flex flex-col justify-between border-t border-hairline pt-8">
-                    <p class="italic leading-relaxed text-anthracite-soft">"Después de buscar numerosos criadores por toda España, Damaxis Criadores destacó por su transparencia y profesionalidad. Nuestro Golden Retriever llegó perfectamente sano y bien socializado. El apoyo continuo ha sido invaluable."</p>
+                    <p class="italic leading-relaxed text-anthracite-soft">"Después de buscar numerosos criadores por toda España, Tesoros del Mediterráneo destacó por su transparencia y profesionalidad. Nuestro Golden Retriever llegó perfectamente sano y bien socializado. El apoyo continuo ha sido invaluable."</p>
                     <p class="mt-8 text-sm uppercase tracking-[0.18em] text-sage-deep">— Familia Rodríguez, Sevilla</p>
                 </div>
                 <div class="flex flex-col justify-between border-t border-hairline pt-8">
@@ -186,7 +186,7 @@
                     <p class="mt-8 text-sm uppercase tracking-[0.18em] text-sage-deep">— Dr. Herrera y Dra. Sánchez, Barcelona</p>
                 </div>
                 <div class="flex flex-col justify-between border-t border-hairline pt-8">
-                    <p class="italic leading-relaxed text-anthracite-soft">"El equipo de Damaxis Criadores no solo nos entregó un cachorro, sino que nos acogió en su gran familia. El apoyo continúa dos años después."</p>
+                    <p class="italic leading-relaxed text-anthracite-soft">"El equipo de Tesoros del Mediterráneo no solo nos entregó un cachorro, sino que nos acogió en su gran familia. El apoyo continúa dos años después."</p>
                     <p class="mt-8 text-sm uppercase tracking-[0.18em] text-sage-deep">— Familia Jiménez, Madrid</p>
                 </div>
             </div>

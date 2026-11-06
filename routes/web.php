@@ -51,6 +51,10 @@ Route::get('/entrega', [CatController::class, 'entrega'])->name('entrega');
 
 Route::get('/garantia', [CatController::class, 'garantia'])->name('garantia');
 
+Route::get('/privacidad', fn() => view('pages.privacidad'))->name('privacidad');
+
+Route::get('/devoluciones', fn() => view('pages.devoluciones'))->name('devoluciones');
+
 Route::get('/testimonials', [CatController::class, 'testimonials'])->name('testimonials');
 Route::get('/buscar-gatos', [CatController::class, 'search'])->name('cats.search');
 

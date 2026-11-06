@@ -1,0 +1,198 @@
+/* Styles for resources/views/pages/referencias.blade.php
+   Same Brizy-exported template pattern as privacidad/devoluciones, but with
+   image/video blocks and a contact form at the end. Restyles the generic
+   brz-* structural classes with the site's design tokens. */
+
+.brz-root__container {
+  background: var(--ivory);
+  padding-top: 10rem;
+}
+
+@media (min-width: 1024px) {
+  .brz-root__container {
+    padding-top: 13rem;
+  }
+}
+
+.brz-section {
+  padding: 3rem 0;
+}
+
+.brz-section__content.brz-section--boxed {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.brz-row__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.brz-row__container .brz-columns {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.brz-column__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Headings */
+.brz-rich-text h1,
+.brz-rich-text h2,
+.brz-rich-text h3,
+.brz-tp-lg-heading1,
+.brz-tp-lg-heading2,
+.brz-tp-lg-heading3 {
+  font-family: var(--font-serif);
+  font-weight: 380;
+  letter-spacing: -0.02em;
+  color: var(--anthracite);
+}
+
+.brz-tp-lg-heading1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  line-height: 1.08;
+  margin-bottom: 0.5rem;
+}
+
+.brz-tp-lg-heading2 {
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  margin-bottom: 0.5rem;
+}
+
+.brz-text-lg-center {
+  text-align: center;
+}
+
+.brz-tp-lg-paragraph,
+.brz-rich-text p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted-ink);
+  margin: 0 0 0.75rem;
+}
+
+.brz-cp-color2 {
+  color: var(--sage-deep) !important;
+}
+
+.brz-cp-color7,
+.brz-cp-color8 {
+  color: var(--muted-ink) !important;
+}
+
+/* Images */
+.brz-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.brz-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Video blocks */
+.video-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  background: var(--anthracite);
+}
+
+.brz-image-fix-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.brz-icon-svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--ivory);
+}
+
+/* Buttons */
+.brz-button,
+.brz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  background: var(--sage-deep);
+  color: var(--ivory);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.brz-button:hover,
+.brz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+/* Contact form */
+.brz-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.brz-forms2__item {
+  flex: 1 1 260px;
+}
+
+.brz-forms2__item input,
+.brz-forms2__item textarea,
+.brz-forms2__item select {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-md);
+  background: var(--ivory);
+  color: var(--anthracite);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.brz-forms2__item input:focus,
+.brz-forms2__item textarea:focus,
+.brz-forms2__item select:focus {
+  outline: none;
+  border-color: var(--sage-deep);
+}
+
+.brz-forms2__item-button {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .brz-row__container {
+    flex-direction: column;
+  }
+  .brz-tp-lg-heading1 {
+    font-size: 2rem;
+  }
+}

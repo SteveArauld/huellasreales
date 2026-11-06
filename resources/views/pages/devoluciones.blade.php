@@ -5,13 +5,11 @@
 @push('styles')
     <title>{{ __('returns_policy.meta_title') }}</title>
     @include('pages.style')
-    @vite(['resources/css/devoluciones.css'])
+    <link rel="stylesheet" href="{{ asset('css/devoluciones.css') }}">
 @endpush
 
 @section('content')
     <div class="brz brz-root__container brz-reset-all brz-root__container-page">
-
-        @include('layouts.partials.navbar.public')
 
         <section id="31076cf06fffce30c6ae_gM2vRfMlr8Be" class="brz-section brz-css-1ux9ltk brz-css-1uf6qag">
             <div class="brz-section__content brz-section--boxed brz-css-iy0c1t brz-css-10qzzye"
@@ -157,8 +155,6 @@
                 </div>
             </div>
         </section>
-
-        @include('layouts.partials.footer.public')
 
     </div>
 @endsection

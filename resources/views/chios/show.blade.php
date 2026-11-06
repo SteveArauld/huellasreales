@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $cachorro['nombre'] . ' — ' . $cachorro['raza'] . ' — Damaxis Criadores')
+@section('title', $cachorro['nombre'] . ' — ' . $cachorro['raza'] . ' — Tesoros del Mediterráneo')
 
 @push('styles')
 <style>

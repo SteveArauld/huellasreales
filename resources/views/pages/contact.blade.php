@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Contacto — Damaxis Criadores')
+@section('title', 'Contacto — Tesoros del Mediterráneo')
 
 @push('styles')
 
@@ -33,14 +33,15 @@
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">Email</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>contacto@damaxiscriadores.es</p>
+                            <p>contacto@tesorosdelmediterraneo.es</p>
                             <p>Respuesta en menos de 24 h</p>
                         </div>
                     </div>
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">Criadero</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>Núcleo zoológico familiar</p>
+                            <p>Núcleo Zoológico ES300030440050</p>
+                            <p>Criador verificado (según MundoAnimalia) · Miembro desde 2026 · Criadero familiar</p>
                             <p>Barbadás (Ourense), Galicia, España</p>
                             <p>Visitas con cita previa</p>
                         </div>
@@ -48,8 +49,8 @@
                     <div class="border-t border-hairline pt-6">
                         <p class="eyebrow">Síganos</p>
                         <div class="mt-4 space-y-1 text-base text-anthracite">
-                            <p>Instagram · @damaxiscriadores</p>
-                            <p>Facebook · Damaxis Criadores</p>
+                            <p>Instagram · @tesorosdelmediterraneo</p>
+                            <p>Facebook · Tesoros del Mediterráneo</p>
                         </div>
                     </div>
                 </aside>

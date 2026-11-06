@@ -127,7 +127,7 @@ class CachorroController extends Controller
             Mail::to($orderData['email'])
                 ->send(new OrderConfirmationMail($orderData, $cachorro));
 
-            $adminEmail = env('ADMIN_EMAIL', 'contacto@damaxiscriadores.es');
+            $adminEmail = env('ADMIN_EMAIL', 'contacto@tesorosdelmediterraneo.es');
             Mail::to($adminEmail)
                 ->send(new OrderConfirmationMail($orderData, $cachorro, true));
 
@@ -359,7 +359,7 @@ public function reserve(Request $request, $slug)
     ]);
 
     // Envoyer un email ou enregistrer dans la base de données
-    // Mail::to('contacto@damaxiscriadores.es')->send(new ReservationRequest($validated));
+    // Mail::to('contacto@tesorosdelmediterraneo.es')->send(new ReservationRequest($validated));
 
     // Rediriger avec un message de succès
     return redirect()->back()->with('success', '¡Gracias por su interés! Le contactaremos en las próximas 24 horas.');

@@ -1,8 +1,7 @@
 <header class="fixed inset-x-0 top-0 z-50 border-b border-hairline/60 bg-ivory shadow-soft transition-shadow duration-500">
     <div class="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 lg:px-12">
-        <a aria-label="Damaxis Criadores — Inicio" class="flex items-center gap-3 active" href="/" data-status="active" aria-current="page">
-            <img src="{{ asset("assets/logo/logo.png") }}" alt="Damaxis Criadores" class="h-16 w-auto lg:h-20">
-        </a>
+        <a aria-label="Tesoros del Mediterráneo — Inicio" class="flex items-center gap-3 active" href="/" data-status="active" aria-current="page">
+<img src="{{ asset('assets/logo/logo.png') }}" alt="Tesoros del Mediterráneo" class="h-11 w-auto lg:h-14" style="width: 80px !important;">        </a>
         
         <!-- Navigation desktop -->
         <nav class="hidden items-center gap-5 md:flex lg:gap-7">

@@ -3,14 +3,13 @@
 @section('title', __('Resultados de búsqueda'))
 
 @push('styles')
-    <title>Resultados de búsqueda: {{ $query }} - Damaxis Criadores</title>
+    <title>Resultados de búsqueda: {{ $query }} - Tesoros del Mediterráneo</title>
     @include('pages.style')
-    @vite(['resources/css/venta.css'])
+    <link rel="stylesheet" href="{{ asset('css/venta.css') }}">
 @endpush
 
 @section('content')
     <div class="brz brz-root__container brz-reset-all brz-root__container-page">
-        @include('layouts.partials.navbar.public')
 
         <section class="brz-section">
             <div class="brz-section__content brz-section--boxed">
@@ -53,6 +52,5 @@
             </div>
         </section>
 
-        @include('layouts.partials.footer.public')
     </div>
 @endsection

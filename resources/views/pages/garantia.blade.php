@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Garantía Sanitaria — Damaxis Criadores')
+@section('title', 'Garantía Sanitaria — Tesoros del Mediterráneo')
 
 @push('styles')
 
